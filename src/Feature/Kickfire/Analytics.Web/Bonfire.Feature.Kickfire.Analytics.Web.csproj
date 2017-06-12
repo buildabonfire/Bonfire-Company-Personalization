@@ -118,12 +118,6 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bonfire.Feature.Kickfire.Analytics\Bonfire.Feature.Kickfire.Analytics.csproj">
-      <Project>{03ffd085-4577-41a6-b74c-70f7775e8c0a}</Project>
-      <Name>Bonfire.Feature.Kickfire.Analytics</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -100,11 +100,11 @@
     <Content Include="App_Config\Include\z_Bonfire\Bonfire.Feature.KickfireService.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Kickfire\Bonfire.Foundation.Kickfire.CacheService\Bonfire.Foundation.Kickfire.CacheService.csproj">
+    <ProjectReference Include="..\..\..\Foundation\CacheService\code\Bonfire.Foundation.Kickfire.CacheService.csproj">
       <Project>{c6cdfae6-beea-41a4-984f-c3dc57aac55e}</Project>
       <Name>Bonfire.Foundation.Kickfire.CacheService</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Foundation\Kickfire\Bonfire.Foundation.Kickfire.Library\Bonfire.Foundation.Kickfire.Library.csproj">
+    <ProjectReference Include="..\..\..\Foundation\Library\code\Bonfire.Foundation.Kickfire.Library.csproj">
       <Project>{1b87945b-cf36-428c-9edd-8d331f8b2806}</Project>
       <Name>Bonfire.Foundation.Kickfire.Library</Name>
     </ProjectReference>

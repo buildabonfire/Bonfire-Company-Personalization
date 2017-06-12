@@ -118,7 +118,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Foundation\Kickfire\Bonfire.Foundation.Kickfire.Library\Bonfire.Foundation.Kickfire.Library.csproj">
+    <ProjectReference Include="..\..\..\Foundation\Library\code\Bonfire.Foundation.Kickfire.Library.csproj">
       <Project>{1b87945b-cf36-428c-9edd-8d331f8b2806}</Project>
       <Name>Bonfire.Foundation.Kickfire.Library</Name>
     </ProjectReference>

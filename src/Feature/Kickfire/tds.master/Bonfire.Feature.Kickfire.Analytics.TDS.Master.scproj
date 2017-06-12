@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{e28bb9b3-cc9d-4607-936c-8c190f5bbfbf}</ProjectGuid>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <SourceWebPhysicalPath>..\Bonfire.Feature.Kickfire.Analytics.Web</SourceWebPhysicalPath>
-    <SourceWebProject>{53f9ad6b-127e-42dc-8913-77a9b131fa8a}|src\Feature\Kickfire\Bonfire.Feature.Kickfire.Analytics.Web\Bonfire.Feature.Kickfire.Analytics.Web.csproj</SourceWebProject>
+    <SourceWebPhysicalPath>..\Analytics.Web</SourceWebPhysicalPath>
+    <SourceWebProject>{53f9ad6b-127e-42dc-8913-77a9b131fa8a}|src\Feature\Kickfire\Analytics.Web\Bonfire.Feature.Kickfire.Analytics.Web.csproj</SourceWebProject>
     <SourceWebVirtualPath>/Bonfire.Feature.Kickfire.Analytics.Web.csproj</SourceWebVirtualPath>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <EnableUpdateable>true</EnableUpdateable>
@@ -48,7 +48,7 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bonfire.Feature.Kickfire.Analytics.Web\Bonfire.Feature.Kickfire.Analytics.Web.csproj">
+    <ProjectReference Include="..\Analytics.Web\Bonfire.Feature.Kickfire.Analytics.Web.csproj">
       <Project>{53f9ad6b-127e-42dc-8913-77a9b131fa8a}</Project>
       <Name>Bonfire.Feature.Kickfire.Analytics.Web</Name>
     </ProjectReference>
