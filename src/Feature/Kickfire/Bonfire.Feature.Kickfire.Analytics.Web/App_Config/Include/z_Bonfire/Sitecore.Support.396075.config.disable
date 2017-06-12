@@ -1,0 +1,28 @@
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+    <settings>
+      
+      <!-- ANALYTICS PERFORM LOOKUP CREATE VISIT INTERVAL
+           Specifies the timeout (in seconds) to wait during the visit creation (first request for Visit)
+           to ensure that GeoIp information has been received from Lookup provider.
+           Default: 5
+      -->
+      <setting name="Analytics.PerformLookup.CreateVisitInterval" value="2" />
+            
+    </settings>
+        
+    <pipelines>
+      <createVisit>
+        
+        <processor type="Sitecore.Analytics.Pipelines.CreateVisits.UpdateGeoIpData, Sitecore.Analytics">
+          <patch:delete/>
+        </processor>
+        
+        
+        <processor type="Sitecore.Support.Analytics.Pipelines.CreateVisits.UpdateGeoIpData,Sitecore.Support.396075"
+          patch:after="processor[@type='Sitecore.Analytics.Pipelines.CreateVisits.XForwardedFor, Sitecore.Analytics']" />
+      </createVisit>
+    </pipelines>
+
+  </sitecore>
+</configuration>

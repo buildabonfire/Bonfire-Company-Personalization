@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SicCodes">
+  <DataContextMoniker Name="/SicCodesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="00b72812-8984-438a-8522-fba7c4c97523" absoluteBounds="1.25, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SicCodesDataContext/SicCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffb63a1f-f09e-4f7b-b54f-74b2bd3e94b3" absoluteBounds="1.2649999999999997, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

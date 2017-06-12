@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {73CBDB1F-4B47-446B-93B1-2695F220C291}
+database: master
+path: /sitecore/system/Modules/KickFire/Grouping/Misc repair services
+parent: {8F6AC979-C5EB-4300-820B-E7E264526588}
+name: Misc repair services
+master: {00000000-0000-0000-0000-000000000000}
+template: {A4AB9DEA-0DF9-4B34-869D-40F1CB02C9FA}
+templatekey: Grouping
+
+----version----
+language: en
+version: 1
+revision: 80eead53-49ea-4bea-a2c7-526a16f3263f
+
+----field----
+field: {F9E6C052-9189-43DA-B814-E9019C793E99}
+name: Group
+key: group
+content-length: 20
+
+Misc repair services
+----field----
+field: {851F239D-F387-4724-B756-62179C7F0356}
+name: Pattern
+key: pattern
+content-length: 38
+
+{0E7A9378-4076-43F6-A6FA-F62AC86B0411}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160318T151131Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+80eead53-49ea-4bea-a2c7-526a16f3263f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160318T151137Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

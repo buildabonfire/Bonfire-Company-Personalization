@@ -1,0 +1,11 @@
+﻿<Project>
+  <PropertyGroup>
+    <Site Server="Contoso" UserName="sitecore\admin" IsRemoteSitecore="True" />
+  </PropertyGroup>
+  <File Include="Views\KickFire\ImportFile.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{D560CCC6-901C-48DF-80DC-519C085078AF}</Item>
+  </File>
+  <File Include="Views\Tester\TestActionResult.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{B146F2A6-E8B1-4B72-BBD6-72E23ECE1C14}</Item>
+  </File>
+</Project>

@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {BA2BC427-16A1-4CFD-8E32-37B1766C0421}
+database: master
+path: /sitecore/system/Modules/KickFire/Grouping/Public finance
+parent: {8F6AC979-C5EB-4300-820B-E7E264526588}
+name: Public finance
+master: {00000000-0000-0000-0000-000000000000}
+template: {A4AB9DEA-0DF9-4B34-869D-40F1CB02C9FA}
+templatekey: Grouping
+
+----version----
+language: en
+version: 1
+revision: 3cf49c1b-4ea2-40e8-8f49-e71f9982a8d6
+
+----field----
+field: {F9E6C052-9189-43DA-B814-E9019C793E99}
+name: Group
+key: group
+content-length: 14
+
+Public finance
+----field----
+field: {851F239D-F387-4724-B756-62179C7F0356}
+name: Pattern
+key: pattern
+content-length: 38
+
+{86AB9A43-6C68-4F7D-86B1-E68019024466}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160318T151424Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3cf49c1b-4ea2-40e8-8f49-e71f9982a8d6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160318T151428Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {14C59DDB-161D-4E19-839F-BC2D5E2DC0F1}
+database: master
+path: /sitecore/system/Marketing Control Panel/Profiles/Industry/National sercurity
+parent: {8C78D1EC-E978-4EF7-A27F-F70038548230}
+name: National sercurity
+master: {00000000-0000-0000-0000-000000000000}
+template: {44AB5107-3C73-42F0-A427-BEC549F944B9}
+templatekey: Profile Key
+
+----field----
+field: {2E1A9AAB-F7C1-49EE-B032-28B98D3688D6}
+name: Name
+key: name
+content-length: 18
+
+National sercurity
+----field----
+field: {12E2C64A-5F08-4948-86C8-55AE06AFEEF8}
+name: MaxValue
+key: maxvalue
+content-length: 2
+
+10
+----version----
+language: en
+version: 1
+revision: f942b991-c789-402d-82ea-6650ebd68a4a
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160318T144648Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+f942b991-c789-402d-82ea-6650ebd68a4a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160318T144652Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

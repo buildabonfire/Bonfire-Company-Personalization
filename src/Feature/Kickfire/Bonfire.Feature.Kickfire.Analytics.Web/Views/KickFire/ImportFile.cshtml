@@ -1,0 +1,19 @@
+﻿@model Bonfire.Kickfire.Analytics.Models.ImportModel
+@using (Html.BeginForm(null, null, FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <div>
+        @Html.LabelFor(x => x.File)
+        @Html.TextBoxFor(x => x.File, new {type = "file"})
+        @Html.ValidationMessageFor(x => x.File)
+    </div>
+
+    <button type="submit">Upload</button>
+
+    
+}
+
+<div>
+    <code class="prettyprint">
+        @Model.JsonData;
+    </code>
+</div>

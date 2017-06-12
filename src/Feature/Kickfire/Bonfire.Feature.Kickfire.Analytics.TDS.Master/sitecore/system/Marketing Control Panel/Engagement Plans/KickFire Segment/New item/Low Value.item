@@ -1,0 +1,113 @@
+----item----
+version: 1
+id: {E087C275-6941-5272-F3BB-ACC364C4CC00}
+database: master
+path: /sitecore/system/Marketing Control Panel/Engagement Plans/KickFire Segment/New item/Low Value
+parent: {C1408AD0-5004-CF23-D977-4ED6065B227A}
+name: Low Value
+master: {00000000-0000-0000-0000-000000000000}
+template: {0A43A0FE-7E0E-49EF-95D4-E3DE34F4F175}
+templatekey: Engagement Plan Condition
+
+----field----
+field: {E13DCD09-D9BB-43C9-8D7D-438C79D714CA}
+name: Evaluate
+key: evaluate
+content-length: 38
+
+{B81C1F4C-8B83-44D9-902F-448463DBCCBC}
+----field----
+field: {21F3482B-BB14-4555-BA5D-AF20D400D5B9}
+name: Rule
+key: rule
+content-length: 251
+
+<ruleset>
+  <rule uid="{2D10FFDC-401C-4165-B300-A51FE267E261}">
+    <conditions>
+      <condition id="{8678E234-7A46-4E8B-97B0-03D5E2BD9F03}" uid="A2223F07F8D2466490F0B1B5C3A3BB34" Days="90" Minutes="00" />
+    </conditions>
+  </rule>
+</ruleset>
+----field----
+field: {D2368879-C784-4031-9B79-6A3BF3CB444E}
+name: Next state
+key: next state
+content-length: 36
+
+c54e8b11-9036-18e3-8eb6-a4ea606bca04
+----field----
+field: {3F72BC07-DE92-483E-A724-D430769D9BA4}
+name: Designer ID
+key: designer id
+content-length: 36
+
+8c23a8a0-2453-0172-67e2-a92925b0ed28
+----field----
+field: {7642ED71-348B-4B88-8634-CC7B28949472}
+name: Origin ID
+key: origin id
+content-length: 36
+
+00000000-0000-0000-0000-000000000000
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+1
+----version----
+language: en
+version: 1
+revision: 968d1bbc-c8c5-4cc4-8205-b40eef9267a5
+
+----field----
+field: {06F2D72A-1924-4B9A-BA1E-186CE4E57EFD}
+name: Description
+key: description
+content-length: 60
+
+Visitor spent > 90 days in plan w/out achieving 30 EV points
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 10
+
+Low Value?
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160220T131712Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+968d1bbc-c8c5-4cc4-8205-b40eef9267a5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160220T131713Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

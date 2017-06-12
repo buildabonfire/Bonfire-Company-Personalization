@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a3f0f07b-9459-4095-9643-4e84b2bffbde</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <SourceWebPhysicalPath>
+    </SourceWebPhysicalPath>
+    <SourceWebProject>
+    </SourceWebProject>
+    <SourceWebVirtualPath>
+    </SourceWebVirtualPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Bonfire.Kickfire.Deployment</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName>Bonfire.Kickfire.Deployment</AssemblyName>
+    <Name>Bonfire.Kickfire.Deployment</Name>
+    <RootNamespace>Bonfire.Kickfire.Deployment</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <PackageName>Bonfire.Kickfire.Deployment</PackageName>
+    <PackageAuthor>Bonfire</PackageAuthor>
+    <PackagePublisher>Bonfire</PackagePublisher>
+    <PackageVersion />
+    <PackageReadme>
+    </PackageReadme>
+    <SitecoreAssemblyPath />
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\Bonfire.Kickfire.Deployment_Debug.xml</ValidationSettingsFilePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <BundledProject Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.TDS.scproj">
+      <ProjectId>{e7e28a9f-6ab0-4214-8d64-5e522a22d597}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Feature\Kickfire\Bonfire.Feature.Kickfire.Analytics.TDS.Core\Bonfire.Feature.Kickfire.Analytics.TDS.Core.scproj">
+      <ProjectId>{cfd0f0ba-0207-4b68-84ef-75bd2380adae}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Feature\Kickfire\Bonfire.Feature.Kickfire.Analytics.TDS.Master\Bonfire.Feature.Kickfire.Analytics.TDS.Master.scproj">
+      <ProjectId>{e28bb9b3-cc9d-4607-936c-8c190f5bbfbf}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Feature\SicCodeService\tds\Bonfire.Feature.SicCodeService.TDS.scproj">
+      <ProjectId>{59aa3021-8d5f-4b76-9ff1-9c3d44e8661d}</ProjectId>
+    </BundledProject>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Feature\Kickfire\Bonfire.Feature.Kickfire.Analytics.TDS.Core\Bonfire.Feature.Kickfire.Analytics.TDS.Core.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Feature\Kickfire\Bonfire.Feature.Kickfire.Analytics.TDS.Master\Bonfire.Feature.Kickfire.Analytics.TDS.Master.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Feature\SicCodeService\tds\Bonfire.Feature.SicCodeService.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+</Project>
