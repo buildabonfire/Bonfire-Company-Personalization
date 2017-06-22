@@ -299,6 +299,7 @@
     <Compile Include="Reporting\Aggregate\Visitors\Processors\ConstructVisitorsDataTable.cs" />
     <Compile Include="Reporting\Aggregate\Visitors\Processors\QueryLatestVisitorsFromSearch.cs" />
     <Compile Include="Helpers\Items.cs" />
+    <Compile Include="Rules\CompanyNameIs.cs" />
     <Compile Include="Transformers\Contact\ContactSearchResultEx2.cs" />
     <Compile Include="Transformers\Contact\ContactSearchResultTransformer.cs" />
   </ItemGroup>
