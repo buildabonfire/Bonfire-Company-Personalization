@@ -32,6 +32,6 @@ It is required to process the company's Sic Code to determine the industry the c
 ## Upgrade warning
 To allow the contact search to search for company names as well as names and emails address, I had to override the provider `Sitecore.Cintel.ContactSearchProvider, Sitecore.Cintel`. I have to keep this up to date with the versions of Sitecore
 
-## Speed warning
-The Sitecore support patch (Sitecore.Support.396075.config) is included, but disabled with the package. This will allow Sitecore to wait for a specified period of time for the GeoIp to be resolved. This is important when trying to determine if the IP is a USA ip or not.
+## Speed warning if enabled
+The Sitecore support patch (Sitecore.Support.396075.config) is included, but **disabled** with the package. This will allow Sitecore to wait for a specified period of time for the GeoIp to be resolved. This is important when trying to determine if the IP is a USA ip or not.
 
