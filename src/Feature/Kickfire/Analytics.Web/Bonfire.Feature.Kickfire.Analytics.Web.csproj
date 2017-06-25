@@ -106,7 +106,7 @@
     <Content Include="App_Config\Include\z_Bonfire\Bonfire.Kickfire.Pipeline.Initialize.config" />
     <Content Include="App_Config\Include\z_Bonfire\Bonfire.Kickfire.Analytics.MergeContacts.config" />
     <None Include="packages.config" />
-    <None Include="App_Config\Include\z_Bonfire\Sitecore.Support.396075.config.disable" />
+    <Content Include="App_Config\Include\z_Bonfire\Sitecore.Support.396075.config.disable" />
     <Content Include="App_Config\Include\z_Bonfire\Kickfire.Settings.config" />
     <None Include="Properties\PublishProfiles\Bonfire.pubxml" />
     <None Include="Properties\PublishProfiles\Contoso.pubxml" />
