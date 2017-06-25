@@ -13,6 +13,8 @@ My next integration will be with MaxMind for company info.
 A quick install can be seen by watching [this video](https://vimeo.com/222762570).
 
 ### Prerequisites
+This requires Sitecore 8.2 update 0 and above. This code uses Sitecore's Microsft dependancy injection logic.
+
 To use the Kickfire service with this installation, you need a API key. Visit the site [Kickfire](https://www.kickfire.com/services/api) API site and create a new account. Then create a new Company endpoint (bottom of Api tab in `Create Another Access Point` section.) You can use the Extreme IP service which is free, but Industry personalization will not be possible.
 
 ### Installing
