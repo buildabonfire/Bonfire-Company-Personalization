@@ -70,6 +70,9 @@ THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
+    <BundledProject Include="..\..\Feature\ExtremeIpService\tds\Bonfire.Feature.ExtremeIpService.TDS.scproj">
+      <ProjectId>{bcacea64-f105-4f68-9a19-eafed6999452}</ProjectId>
+    </BundledProject>
     <BundledProject Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.TDS.scproj">
       <ProjectId>{e7e28a9f-6ab0-4214-8d64-5e522a22d597}</ProjectId>
     </BundledProject>
@@ -84,6 +87,9 @@ THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND
     </BundledProject>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Feature\ExtremeIpService\tds\Bonfire.Feature.ExtremeIpService.TDS.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.TDS.scproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

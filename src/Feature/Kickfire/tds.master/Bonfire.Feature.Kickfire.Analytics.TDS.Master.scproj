@@ -33,6 +33,16 @@
     <ValidationSettingsFilePath>.\Bonfire.Kickfire.Analytics.TDS.Master_Debug.xml</ValidationSettingsFilePath>
     <SitecoreDeployFolder>
     </SitecoreDeployFolder>
+    <PackageName>Bonfire.Feature.Kickfire.Analytics.TDS.Master</PackageName>
+    <PackageAuthor />
+    <PackagePublisher />
+    <PackageVersion />
+    <PackageReadme />
+    <SitecoreAssemblyPath />
+    <GeneratePackage>False</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -1313,7 +1323,6 @@
   </ItemGroup>
   <ItemGroup>
     <ExcludedAssemblies Include="Bonfire.Feature.Kickfire.Analytics.dll" />
-    <ExcludedAssemblies Include="Bonfire.Feature.Kickfire.Analytics.Web.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>

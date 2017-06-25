@@ -14,10 +14,10 @@ namespace Bonfire.Feature.KickfireService
         public KickFireModel.RootObject GetRootObject(string clientIp)
         {
             var apiUrl = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ApiUrl");
-            Assert.IsNotNullOrEmpty(apiUrl, "Kickfire API url cannot be empty. Please update the settoings file.");
+            Assert.IsNotNullOrEmpty(apiUrl, "Kickfire API url cannot be empty. Please update the settings file.");
 
             var apiKey = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ApiKey");
-            Assert.IsNotNullOrEmpty(apiKey, "Kickfire API key cannot be empty. Please update the settoings file.");
+            Assert.IsNotNullOrEmpty(apiKey, "Kickfire API key cannot be empty. Please update the settings file.");
 
             var company = CacheBuilder.KickFireCache.Get(clientIp);
 
