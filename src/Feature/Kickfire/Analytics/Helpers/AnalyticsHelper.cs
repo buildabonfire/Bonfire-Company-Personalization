@@ -81,7 +81,7 @@ namespace Bonfire.Feature.Kickfire.Analytics.Helpers
                     sicCode = sicCodeRepository.GetSicCodeById(sic);
             }
             else
-                Log.Info("KickFire: CicCodeValue was null/empty. We should have a SicCode to look up in the database.", "KickFire");
+                Log.Info("KickFire: SicCodeValue was null/empty. We should have a SicCode to look up in the database.", "KickFire");
 
             return sicCode;
 
