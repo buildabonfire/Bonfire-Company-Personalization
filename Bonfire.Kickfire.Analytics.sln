@@ -41,7 +41,7 @@ Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Bonfire.Feature.Kickfire.An
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Bonfire.Feature.Kickfire.Analytics.TDS.Master", "src\Feature\Kickfire\tds.master\Bonfire.Feature.Kickfire.Analytics.TDS.Master.scproj", "{E28BB9B3-CC9D-4607-936C-8C190F5BBFBF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtremeIp", "ExtremeIp", "{DD55CFC2-CA33-41B8-8533-E15DFCC470E0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtremeIpService", "ExtremeIpService", "{DD55CFC2-CA33-41B8-8533-E15DFCC470E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonfire.Feature.ExtremeIpService", "src\Feature\ExtremeIpService\code\Bonfire.Feature.ExtremeIpService.csproj", "{2F3E80D6-03A3-4751-A70A-76F28B397A35}"
 EndProject
