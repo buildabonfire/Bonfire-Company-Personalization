@@ -31,6 +31,13 @@ It is required to process the company's Sic Code to determine the industry the c
 3. Edit your connection strings file. Add a new connection string called SicCode that points to the database created above. The connection string name must be SicCode.
 4. Open the file App_Config\Include\z_Bonfire\Kickfire.Settings.config. Update the setting `<setting name= "Bonfire.Kickfire.ProcessSicCode" value= "false" />` setting it to true. This will query the SQL databse when a SicCode was found in the API response.
 
+### Switching from Kickfire to Extreme Ip
+By default Kickfire service is enables, which costs money. You can switch to Extreme IP that give similar company detail, but no Industry personalization.
+
+1. Disable the config file `\App_Config\Include\z_Bonfire\Bonfire.Feature.KickfireService.config`
+2. Enable the config file `\App_Config\Include\z_Bonfire\Bonfire.Feature.ExtremeIpService.config.disable`
+
+
 ## Upgrade warning
 To allow the contact search to search for company names as well as names and emails address, I had to override the provider `Sitecore.Cintel.ContactSearchProvider, Sitecore.Cintel`. I have to keep this up to date with the versions of Sitecore
 
