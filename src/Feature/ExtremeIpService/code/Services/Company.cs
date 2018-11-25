@@ -32,21 +32,21 @@ namespace Bonfire.Feature.ExtremeIpService.Services
 
             var data = new KickFireModel.RootObject
             {
-                data = new List<KickFireModel.Datum>
+                Data = new List<KickFireModel.Datum>
                 {
                     new KickFireModel.Datum
                     {
-                        name = extremeData.businessName,
-                        website = extremeData.businessWebsite,
-                        country = extremeData.country,
-                        countryShort = extremeData.countryCode,
-                        latitude = extremeData.lat,
-                        longitude = extremeData.lon,
-                        city = extremeData.city,
-                        region = extremeData.region,
-                        isISP = string.IsNullOrEmpty(extremeData.businessName) ? 1 : 0
+                        Name = extremeData.businessName,
+                        Website = extremeData.businessWebsite,
+                        Country = extremeData.country,
+                        CountryShort = extremeData.countryCode,
+                        Latitude = extremeData.lat,
+                        Longitude = extremeData.lon,
+                        City = extremeData.city,
+                        Region = extremeData.region,
+                        IsIsp = string.IsNullOrEmpty(extremeData.businessName) ? 1 : 0
                     }
-                }, status = "success"
+                }, Status = "success"
             };
 
             return data;

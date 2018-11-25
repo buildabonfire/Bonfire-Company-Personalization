@@ -1,0 +1,160 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{752C5C9E-A15B-4A29-98B1-35A93C57C35E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bonfire.Foundation.XConnectService</RootNamespace>
+    <AssemblyName>Bonfire.Foundation.XConnectService</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" version="9.0.1" />
+    <PackageReference Include="Sitecore.Analytics.Model.NoReferences" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Analytics.NoReferences" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Analytics.XConnect.NoReferences" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Framework.Conditions" version="1.1.12" />
+    <PackageReference Include="Sitecore.Framework.Configuration.Abstractions" version="2.0.7" />
+    <PackageReference Include="Sitecore.Framework.Configuration.Extensions" version="2.0.7" />
+    <PackageReference Include="Sitecore.Kernel.NoReferences" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Logging" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Logging.Client" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Nexus.Licensing" version="9.0.180604" />
+    <PackageReference Include="Sitecore.NVelocity" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Client" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Client.Configuration" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Collection.Model" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Configuration" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.DependencyInjection" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.DependencyInjection.Web" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Diagnostics" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Logging.Serilog" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Search" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Service" version="9.0.180604" />
+    <PackageReference Include="Sitecore.XConnect.Service.Plugins" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Xdb.Collection" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Xdb.Common.Web" version="9.0.180604" />
+    <PackageReference Include="Sitecore.Zip" version="9.0.180604" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.3" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.3" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="2.6.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Sitecore.Abstractions.NoReferences" Version="9.0.180604" />
+    <PackageReference Include="Sitecore.ContentSearch.Linq.NoReferences" Version="9.0.180604" />
+    <PackageReference Include="Sitecore.ContentSearch.NoReferences" Version="9.0.180604" />
+    <PackageReference Include="Sitecore.Mvc.NoReferences" Version="9.0.180604" />
+    <PackageReference Include="System.Collections" Version="4.3.0" />
+    <PackageReference Include="System.Collections.Concurrent" Version="4.0.12" />
+    <PackageReference Include="System.ComponentModel" Version="4.0.1" />
+    <PackageReference Include="System.Diagnostics.Debug" Version="4.0.11" />
+    <PackageReference Include="System.Globalization" Version="4.0.11" />
+    <PackageReference Include="System.Linq" Version="4.1.0" />
+    <PackageReference Include="System.Linq.Expressions" Version="4.1.0" />
+    <PackageReference Include="System.Reflection" Version="4.1.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.0.1" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.1.0" />
+    <PackageReference Include="System.Threading" Version="4.0.11" />
+    <PackageReference Include="System.Threading.Tasks" Version="4.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ContactIdentificationRepository.cs" />
+    <Compile Include="Repositories\GdprRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>30678</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:30678/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

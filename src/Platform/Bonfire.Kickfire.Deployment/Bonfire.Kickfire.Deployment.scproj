@@ -70,36 +70,36 @@ THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
-    <BundledProject Include="..\..\Feature\ExtremeIpService\tds\Bonfire.Feature.ExtremeIpService.TDS.scproj">
+    <BundledProject Include="..\..\Feature\ExtremeIpService\tds\Bonfire.Feature.ExtremeIpService.Master.scproj">
       <ProjectId>{bcacea64-f105-4f68-9a19-eafed6999452}</ProjectId>
     </BundledProject>
-    <BundledProject Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.TDS.scproj">
+    <BundledProject Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.Master.scproj">
       <ProjectId>{e7e28a9f-6ab0-4214-8d64-5e522a22d597}</ProjectId>
     </BundledProject>
-    <BundledProject Include="..\..\Feature\Kickfire\tds.core\Bonfire.Feature.Kickfire.Analytics.TDS.Core.scproj">
-      <ProjectId>{cfd0f0ba-0207-4b68-84ef-75bd2380adae}</ProjectId>
-    </BundledProject>
-    <BundledProject Include="..\..\Feature\Kickfire\tds.master\Bonfire.Feature.Kickfire.Analytics.TDS.Master.scproj">
-      <ProjectId>{e28bb9b3-cc9d-4607-936c-8c190f5bbfbf}</ProjectId>
-    </BundledProject>
-    <BundledProject Include="..\..\Feature\SicCodeService\tds\Bonfire.Feature.SicCodeService.TDS.scproj">
+    <BundledProject Include="..\..\Feature\SicCodeService\tds\Bonfire.Feature.SicCodeService.Master.scproj">
       <ProjectId>{59aa3021-8d5f-4b76-9ff1-9c3d44e8661d}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Foundation\CacheService\tds\Bonfire.Foundation.Kickfire.CacheService.Master\Bonfire.Foundation.Kickfire.CacheService.Master.scproj">
+      <ProjectId>{a10bfdb2-89c3-445c-9f56-8571ef2e3d7d}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\Foundation\XConnectService\tds\Bonfire.Foundation.XConnectService.Master\Bonfire.Foundation.XConnectService.Master.scproj">
+      <ProjectId>{e090abde-9fe1-40a0-81a7-d5beee3b4578}</ProjectId>
     </BundledProject>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Feature\ExtremeIpService\tds\Bonfire.Feature.ExtremeIpService.TDS.scproj">
+    <ProjectReference Include="..\..\Feature\ExtremeIpService\tds\Bonfire.Feature.ExtremeIpService.Master.scproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.TDS.scproj">
+    <ProjectReference Include="..\..\Feature\KickfireService\tds\Bonfire.Feature.KickfireService.Master.scproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\..\Feature\Kickfire\tds.core\Bonfire.Feature.Kickfire.Analytics.TDS.Core.scproj">
+    <ProjectReference Include="..\..\Feature\SicCodeService\tds\Bonfire.Feature.SicCodeService.Master.scproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\..\Feature\Kickfire\tds.master\Bonfire.Feature.Kickfire.Analytics.TDS.Master.scproj">
+    <ProjectReference Include="..\..\Foundation\CacheService\tds\Bonfire.Foundation.Kickfire.CacheService.Master\Bonfire.Foundation.Kickfire.CacheService.Master.scproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="..\..\Feature\SicCodeService\tds\Bonfire.Feature.SicCodeService.TDS.scproj">
+    <ProjectReference Include="..\..\Foundation\XConnectService\tds\Bonfire.Foundation.XConnectService.Master\Bonfire.Foundation.XConnectService.Master.scproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

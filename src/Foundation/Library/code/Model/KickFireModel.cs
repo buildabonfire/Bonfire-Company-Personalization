@@ -6,37 +6,37 @@ namespace Bonfire.Foundation.Kickfire.Library.Model
     {
         public class Datum
         {
-            public string CID { get; set; }
-            public string name { get; set; }
-            public string website { get; set; }
-            public string street { get; set; }
-            public string city { get; set; }
-            public string regionShort { get; set; }
-            public string region { get; set; }
-            public string postal { get; set; }
-            public string countryShort { get; set; }
-            public string country { get; set; }
-            public string phone { get; set; }
-            public string employees { get; set; }
-            public string revenue { get; set; }
-            public string category { get; set; }
-            public string sicCode { get; set; }
-            public string latitude { get; set; }
-            public string longitude { get; set; }
-            public string stockSymbol { get; set; }
-            public string facebook { get; set; }
-            public string twitter { get; set; }
-            public string linkedIn { get; set; }
-            public string linkedInID { get; set; }
-            public int isISP { get; set; }
-            public int confidence { get; set; }
+            public string Cid { get; set; }
+            public string Name { get; set; }
+            public string Website { get; set; }
+            public string Street { get; set; }
+            public string City { get; set; }
+            public string RegionShort { get; set; }
+            public string Region { get; set; }
+            public string Postal { get; set; }
+            public string CountryShort { get; set; }
+            public string Country { get; set; }
+            public string Phone { get; set; }
+            public string Employees { get; set; }
+            public string Revenue { get; set; }
+            public string Category { get; set; }
+            public string SicCode { get; set; }
+            public string Latitude { get; set; }
+            public string Longitude { get; set; }
+            public string StockSymbol { get; set; }
+            public string Facebook { get; set; }
+            public string Twitter { get; set; }
+            public string LinkedIn { get; set; }
+            public string LinkedInId { get; set; }
+            public int IsIsp { get; set; }
+            public int Confidence { get; set; }
         }
 
         public class RootObject
         {
-            public string status { get; set; }
-            public int results { get; set; }
-            public List<Datum> data { get; set; }
+            public string Status { get; set; }
+            public int Results { get; set; }
+            public List<Datum> Data { get; set; }
             public bool IsError { get; set; }
             public string Message { get; set; }
         }

@@ -6,7 +6,7 @@ namespace Bonfire.Foundation.Kickfire.CacheService.Cache
     {
         public KickFireCache(long maxSize): base("BonFire.KickStart", maxSize)
         {
-
+            
         }
 
         public string Get(string cacheKey)

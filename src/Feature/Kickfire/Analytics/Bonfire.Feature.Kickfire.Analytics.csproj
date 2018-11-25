@@ -263,7 +263,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
-    <Compile Include="Constants\IDs.cs" />
     <Compile Include="Constants\Items.cs" />
     <Compile Include="Constants\Strings.cs" />
     <Compile Include="Constants\Templates.cs" />
@@ -274,21 +273,14 @@
     <Compile Include="Interfaces\Entries\ICustomerLookup.cs" />
     <Compile Include="Interfaces\Entries\IElementCustomerLookup.cs" />
     <Compile Include="Models\Alerts.cs" />
-    <Compile Include="Models\Generated\ContactCustomerLookups.cs" />
-    <Compile Include="Models\Generated\ElementCustomerLookup.cs" />
     <Compile Include="Models\ImportModel.cs" />
-    <Compile Include="Models\Generated\CompanyLookupModel.cs" />
     <Compile Include="Interfaces\ISicCodeModel.cs" />
     <Compile Include="Models\IndexedCompany.cs" />
-    <Compile Include="Dto\ContactInformation.cs" />
-    <Compile Include="Controllers\VisitorController.cs" />
     <Compile Include="Extensions\GuidExtensions.cs" />
     <Compile Include="Models\Readonly\ReadonlyElementCustomerLookup.cs" />
     <Compile Include="Models\TestModel.cs" />
     <Compile Include="Pipelines\CompanyIndexableLoadFields\LoadFields.cs" />
     <Compile Include="Pipelines\createVisit\AdvancedIpData.cs" />
-    <Compile Include="Pipelines\Analytics\MergeContacts\MergeFacets.cs" />
-    <Compile Include="Pipelines\Initialize\RegisterCustomRoute.cs" />
     <Compile Include="Pipelines\Reporting\CompanyInfo\GetCompanyInfoData.cs" />
     <Compile Include="Pipelines\Reporting\CompanyInfo\PopulateWithCompanyData.cs" />
     <Compile Include="Pipelines\Reporting\ConstructCompanyDataTable.cs" />
@@ -305,7 +297,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
