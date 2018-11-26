@@ -4,15 +4,15 @@ using Sitecore.Data.Items;
 
 namespace Bonfire.Feature.KickfireCore.Repository
 {
-    public class SicCodeRepository : ISicCodeRepository
+    public class SicCodeGroupGroupRepository : ISicCodeGroupRepository
     {
         private readonly Database _db;
-        public SicCodeRepository()
+        public SicCodeGroupGroupRepository()
         {
             _db = Sitecore.Configuration.Factory.GetDatabase(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.MasterDatabaseName"));
         }
 
-        public Item GetSicItem(string sicCode)
+        public Item GetSicGroup(string sicCode)
         {
             var item = GetSicCodeItem(sicCode);
             if (item != null)
@@ -27,6 +27,9 @@ namespace Bonfire.Feature.KickfireCore.Repository
         }
 
 
+
+
+
         private Item GetDefaultSicCode()
         {
             var defaultItem = Sitecore.Configuration.Settings.GetAppSetting("Bonfire.Kickfire.DefaultSicCode");
@@ -39,21 +42,12 @@ namespace Bonfire.Feature.KickfireCore.Repository
 
         private Item GetSicCodeItem(string sicCode)
         {
-            var sicCodeOverride = GetSicCodeFromOverride(sicCode);
-            if (sicCodeOverride != null)
-                return sicCodeOverride;
-
             var sicCodeItem = GetSicCodeFromBase(sicCode);
 
             if (sicCodeItem != null)
                 return sicCodeItem;
 
             return GetDefaultSicCode();
-        }
-
-        private Item GetSicCodeFromOverride(string sicCode)
-        {
-            return GetGroupOverrideParent()?.Children.FirstOrDefault(x => x[Templates.SicCodeOverride.Fields.Code] == sicCode);
         }
 
         private Item GetSicCodeFromBase(string sicCode)
@@ -77,16 +71,6 @@ namespace Bonfire.Feature.KickfireCore.Repository
         public Item GetGroupParent()
         {
             var groupSetting = Sitecore.Configuration.Settings.GetAppSetting("Bonfire.Kickfire.Grouping");
-
-            if (_db == null || groupSetting == null || ID.IsID(groupSetting))
-                return null;
-
-            return _db.GetItem(ID.Parse(groupSetting));
-        }
-
-        public Item GetGroupOverrideParent()
-        {
-            var groupSetting = Sitecore.Configuration.Settings.GetAppSetting("Bonfire.Kickfire.Overrides");
 
             if (_db == null || groupSetting == null || ID.IsID(groupSetting))
                 return null;

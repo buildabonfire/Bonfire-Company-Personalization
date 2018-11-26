@@ -37,7 +37,7 @@ namespace Bonfire.Feature.KickfireCore.Helpers
                 }
             }
 
-            return true;
+            return false;
 
         }
 

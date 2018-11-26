@@ -83,7 +83,7 @@
       <LastGenOutput>SicCodes.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\z_Bonfire\Bonfire.Feature.SicCodeService.config" />
+    <Content Include="App_Config\Include\Feature\Bonfire.Feature.SicCodeService.config" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>
@@ -98,6 +98,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\SicCodeRepository.cs" />
     <Compile Include="ServicesConfigurator\DiConfigurator.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

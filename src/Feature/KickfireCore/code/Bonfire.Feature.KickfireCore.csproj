@@ -58,20 +58,27 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\z_Bonfire\Feature\Kickfire.Analytics.config">
+    <Content Include="App_Config\Include\Feature\Kickfire.Analytics.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\z_Bonfire\Sitecore.Support.396075.config.disable" />
+    <Content Include="App_Config\Include\Feature\Sitecore.Support.396075.config.disable" />
+    <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.Registration.config" />
+    <Content Include="App_Config\Sitecore\XConnect.Client.Configuration\Bonfire.Feature.Registration.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
     <Compile Include="Helpers\AnalyticsConfigurationHelper.cs" />
+    <Compile Include="Models\DataModel\CompanyDataModel.cs" />
+    <Compile Include="Models\Facets\CompanyFacet.cs" />
     <Compile Include="Pipelines\createVisit\AdvancedIpData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\ISicCodeRepository.cs" />
-    <Compile Include="Repository\SicCodeRepository.cs" />
+    <Compile Include="Repository\ISicCodeGroupRepository.cs" />
+    <Compile Include="Repository\ISicCodeOverrideRepository.cs" />
+    <Compile Include="Repository\SicCodeGroupGroupRepository.cs" />
+    <Compile Include="Repository\SicCodeOverrideRepository.cs" />
     <Compile Include="ServicesConfigurator\DiConfigurator.cs" />
+    <Compile Include="Services\CompanyConnectService.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,13 +99,15 @@
     <PackageReference Include="Sitecore.Logging" Version="9.0.180604" />
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\Library\code\Bonfire.Foundation.Kickfire.Library.csproj">
       <Project>{1b87945b-cf36-428c-9edd-8d331f8b2806}</Project>
       <Name>Bonfire.Foundation.Kickfire.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\XConnectService\code\Bonfire.Foundation.XConnectService.csproj">
+      <Project>{752c5c9e-a15b-4a29-98b1-35a93c57c35e}</Project>
+      <Name>Bonfire.Foundation.XConnectService</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

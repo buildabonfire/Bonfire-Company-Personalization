@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using Bonfire.Feature.KickfireCore.Helpers;
+using Bonfire.Feature.KickfireCore.Models.Facets;
 using Bonfire.Feature.KickfireCore.Repository;
+using Bonfire.Feature.KickfireCore.Services;
 using Bonfire.Foundation.Kickfire.Library.Model;
 using Bonfire.Foundation.Kickfire.Library.Services;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Pipelines.CreateVisits;
 using Sitecore.Diagnostics;
-using Constants = Bonfire.Feature.KickfireCore.Constants;
 
 namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 {
     public class AdvancedIpData : CreateVisitProcessor
     {
         private readonly ICompanyService _companyService;
-        public ISicCodeRepository _sicCodeRepository { get; }
+        public ISicCodeGroupRepository SicCodeGroupRepository { get; }
 
-        public AdvancedIpData(ISicCodeRepository sicCodeRepository, ICompanyService companyService)
+        public AdvancedIpData(ISicCodeGroupRepository sicCodeGroupRepository, ICompanyService companyService)
         {
             _companyService = companyService;
-            _sicCodeRepository = sicCodeRepository;
+            SicCodeGroupRepository = sicCodeGroupRepository;
         }
 
         public override void Process(CreateVisitArgs args)
@@ -53,7 +54,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             try
             {
                 // check to see if we only want USA to keep the API hits down
-                if (ShouldProcessNonUsa())
+                if (!ShouldProcessNonUsa())
                 {
                     Log.Info("KickFire: Not USA, kicking out", "KickFire");
                     return;
@@ -72,7 +73,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                     AddCompanyData(model);
 
                     // add company information node
-                    AddCompanyInformation(model);
+                    //AddCompanyInformation(model);
 
                     // add the page event
                     //Helpers.Events.PageEvent.RegisterCompanyEvent(model.Data[0].name);
@@ -122,8 +123,6 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             profile.Score(scores);
             profile.UpdatePattern();
 
-            Log.Info("KickFire: Putting user is EngagementPlans plan.", "KickFire");
-
             Log.Info("KickFire: ====== ALL IS DONE ======", "KickFire");
         }
 
@@ -137,9 +136,9 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             }
 
             // get the profile item so we can assign the proper points
-            var profileItem = _sicCodeRepository.GetProfileItemBySicCode(model.Data[0].SicCode);
+            var profileItem = SicCodeGroupRepository.GetProfileItemBySicCode(model.Data[0].SicCode);
 
-            //var groupItem = _sicCodeRepository.GetSicItem(model.Data[0].SicCode);
+            //var groupItem = SicCodeGroupRepository.GetSicGroup(model.Data[0].SicCode);
 
             ProcessProfile(profileItem);
 
@@ -147,35 +146,40 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 
         private static void AddCompanyData(KickFireModel.RootObject model)
         {
-            // convert to xConnect
+            var service = new CompanyConnectService();
+            service.UpdateCompanyFacet(HydrateModel(model));
+        }
 
-            //var data = Tracker.Current.Contact.GetFacet<ICustomerLookup>("CompanyData");
-            //data.Name = model.Data[0].Name;
-            //data.Cid = model.Data[0].Cid;
-            //data.Category = model.Data[0].Category;
-            //data.City = model.Data[0].City;
-            //data.Confidence = model.Data[0].Confidence;
-            //data.Country = model.Data[0].Country;
-            //data.CountryShort = model.Data[0].CountryShort;
-            //data.Employees = model.Data[0].Employees;
-            //data.Facebook = model.Data[0].Facebook;
-            //data.IsIsp = model.Data[0].IsIsp;
-            //data.Latitude = model.Data[0].Latitude;
-            //data.LinkedIn = model.Data[0].LinkedIn;
-            //data.LinkedInId = model.Data[0].LinkedInId;
-            //data.Longitude = model.Data[0].Longitude;
-            //data.Phone = model.Data[0].Phone;
-            //data.Postal = model.Data[0].Postal;
-            //data.Region = model.Data[0].Region;
-            //data.RegionShort = model.Data[0].RegionShort;
-            //data.Revenue = model.Data[0].Revenue;
-            //data.SicCode = model.Data[0].SicCode;
-            //data.StockSymbol = model.Data[0].StockSymbol;
-            //data.Street = model.Data[0].Street;
-            //data.Twitter = model.Data[0].Twitter;
-            //data.Website = model.Data[0].Website;
-            //data.IsIsp = model.Data[0].IsIsp;
-            //data.Confidence = model.Data[0].Confidence;
+        private static CompanyFacet HydrateModel(KickFireModel.RootObject model)
+        {
+            var data = new CompanyFacet();
+            data.Name = model.Data[0].Name;
+            data.Cid = model.Data[0].Cid;
+            data.Category = model.Data[0].Category;
+            data.City = model.Data[0].City;
+            data.Confidence = model.Data[0].Confidence;
+            data.Country = model.Data[0].Country;
+            data.CountryShort = model.Data[0].CountryShort;
+            data.Employees = model.Data[0].Employees;
+            data.Facebook = model.Data[0].Facebook;
+            data.IsIsp = model.Data[0].IsIsp;
+            data.Latitude = model.Data[0].Latitude;
+            data.LinkedIn = model.Data[0].LinkedIn;
+            data.LinkedInId = model.Data[0].LinkedInId;
+            data.Longitude = model.Data[0].Longitude;
+            data.Phone = model.Data[0].Phone;
+            data.Postal = model.Data[0].Postal;
+            data.Region = model.Data[0].Region;
+            data.RegionShort = model.Data[0].RegionShort;
+            data.Revenue = model.Data[0].Revenue;
+            data.SicCode = model.Data[0].SicCode;
+            data.StockSymbol = model.Data[0].StockSymbol;
+            data.Street = model.Data[0].Street;
+            data.Twitter = model.Data[0].Twitter;
+            data.Website = model.Data[0].Website;
+            data.IsIsp = model.Data[0].IsIsp;
+            data.Confidence = model.Data[0].Confidence;
+            return data;
         }
 
         private void AddCompanyInformation(KickFireModel.RootObject model)

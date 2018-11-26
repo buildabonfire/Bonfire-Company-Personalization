@@ -80,7 +80,7 @@
     <Compile Include="ServicesConfigurator\DiConfigurator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\z_Bonfire\Bonfire.Feature.KickfireService.config" />
+    <Content Include="App_Config\Include\Feature\Bonfire.Feature.KickfireService.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Foundation\CacheService\code\Bonfire.Foundation.Kickfire.CacheService.csproj">

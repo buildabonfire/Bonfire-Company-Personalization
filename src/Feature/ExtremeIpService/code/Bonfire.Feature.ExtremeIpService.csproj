@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\z_Bonfire\Bonfire.Feature.ExtremeIpService.config.disable" />
+    <Content Include="App_Config\Include\Feature\Bonfire.Feature.ExtremeIpService.config.disable" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
