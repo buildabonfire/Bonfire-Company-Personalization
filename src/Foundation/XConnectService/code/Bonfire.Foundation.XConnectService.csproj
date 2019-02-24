@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bonfire.Foundation.XConnectService</RootNamespace>
     <AssemblyName>Bonfire.Foundation.XConnectService</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -43,46 +43,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" version="9.0.1" />
-    <PackageReference Include="Sitecore.Analytics.Model.NoReferences" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Analytics.NoReferences" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Analytics.XConnect.NoReferences" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Framework.Conditions" version="1.1.12" />
-    <PackageReference Include="Sitecore.Framework.Configuration.Abstractions" version="2.0.7" />
-    <PackageReference Include="Sitecore.Framework.Configuration.Extensions" version="2.0.7" />
-    <PackageReference Include="Sitecore.Kernel.NoReferences" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Logging" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Logging.Client" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Nexus.Licensing" version="9.0.180604" />
-    <PackageReference Include="Sitecore.NVelocity" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Client" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Client.Configuration" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Collection.Model" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Configuration" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.DependencyInjection" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.DependencyInjection.Web" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Diagnostics" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Logging.Serilog" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Search" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Service" version="9.0.180604" />
-    <PackageReference Include="Sitecore.XConnect.Service.Plugins" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Xdb.Collection" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Xdb.Common.Web" version="9.0.180604" />
-    <PackageReference Include="Sitecore.Zip" version="9.0.180604" />
-    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.3" />
-    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.3" />
-    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.3" />
-    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.0" />
-    <PackageReference Include="Microsoft.Net.Compilers" Version="2.6.1" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" version="11.0.2" />
+    <PackageReference Include="Sitecore.Analytics">
+      <Version>12.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Sitecore.Logging" version="12.0.0" />
+    <PackageReference Include="Sitecore.Logging.Client" version="12.0.0" />
+    <PackageReference Include="Sitecore.Nexus.Licensing" version="2.0.5" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.4" />
+    <PackageReference Include="Microsoft.AspNet.Razor" Version="3.2.4" />
+    <PackageReference Include="Microsoft.AspNet.WebPages" Version="3.2.4" />
+    <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Net.Compilers" Version="2.10.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="Sitecore.Abstractions.NoReferences" Version="9.0.180604" />
-    <PackageReference Include="Sitecore.ContentSearch.Linq.NoReferences" Version="9.0.180604" />
-    <PackageReference Include="Sitecore.ContentSearch.NoReferences" Version="9.0.180604" />
-    <PackageReference Include="Sitecore.Mvc.NoReferences" Version="9.0.180604" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
     <PackageReference Include="System.Collections.Concurrent" Version="4.0.12" />
     <PackageReference Include="System.ComponentModel" Version="4.0.1" />

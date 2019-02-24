@@ -10,13 +10,13 @@ namespace Bonfire.Feature.KickfireCore.Helpers
         {
             if (!string.IsNullOrEmpty(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ConfigPath")))
             {
-                var ConfigItemPath = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ConfigPath");
+                var configItemPath = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ConfigPath");
 
-                var ConfigItem = Sitecore.Context.Database.GetItem(ConfigItemPath);
+                var configItem = Sitecore.Context.Database.GetItem(configItemPath);
 
-                if (ConfigItem == null)
-                    Log.Info("The configuration item is empty. Did you forget to publish? Configuration item is located at " + ConfigItemPath + ".", new System.Exception("config item null"));
-                return ConfigItem;
+                if (configItem == null)
+                    Log.Info("The configuration item is empty. Did you forget to publish? Configuration item is located at " + configItemPath + ".", new System.Exception("config item null"));
+                return configItem;
             }
 
             return null;

@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a3f0f07b-9459-4095-9643-4e84b2bffbde</ProjectGuid>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>Bonfire.Kickfire.Deployment</SingleAssemblyName>
+    <UseWebConfigReplacement>false</UseWebConfigReplacement>
+    <DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+    <LegacyFileReplacement>false</LegacyFileReplacement>
+    <AssemblyName>Bonfire.Kickfire.Deployment</AssemblyName>
+    <Name>Bonfire.Kickfire.Deployment</Name>
+    <RootNamespace>Bonfire.Kickfire.Deployment</RootNamespace>
+    <ManageRoles>False</ManageRoles>
+    <SitecoreDatabase>master</SitecoreDatabase>
+    <AssemblyStatus>Include</AssemblyStatus>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <PackageName>Bonfire.Kickfire.Deployment</PackageName>
+    <PackageAuthor>Bonfire</PackageAuthor>
+    <PackagePublisher>Bonfire</PackagePublisher>
+    <PackageVersion />
+    <PackageReadme>
+    </PackageReadme>
+    <SitecoreAssemblyPath />
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\Bonfire.Kickfire.Deployment_Debug.xml</ValidationSettingsFilePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <PackageName>Bonfire.Kickfire.Deployment</PackageName>
+    <PackageAuthor>Bonfire</PackageAuthor>
+    <PackagePublisher />
+    <PackageVersion />
+    <PackageReadme>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;quot;Software&amp;quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</PackageReadme>
+    <SitecoreAssemblyPath />
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>False</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <BundledProject Include="..\..\..\Project\Kickfire\tds\Kickfire.Content.Master\Kickfire.Content.Master.scproj">
+      <ProjectId>{e28bb9b3-cc9d-4607-936c-8c190f5bbfbf}</ProjectId>
+    </BundledProject>
+  </ItemGroup>
+  <ItemGroup>
+    <SourceWebProjects Include="{6a8a18d8-6e93-49a6-81f7-82d75401ff94}|src\Feature\SicCodeService\code\Bonfire.Feature.SicCodeService.csproj">
+      <SourceWebPhysicalPath>..\..\..\Feature\SicCodeService\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Bonfire.Feature.SicCodeService.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>6a8a18d8-6e93-49a6-81f7-82d75401ff94</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{752c5c9e-a15b-4a29-98b1-35a93c57c35e}|src\Foundation\XConnectService\code\Bonfire.Foundation.XConnectService.csproj">
+      <SourceWebPhysicalPath>..\..\..\Foundation\XConnectService\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Bonfire.Foundation.XConnectService.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>752c5c9e-a15b-4a29-98b1-35a93c57c35e</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{b844f84c-4a3b-4731-a3d8-780bce4dd8c8}|src\Feature\KickfireService\code\Bonfire.Feature.KickfireService.csproj">
+      <SourceWebPhysicalPath>..\..\..\Feature\KickfireService\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Bonfire.Feature.KickfireService.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>b844f84c-4a3b-4731-a3d8-780bce4dd8c8</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{c6cdfae6-beea-41a4-984f-c3dc57aac55e}|src\Foundation\CacheService\code\Bonfire.Foundation.Kickfire.CacheService.csproj">
+      <SourceWebPhysicalPath>..\..\..\Foundation\CacheService\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Bonfire.Foundation.Kickfire.CacheService.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>c6cdfae6-beea-41a4-984f-c3dc57aac55e</SourceWebProjectId>
+    </SourceWebProjects>
+    <SourceWebProjects Include="{cf2ea81a-ec3a-4833-8de6-798bf884a4c2}|src\Feature\KickfireCore\code\Bonfire.Feature.KickfireCore.csproj">
+      <SourceWebPhysicalPath>..\..\..\Feature\KickfireCore\code</SourceWebPhysicalPath>
+      <SourceWebVirtualPath>/Bonfire.Feature.KickfireCore.csproj</SourceWebVirtualPath>
+      <SourceWebProjectId>cf2ea81a-ec3a-4833-8de6-798bf884a4c2</SourceWebProjectId>
+    </SourceWebProjects>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Feature\KickfireCore\code\Bonfire.Feature.KickfireCore.csproj">
+      <Project>{cf2ea81a-ec3a-4833-8de6-798bf884a4c2}</Project>
+      <Name>Bonfire.Feature.KickfireCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Feature\KickfireService\code\Bonfire.Feature.KickfireService.csproj">
+      <Project>{b844f84c-4a3b-4731-a3d8-780bce4dd8c8}</Project>
+      <Name>Bonfire.Feature.KickfireService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Feature\SicCodeService\code\Bonfire.Feature.SicCodeService.csproj">
+      <Project>{6a8a18d8-6e93-49a6-81f7-82d75401ff94}</Project>
+      <Name>Bonfire.Feature.SicCodeService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\CacheService\code\Bonfire.Foundation.Kickfire.CacheService.csproj">
+      <Project>{c6cdfae6-beea-41a4-984f-c3dc57aac55e}</Project>
+      <Name>Bonfire.Foundation.Kickfire.CacheService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\XConnectService\code\Bonfire.Foundation.XConnectService.csproj">
+      <Project>{752c5c9e-a15b-4a29-98b1-35a93c57c35e}</Project>
+      <Name>Bonfire.Foundation.XConnectService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ExcludedAssemblies Include="Bonfire.%2a" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
+</Project>

@@ -22,6 +22,8 @@ namespace Bonfire.Feature.KickfireCore.Models.Facets
         public string Employees { get; set; }
         public string Revenue { get; set; }
         public string Category { get; set; }
+        public string Category2 { get; set; }
+        public string NaicsCode { get; set; }
         public string SicCode { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
@@ -29,7 +31,6 @@ namespace Bonfire.Feature.KickfireCore.Models.Facets
         public string Facebook { get; set; }
         public string Twitter { get; set; }
         public string LinkedIn { get; set; }
-        public string LinkedInId { get; set; }
         public int IsIsp { get; set; }
         public int Confidence { get; set; }
     }

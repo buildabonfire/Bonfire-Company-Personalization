@@ -1,5 +1,7 @@
 ﻿
 
+using Bonfire.Foundation.Kickfire.Library.Model;
+
 namespace Bonfire.Feature.KickfireCore.Repository
 {
     using System.Linq;
@@ -9,14 +11,27 @@ namespace Bonfire.Feature.KickfireCore.Repository
     public class SicCodeOverrideRepository : ISicCodeOverrideRepository
     {
         private readonly Database _db;
+
         public SicCodeOverrideRepository()
         {
-            _db = Sitecore.Configuration.Factory.GetDatabase(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.MasterDatabaseName"));
+            _db = Sitecore.Configuration.Factory.GetDatabase(
+                Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.MasterDatabaseName"));
         }
 
-        public Item GetSicCodeFromOverride(string sicCode)
+        public SicCodeModel GetSicCodeFromOverride(string sicCode)
         {
-            return GetGroupOverrideParent()?.Children.FirstOrDefault(x => x[Templates.SicCodeOverride.Fields.Code] == sicCode);
+            var sicItem = GetGroupOverrideParent()?.Children
+                .FirstOrDefault(x => x[Templates.SicCodeOverride.Fields.Code] == sicCode);
+
+            return sicItem == null ? null : CreateSicCodeModel(sicItem);
+        }
+
+        public Item GetSicCodeItemFromOverride(string sicCode)
+        {
+            var sicItem = GetGroupOverrideParent()?.Children
+                .FirstOrDefault(x => x[Templates.SicCodeOverride.Fields.Code] == sicCode);
+
+            return sicItem;
         }
 
         public Item GetGroupOverrideParent()
@@ -27,6 +42,18 @@ namespace Bonfire.Feature.KickfireCore.Repository
                 return null;
 
             return _db.GetItem(ID.Parse(groupSetting));
+        }
+
+        private SicCodeModel CreateSicCodeModel(Item item)
+        {
+            int.TryParse(item[Templates.SicCodeOverride.Fields.Code], out var sicId);
+
+            return new SicCodeModel
+            {
+                Description = item[Templates.SicCodeOverride.Fields.Description],
+                Grouping = item[Templates.SicCodeOverride.Fields.Grouping],
+                SicCode = sicId
+            };
         }
     }
 }

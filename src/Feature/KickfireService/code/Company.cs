@@ -24,11 +24,10 @@ namespace Bonfire.Feature.KickfireService
             if (string.IsNullOrWhiteSpace(company))
             {
                 company = CallApiService(clientIp, apiKey, apiUrl);
-
                 CacheBuilder.KickFireCache.Set(clientIp, company);
             }
             else
-                Log.Info("KickFire: Got company from cache. " + clientIp, "KickFire");
+                Log.Debug("KickFire: Got company from cache. " + clientIp, "KickFire");
 
             var data =  JsonConvert.DeserializeObject<KickFireModel.RootObject>(company);
             data.IsError = false;
@@ -40,7 +39,7 @@ namespace Bonfire.Feature.KickfireService
         {
             string company;
             var apiCall = GetApiUrl(clientIp, apiKey, apiUrl);
-            Log.Info($"KickFire: Calling url {apiCall}", "KickFire");
+            Log.Debug($"KickFire: Calling url {apiCall}", "KickFire");
             var webRequest = WebRequest.Create(apiCall);
 
             using (var response = webRequest.GetResponse())
@@ -54,7 +53,7 @@ namespace Bonfire.Feature.KickfireService
                 response.Close();
             }
 
-            Log.Info("KickFire: API call for " + clientIp + "|" + company, "KickFire");
+            Log.Debug("KickFire: API call for " + clientIp + "|" + company, "KickFire");
             return company;
         }
 

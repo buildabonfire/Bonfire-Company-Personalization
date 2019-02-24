@@ -27,7 +27,8 @@ namespace Bonfire.Foundation.Kickfire.Library.Model
             public string Facebook { get; set; }
             public string Twitter { get; set; }
             public string LinkedIn { get; set; }
-            public string LinkedInId { get; set; }
+            public string Category2 { get; set; }
+            public string NaicsCode { get; set; }
             public int IsIsp { get; set; }
             public int Confidence { get; set; }
         }
