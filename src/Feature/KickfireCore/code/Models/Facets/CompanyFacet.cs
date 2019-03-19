@@ -7,7 +7,13 @@ namespace Bonfire.Feature.KickfireCore.Models.Facets
     [FacetKey(DefaultFacetKey)]
     public class CompanyFacet : Facet
     {
-        public const string DefaultFacetKey = "CompanyFacet";
+        public CompanyFacet()
+        {
+
+        }
+
+        public const string DefaultFacetKey = "Company";
+
         public string Cid { get; set; }
         public string Name { get; set; }
         public string Website { get; set; }
