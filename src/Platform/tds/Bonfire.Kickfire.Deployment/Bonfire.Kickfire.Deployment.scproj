@@ -119,6 +119,9 @@ THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND
       <Project>{752c5c9e-a15b-4a29-98b1-35a93c57c35e}</Project>
       <Name>Bonfire.Foundation.XConnectService</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Project\Kickfire\tds\Kickfire.Content.Master\Kickfire.Content.Master.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ExcludedAssemblies Include="Bonfire.%2a" />

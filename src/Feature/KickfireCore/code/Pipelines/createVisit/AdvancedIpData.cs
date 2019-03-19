@@ -80,12 +80,6 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             // add company data to xDB
             AddCompanyData(model);
 
-            // add company information node
-            //AddCompanyInformation(model);
-
-            // add the page event
-            //Helpers.Events.PageEvent.RegisterCompanyEvent(model.Data[0].name);
-
             Log.Info("KickFire: Logged for " + clientIp, "KickFire");
 
             bool.TryParse(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ProcessSicCode"),

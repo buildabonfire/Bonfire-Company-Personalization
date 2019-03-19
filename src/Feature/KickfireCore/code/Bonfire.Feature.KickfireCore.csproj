@@ -58,16 +58,21 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Kickfire.Analytics.config">
+    <Content Include="App_Config\Modules\Kickfire\Bonfire.Feature.Analytics.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Feature\Sitecore.Support.396075.config.disable" />
+    <Content Include="App_Config\Modules\Kickfire\Sitecore.Support.396075.config.disable" />
     <Content Include="App_Config\Sitecore\Marketing.Tracking\Sitecore.Analytics.Registration.config" />
-    <Content Include="App_Config\Sitecore\XConnect.Client.Configuration\Bonfire.Feature.Registration.config" />
-    <None Include="Web.config" />
+    <Content Include="App_Config\Sitecore\XConnect.Client.Configuration\Bonfire.Feature.Registration.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Extensions\ContactExtensions.cs" />
     <Compile Include="Helpers\AnalyticsConfigurationHelper.cs" />
     <Compile Include="Models\DataModel\CompanyDataModel.cs" />
     <Compile Include="Models\Facets\CompanyFacet.cs" />
@@ -77,6 +82,8 @@
     <Compile Include="Repository\ISicCodeOverrideRepository.cs" />
     <Compile Include="Repository\SicCodeGroupGroupRepository.cs" />
     <Compile Include="Repository\SicCodeOverrideRepository.cs" />
+    <Compile Include="Rules\Conditions\CompanyIncomeCondition.cs" />
+    <Compile Include="Rules\Conditions\CompanySizeCondition.cs" />
     <Compile Include="ServicesConfigurator\DiConfigurator.cs" />
     <Compile Include="Services\CompanyConnectService.cs" />
     <Compile Include="Templates.cs" />
