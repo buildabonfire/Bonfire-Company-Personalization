@@ -1,0 +1,28 @@
+﻿@model Bonfire.Feature.KickfireCore.Models.Facets.CompanyFacet
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Kickfire Data</h1>
+        </div>
+    </div>
+    @if (Model != null)
+    {
+        <div class="row mb-3">
+            <div class="col-md-2">
+                Employees
+            </div>
+            <div class="col-md-2">
+                @Model.Employees
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-2">
+                Revenue
+            </div>
+            <div class="col-md-2">
+                @Model.Revenue
+            </div>
+        </div>
+    }
+</div>

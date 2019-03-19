@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {38F1F36D-3E17-4D92-8D26-6D0AD5399B90}
+database: master
+path: /sitecore/content/Home/Demo
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: Demo
+master: {00000000-0000-0000-0000-000000000000}
+template: {1F2FC5C0-D682-4837-8951-A5E9ECD0647A}
+templatekey: DemoPage
+created: 20190319T183447Z
+
+----version----
+language: en
+version: 1
+revision: 9188ea22-2598-45d4-987d-fabed1f1841e
+
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 253
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DCD01BA4-4781-4D04-8658-425F7B16542A}" s:ds="{00A4924D-EF56-4976-B80D-FA364247B729}" s:id="{FCE4B116-DD33-41E1-85C7-81106CB04E9A}" s:par="" s:ph="main" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20190319T183447Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9188ea22-2598-45d4-987d-fabed1f1841e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20190319T184258Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

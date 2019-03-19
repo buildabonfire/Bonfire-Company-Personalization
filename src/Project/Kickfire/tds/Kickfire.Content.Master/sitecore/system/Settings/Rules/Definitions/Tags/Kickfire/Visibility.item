@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {D5382AF2-CAB9-4F61-8B2B-D979A28C49C5}
+id: {E0A9237A-AA19-4B5C-AD3A-010244A3E089}
 database: master
-path: /sitecore/system/Settings/Rules/Definitions/Tags/Company/Visibility
-parent: {B4F00024-9101-4905-8047-7579F9EC11AD}
+path: /sitecore/system/Settings/Rules/Definitions/Tags/Kickfire/Visibility
+parent: {6CA2FF32-C537-45AD-BBB2-838444CFAEE9}
 name: Visibility
 master: {60E3E35B-CEF9-4AFA-9F89-204ED015CCB9}
 template: {AA91A868-02F2-41D3-8B78-1CAD91B4DCAE}
 templatekey: Visibility
-created: 20170622T222620Z
+created: 20190319T190809Z
 
 ----field----
 field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 14fbbf05-1db1-43e7-8a14-3f02524e51cd
+revision: a914c177-0a1d-48dd-bee1-0524e61ebfc1
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170622T222620Z
+20190319T190809Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-14fbbf05-1db1-43e7-8a14-3f02524e51cd
+a914c177-0a1d-48dd-bee1-0524e61ebfc1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T222620Z
+20190319T190809Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

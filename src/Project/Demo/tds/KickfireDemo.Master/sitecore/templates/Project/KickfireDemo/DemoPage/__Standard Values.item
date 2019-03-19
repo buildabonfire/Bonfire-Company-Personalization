@@ -1,26 +1,26 @@
 ----item----
 version: 1
-id: {2D9F124F-4B5E-4F16-816A-2D18DE87069B}
+id: {0733EA29-4951-47F6-A770-126E1D54FE68}
 database: master
-path: /sitecore/system/Settings/Rules/Definitions/Elements/Company/Visibility
-parent: {603D0548-D813-40AA-8612-5E16CB5BFEB2}
-name: Visibility
-master: {9A72C539-DBF8-4DAD-96D3-A298FC04ADD6}
-template: {AA91A868-02F2-41D3-8B78-1CAD91B4DCAE}
-templatekey: Visibility
-created: 20170622T221440Z
+path: /sitecore/templates/Project/KickfireDemo/DemoPage/__Standard Values
+parent: {1F2FC5C0-D682-4837-8951-A5E9ECD0647A}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {1F2FC5C0-D682-4837-8951-A5E9ECD0647A}
+templatekey: DemoPage
+created: 20190319T183321Z
 
 ----field----
-field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
-name: __Originator
-key: __originator
-content-length: 38
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 145
 
-{283F6CD6-EFB8-47AC-946A-ABB17FA45ECB}
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{4AA37460-23BA-4A1F-940D-3F9AB66122CD}" /></r>
 ----version----
 language: en
 version: 1
-revision: 4378ccf1-fe28-4cca-ac63-28d6997e1310
+revision: 35bc65da-e41c-4b6d-84c8-3d1ded532e95
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170622T221440Z
+20190319T183321Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4378ccf1-fe28-4cca-ac63-28d6997e1310
+35bc65da-e41c-4b6d-84c8-3d1ded532e95
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T221440Z
+20190319T183355Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

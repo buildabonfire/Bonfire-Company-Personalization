@@ -1,0 +1,59 @@
+----item----
+version: 1
+id: {4AA37460-23BA-4A1F-940D-3F9AB66122CD}
+database: master
+path: /sitecore/layout/Layouts/Project/MVC Layout
+parent: {DA04B275-8838-4A3A-AFEE-817CF1FDD2EB}
+name: MVC Layout
+master: {00000000-0000-0000-0000-000000000000}
+template: {3A45A723-64EE-4919-9D41-02FD40FD1466}
+templatekey: Layout
+created: 20190319T182707Z
+
+----field----
+field: {A036B2BC-BA04-44F6-A75F-BAE6CD242ABF}
+name: Path
+key: path
+content-length: 31
+
+/Views/Shared/MVC Layout.cshtml
+----version----
+language: en
+version: 1
+revision: a3403077-086e-4119-b524-a92d9849b966
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20190319T182707Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a3403077-086e-4119-b524-a92d9849b966
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20190319T182707Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

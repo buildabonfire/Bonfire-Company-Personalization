@@ -32,5 +32,27 @@ namespace Bonfire.Feature.KickfireCore
                 public static ID SkipNonUsa = new ID("{99CA527F-E76D-4ACF-A121-152D360EBB07}");
             }
         }
+
+        public struct Employees
+        {
+            public static ID Id = new ID("{46E6AB99-6CEF-4A90-ADF6-173B79958D59}");
+
+            public struct Fields
+            {
+                public static ID Range = new ID("{F4B02179-62C8-4D4F-8EC6-4B77D3411D30}");
+               
+            }
+        }
+
+        public struct Revenue
+        {
+            public static ID Id = new ID("{8E453E67-C2F6-4E80-83CD-CB63839F44E3}");
+
+            public struct Fields
+            {
+                public static ID Range = new ID("{1A01C3B3-C865-4D5D-B70A-F0EC03431F56}");
+               
+            }
+        }
     }
 }

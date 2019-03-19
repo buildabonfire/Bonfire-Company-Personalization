@@ -1,26 +1,33 @@
 ----item----
 version: 1
-id: {B4F00024-9101-4905-8047-7579F9EC11AD}
+id: {B3C8A24C-40B3-4E3E-A064-F18ABAC87C98}
 database: master
-path: /sitecore/system/Settings/Rules/Definitions/Tags/Company
-parent: {DADB4F93-477F-491F-A905-C4005C452E67}
-name: Company
-master: {60E3E35B-CEF9-4AFA-9F89-204ED015CCB9}
-template: {1A9B6300-4652-477C-A4B5-B2A64E86B29F}
-templatekey: Tag
-created: 20170622T222620Z
+path: /sitecore/layout/Placeholder Settings/Project/KickfireDemo/main
+parent: {B542357E-B925-4CDE-A8A1-CA3E820047DB}
+name: main
+master: {00000000-0000-0000-0000-000000000000}
+template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
+templatekey: Placeholder
+created: 20190319T184108Z
 
 ----field----
-field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
-name: __Originator
-key: __originator
+field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
+name: Placeholder Key
+key: placeholder key
+content-length: 4
+
+main
+----field----
+field: {E391B526-D0C5-439D-803E-17512EAE6222}
+name: Allowed Controls
+key: allowed controls
 content-length: 38
 
-{0C559214-E3B6-418E-9E1C-8AF7B19FC20B}
+{FCE4B116-DD33-41E1-85C7-81106CB04E9A}
 ----version----
 language: en
 version: 1
-revision: 969560ce-8018-44b2-a0d6-8f5d9b481c36
+revision: b1d60000-ccae-4770-82c3-c2a11176c73d
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -28,14 +35,14 @@ name: __Owner
 key: __owner
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170622T222620Z
+20190319T184108Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-969560ce-8018-44b2-a0d6-8f5d9b481c36
+b1d60000-ccae-4770-82c3-c2a11176c73d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T222620Z
+20190319T184138Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -17,7 +17,7 @@ namespace Bonfire.Feature.KickfireCore.Services
             _contactIdentificationRepository = new ContactIdentificationRepository();
         }
 
-        public void UpdateCompanyFacet(CompanyFacet model)
+        public void UpdateCompanyDataOnClient(CompanyFacet model)
         {
             var contactReference = _contactIdentificationRepository.GetContactReference();
 

@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {B0C4CDBF-A767-4AA2-9753-37C3E6C1327F}
+id: {89CDFD2F-352F-4249-8E48-E890A533C46B}
 database: master
-path: /sitecore/system/Settings/Rules/Definitions/Elements/Company/Tags
-parent: {603D0548-D813-40AA-8612-5E16CB5BFEB2}
-name: Tags
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Kickfire
+parent: {E7CBEFE8-9112-4B95-A978-4E470D94C54A}
+name: Kickfire
 master: {9A72C539-DBF8-4DAD-96D3-A298FC04ADD6}
-template: {96C8E5DD-63C3-496B-A97C-A3E37E1DACBA}
-templatekey: Tags Definitions Folder
-created: 20170622T221440Z
+template: {54DAE7CD-BFD8-4E69-9679-75F2AE9F9034}
+templatekey: Element Folder
+created: 20190319T185137Z
 
 ----field----
 field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
@@ -16,11 +16,11 @@ name: __Originator
 key: __originator
 content-length: 38
 
-{FD4268C6-E588-4C19-B141-B1AAD488887D}
+{8D1DB71C-9ACF-4192-8384-5F9B6D533F95}
 ----version----
 language: en
 version: 1
-revision: ba0bba65-4186-40ca-a2ff-0d3f4b83c18b
+revision: 1dc634c1-e797-4083-9d27-93ed95bea99e
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170622T221440Z
+20190319T185137Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ba0bba65-4186-40ca-a2ff-0d3f4b83c18b
+1dc634c1-e797-4083-9d27-93ed95bea99e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T221440Z
+20190319T185137Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,34 +1,34 @@
 ----item----
 version: 1
-id: {8BB39463-B7B0-4989-A8E3-608D58ED2971}
+id: {33EED952-2F6C-4F1F-B97C-5C2F04794E0B}
 database: master
-path: /sitecore/system/Settings/Rules/Definitions/Elements/Company/Company Name
-parent: {603D0548-D813-40AA-8612-5E16CB5BFEB2}
-name: Company Name
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Kickfire/Employees
+parent: {89CDFD2F-352F-4249-8E48-E890A533C46B}
+name: Employees
 master: {00000000-0000-0000-0000-000000000000}
 template: {F0D16EEE-3A05-4E43-A082-795A32B873C0}
 templatekey: Condition
-created: 20170622T221718Z
+created: 20190319T185358Z
 
 ----field----
 field: {AB51C8B2-F0E1-4471-9AAE-CC080D774923}
 name: Type
 key: type
-content-length: 90
+content-length: 98
 
-Bonfire.Feature.Kickfire.Analytics.Rules.CompanyNameIs, Bonfire.Feature.Kickfire.Analytics
+Bonfire.Feature.KickfireCore.Rules.Conditions.EmployeeCountCondition, Bonfire.Feature.KickfireCore
 ----version----
 language: en
 version: 1
-revision: 91967287-ff01-471f-b2b8-2369b55420be
+revision: fafb361b-f361-432e-8d1c-72aed0bf4509
 
 ----field----
 field: {AF321234-4EB9-4EF5-9197-65903351939C}
 name: Text
 key: text
-content-length: 84
+content-length: 128
 
-When Company name  [operatorid,StringOperator,,compares to] [value,,,specific value]
+where the contact's employee range matches [EmployeeCount,Tree,root=/sitecore/system/Modules/KickFire/Employees, employee count]
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170622T221718Z
+20190319T185358Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-91967287-ff01-471f-b2b8-2369b55420be
+fafb361b-f361-432e-8d1c-72aed0bf4509
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170622T232222Z
+20190319T190312Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

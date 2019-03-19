@@ -18,7 +18,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
         private readonly ICompanyService _companyService;
         private readonly ISicCodeOverrideRepository _sicCodeOverrideRepository;
         private readonly ISicCodeRepository _sicCodeRepository;
-        private readonly ISicCodeGroupRepository _sicCodeGroupRepositor;
+        private readonly ISicCodeGroupRepository _sicCodeGroupRepository;
 
         public AdvancedIpData(ISicCodeGroupRepository sicCodeGroupRepository, 
             ICompanyService companyService, 
@@ -28,7 +28,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             _companyService = companyService;
             _sicCodeOverrideRepository = sicCodeOverrideRepository;
             _sicCodeRepository = sicCodeRepository;
-            _sicCodeGroupRepositor = sicCodeGroupRepository;
+            _sicCodeGroupRepository = sicCodeGroupRepository;
         }
 
         public override void Process(CreateVisitArgs args)
@@ -78,7 +78,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
         private void ProcessValidRequest(KickFireModel.RootObject model, string clientIp)
         {
             // add company data to xDB
-            AddCompanyData(model);
+            UpdateCompanyDataOnClient(model);
 
             Log.Info("KickFire: Logged for " + clientIp, "KickFire");
 
@@ -162,7 +162,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             }
 
             // get the profile item so we can assign the proper points
-            var profileItem = _sicCodeGroupRepositor.GetProfileItemBySicCode(model.Data[0].SicCode);
+            var profileItem = _sicCodeGroupRepository.GetProfileItemBySicCode(model.Data[0].SicCode);
 
             //var groupItem = SicCodeGroupRepository.GetSicGroup(model.Data[0].SicCode);
 
@@ -170,10 +170,10 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 
         }
 
-        private static void AddCompanyData(KickFireModel.RootObject model)
+        private static void UpdateCompanyDataOnClient(KickFireModel.RootObject model)
         {
             var service = new CompanyConnectService();
-            service.UpdateCompanyFacet(HydrateCompanyModel(model));
+            service.UpdateCompanyDataOnClient(HydrateCompanyModel(model));
         }
 
         private static CompanyFacet HydrateCompanyModel(KickFireModel.RootObject model)
