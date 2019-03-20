@@ -18,6 +18,8 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
             Assert.IsNotNull((object)Tracker.Current, "Tracker.Current is not initialized");
 
             var xConnectFacet = Tracker.Current.Contact.GetFacet<IXConnectFacets>("XConnectFacets");
+            if (xConnectFacet.Facets == null) return false;
+
             var company = xConnectFacet.Facets[CompanyFacet.DefaultFacetKey] as CompanyFacet;
 
             return this.Compare(this.GetVisitStringValue(company), this.GetValue(ruleContext));

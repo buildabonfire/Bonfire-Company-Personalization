@@ -82,6 +82,7 @@
     <Compile Include="Repository\ISicCodeOverrideRepository.cs" />
     <Compile Include="Repository\SicCodeGroupGroupRepository.cs" />
     <Compile Include="Repository\SicCodeOverrideRepository.cs" />
+    <Compile Include="Rules\Conditions\FacetPropertyCondition.cs" />
     <Compile Include="Rules\Conditions\CompanyFacetCondition.cs" />
     <Compile Include="Rules\Conditions\CompanyIncomeCondition.cs" />
     <Compile Include="Rules\Conditions\CompanyNameCondition.cs" />
