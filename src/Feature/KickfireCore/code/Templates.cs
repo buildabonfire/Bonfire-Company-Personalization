@@ -54,5 +54,17 @@ namespace Bonfire.Feature.KickfireCore
                
             }
         }
+
+        public struct Region
+        {
+            public static ID Id = new ID("{A6DA2DB8-7ABC-4C30-AFEF-920A7831F706}");
+
+            public struct Fields
+            {
+                public static ID Code = new ID("{47308B97-FD4D-47C7-8091-EF7B1A944251}");
+                public static ID Description = new ID("{1A01C3B3-C865-4D5D-B70A-F0EC03431F56}");
+
+            }
+        }
     }
 }
