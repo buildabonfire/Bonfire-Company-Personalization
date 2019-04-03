@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {6F3EA3B4-4DAB-40FE-AA39-F5548AA9FB78}
+id: {C25CA74E-A99C-45B7-A12F-250F7E9489F5}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Business Associations-8611
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Business Associations-8611
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011803Z
+created: 20190403T022055Z
 
 ----version----
 language: en
 version: 1
-revision: e88ddf65-404a-42c8-b14b-d2513ed2a169
+revision: d6b34312-8232-4461-ba13-cbb803c1a4f0
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 21
 
 Business Associations
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{E0D87B6D-A896-4197-BE0B-B14BFDFDD302}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011803Z
+20190403T022055Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e88ddf65-404a-42c8-b14b-d2513ed2a169
+d6b34312-8232-4461-ba13-cbb803c1a4f0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011803Z
+20190403T022055Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

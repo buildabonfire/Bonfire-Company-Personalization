@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {4387A3A9-E267-412E-83E6-BA3B0C0C48E3}
+id: {FBEE4B2A-E619-4D9D-AC7C-FF4051296718}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Jewelry Precious Metal-3911
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Jewelry Precious Metal-3911
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011702Z
+created: 20190403T021932Z
 
 ----version----
 language: en
 version: 1
-revision: 056859b3-7478-4eff-80ba-459acb535883
+revision: 3cf1ebad-01d0-4f5c-bd2c-a4e7c625a11f
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 23
 
 Jewelry, Precious Metal
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{74AF7DCB-2B0C-42FE-85D2-FA090CA8ED21}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011702Z
+20190403T021932Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-056859b3-7478-4eff-80ba-459acb535883
+3cf1ebad-01d0-4f5c-bd2c-a4e7c625a11f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011702Z
+20190403T021932Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

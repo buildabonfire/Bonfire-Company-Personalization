@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {92BE1CC3-2BDD-4B95-979C-03109C76C797}
+id: {C20C9AF0-5CCB-4CBA-A9E1-2BC495C656CA}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Natural Gas Distribution-4924
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Natural Gas Distribution-4924
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011714Z
+created: 20190403T021949Z
 
 ----version----
 language: en
 version: 1
-revision: cdc617e4-64b1-46ff-b87b-34a557a41aa3
+revision: cdfc7e7e-6110-4060-a3cc-b1d07cf948ae
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 24
 
 Natural Gas Distribution
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{75A4E1C4-184F-4E52-B4A8-DB16ABC9AA5B}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011714Z
+20190403T021949Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cdc617e4-64b1-46ff-b87b-34a557a41aa3
+cdfc7e7e-6110-4060-a3cc-b1d07cf948ae
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011714Z
+20190403T021949Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

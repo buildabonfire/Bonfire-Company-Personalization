@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {94851B2A-8B13-4529-B788-E842B7902438}
+id: {59F43373-C7F4-4F90-B1B2-1EE08CFFEC92}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Setup Paperboard Boxes-2652
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Setup Paperboard Boxes-2652
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011616Z
+created: 20190403T021843Z
 
 ----version----
 language: en
 version: 1
-revision: 6d20b7ac-8cf8-4425-abfd-d37a5c450020
+revision: 444dc11b-4730-4435-8048-54596010e3da
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 22
 
 Setup Paperboard Boxes
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{07C0739E-EF23-4F3D-8DCE-9769F3704B98}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011616Z
+20190403T021843Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6d20b7ac-8cf8-4425-abfd-d37a5c450020
+444dc11b-4730-4435-8048-54596010e3da
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011616Z
+20190403T021843Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {06DF2908-15C2-492C-88BB-4F8BEA055B83}
+id: {857EBE8E-AD6B-49E2-BFCE-7AA4B634E766}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Canned Fruits And Specialties-2033
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Canned Fruits And Specialties-2033
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011558Z
+created: 20190403T021825Z
 
 ----version----
 language: en
 version: 1
-revision: 2cfe4699-58f9-41d2-8943-5e2ea6dfe075
+revision: ea76b7c2-3415-4cb5-a2d3-9d016513f911
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 29
 
 Canned Fruits And Specialties
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{E1AC0171-2913-4C79-8D85-9FC4CE153A5A}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011558Z
+20190403T021825Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2cfe4699-58f9-41d2-8943-5e2ea6dfe075
+ea76b7c2-3415-4cb5-a2d3-9d016513f911
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011558Z
+20190403T021825Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

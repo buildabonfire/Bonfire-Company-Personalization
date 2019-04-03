@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {54FBE5C5-18BA-4D98-A00D-1B99BD06EE72}
+id: {A0295E9E-9494-40DB-A3A2-3E1655053459}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Pulp Mills-2611
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Pulp Mills-2611
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011615Z
+created: 20190403T021843Z
 
 ----version----
 language: en
 version: 1
-revision: 5b3ebd30-e611-4754-88fb-2f81a62c8ce5
+revision: 17450b0d-48dd-4f07-9f8d-8d9a17fed4e7
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 10
 
 Pulp Mills
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{07C0739E-EF23-4F3D-8DCE-9769F3704B98}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011615Z
+20190403T021843Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5b3ebd30-e611-4754-88fb-2f81a62c8ce5
+17450b0d-48dd-4f07-9f8d-8d9a17fed4e7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011615Z
+20190403T021843Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

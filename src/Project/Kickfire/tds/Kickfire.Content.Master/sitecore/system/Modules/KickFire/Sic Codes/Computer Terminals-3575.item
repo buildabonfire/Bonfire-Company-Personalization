@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {F28DDA04-18B5-4E51-B053-A6DCFEBE4D23}
+id: {4868D9CA-A16B-4A47-9DF6-1C18A424C226}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Computer Terminals-3575
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Computer Terminals-3575
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011648Z
+created: 20190403T021918Z
 
 ----version----
 language: en
 version: 1
-revision: ec6688fb-881e-4245-ab0f-cef7381d18c5
+revision: ffe7c9e3-aca6-40a6-bf4f-182d6d313757
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 18
 
 Computer Terminals
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{2B6A02E1-3F67-4E0D-8AB4-6E5E0293E38A}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011648Z
+20190403T021918Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ec6688fb-881e-4245-ab0f-cef7381d18c5
+ffe7c9e3-aca6-40a6-bf4f-182d6d313757
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011648Z
+20190403T021918Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,18 +1,19 @@
 ----item----
 version: 1
-id: {4E29C010-9583-4735-8971-97777B23B9A1}
+id: {DC877F8B-E7C9-4814-8B21-22EA47B07D26}
 database: master
-path: /sitecore/system/Modules/KickFire/Grouping/Social services
+path: /sitecore/system/Modules/KickFire/Grouping/Social Services
 parent: {8F6AC979-C5EB-4300-820B-E7E264526588}
-name: Social services
+name: Social Services
 master: {00000000-0000-0000-0000-000000000000}
 template: {A4AB9DEA-0DF9-4B34-869D-40F1CB02C9FA}
 templatekey: Grouping
+created: 20190403T015710Z
 
 ----version----
 language: en
 version: 1
-revision: 43b64e88-e7ce-4659-89bd-4be923f32e32
+revision: 1703b4d1-b201-405b-b10f-836959f1db13
 
 ----field----
 field: {F9E6C052-9189-43DA-B814-E9019C793E99}
@@ -20,39 +21,60 @@ name: Group
 key: group
 content-length: 15
 
-Social services
+Social Services
 ----field----
 field: {851F239D-F387-4724-B756-62179C7F0356}
 name: Pattern
 key: pattern
 content-length: 38
 
-{BD8E7B13-92E9-491F-9798-B5BF6051ED0A}
+{07488F1E-0F04-4D62-8BE1-867597E6FF03}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 15
+
+Social Services
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160318T151613Z
+20190403T015710Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-43b64e88-e7ce-4659-89bd-4be923f32e32
+1703b4d1-b201-405b-b10f-836959f1db13
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160318T151617Z
+20190403T015710Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

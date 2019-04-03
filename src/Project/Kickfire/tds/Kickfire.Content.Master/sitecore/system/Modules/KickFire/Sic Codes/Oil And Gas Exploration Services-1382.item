@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {AE5477B6-C29C-40FB-AA35-6EDE43A3B6E9}
+id: {7FC452C3-1E1F-49AA-91A5-EC5F769711A9}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Oil And Gas Exploration Services-1382
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Oil And Gas Exploration Services-1382
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011549Z
+created: 20190403T021817Z
 
 ----version----
 language: en
 version: 1
-revision: d4ac2cbc-a66f-4921-ad35-3478f49858f5
+revision: fa4dbccc-85f9-4c04-910d-70396f4a907c
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 32
 
 Oil And Gas Exploration Services
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{15223236-10C5-4FD0-93FE-27497DC9A952}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011549Z
+20190403T021817Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d4ac2cbc-a66f-4921-ad35-3478f49858f5
+fa4dbccc-85f9-4c04-910d-70396f4a907c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011549Z
+20190403T021817Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

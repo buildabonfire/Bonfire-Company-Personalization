@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {8855B8D4-A441-46AE-A29E-D23789E5622B}
+id: {0D1E5431-3D96-4543-89E0-377A354BA733}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Structural Wood Members Nec-2439
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Structural Wood Members Nec-2439
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011611Z
+created: 20190403T021839Z
 
 ----version----
 language: en
 version: 1
-revision: 1b46b936-3718-4d9b-982a-ab0f69b89dec
+revision: 803f610b-1d06-4d9f-9d8f-e09846391c0b
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 28
 
 Structural Wood Members, Nec
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{1EFC088A-E0A1-4847-B142-25A1A29C28AF}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011611Z
+20190403T021839Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1b46b936-3718-4d9b-982a-ab0f69b89dec
+803f610b-1d06-4d9f-9d8f-e09846391c0b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011611Z
+20190403T021839Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

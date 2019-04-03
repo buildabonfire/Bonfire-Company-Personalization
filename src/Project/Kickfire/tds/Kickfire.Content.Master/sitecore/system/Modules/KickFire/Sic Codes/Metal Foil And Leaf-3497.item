@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {0200FC30-71DF-49EB-A711-D539374CBD10}
+id: {66FAEEAB-ECAF-4641-A924-2660A4AC361F}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Metal Foil And Leaf-3497
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Metal Foil And Leaf-3497
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011642Z
+created: 20190403T021911Z
 
 ----version----
 language: en
 version: 1
-revision: 86604831-328c-4bc2-a8ae-878be974826e
+revision: 55e105d4-faa2-402a-b116-ed955dd722ca
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 19
 
 Metal Foil And Leaf
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{2F9ABA77-E1D1-4099-955D-805AAC79013C}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011642Z
+20190403T021911Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-86604831-328c-4bc2-a8ae-878be974826e
+55e105d4-faa2-402a-b116-ed955dd722ca
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011642Z
+20190403T021911Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

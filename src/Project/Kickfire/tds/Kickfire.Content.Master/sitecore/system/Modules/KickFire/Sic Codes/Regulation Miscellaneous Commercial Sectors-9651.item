@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {A8CE5C86-7880-4999-91B1-A5BF6DC8E1AA}
+id: {41B5A85A-6343-44C4-B75D-13F156A10E55}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Regulation Miscellaneous Commercial Sectors-9651
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Regulation Miscellaneous Commercial Sectors-9651
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011810Z
+created: 20190403T022103Z
 
 ----version----
 language: en
 version: 1
-revision: 8df515f2-a1df-4ce3-83c7-dab4cb8f5d0a
+revision: 981c537a-49ef-43de-8339-693abec5a226
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 44
 
 Regulation, Miscellaneous Commercial Sectors
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{5B5D5069-C980-4CD5-AD4C-0832C19E324A}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011810Z
+20190403T022103Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8df515f2-a1df-4ce3-83c7-dab4cb8f5d0a
+981c537a-49ef-43de-8339-693abec5a226
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011810Z
+20190403T022103Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

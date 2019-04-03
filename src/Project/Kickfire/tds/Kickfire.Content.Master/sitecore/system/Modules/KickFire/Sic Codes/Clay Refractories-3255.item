@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {70838A0B-E0C7-4DE1-AF8E-93A5598BFAF5}
+id: {32AEACC2-F277-4B46-A1CE-8B71C5EDB43B}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Clay Refractories-3255
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Clay Refractories-3255
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011630Z
+created: 20190403T021858Z
 
 ----version----
 language: en
 version: 1
-revision: 273f8afe-c78a-4082-aea9-d9f1d0baaaaa
+revision: 7d37ffcc-3288-4895-9d5c-41dccc14d365
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 17
 
 Clay Refractories
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{9E036DA4-CF97-4604-B35C-30FC2B0FA802}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011630Z
+20190403T021858Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-273f8afe-c78a-4082-aea9-d9f1d0baaaaa
+7d37ffcc-3288-4895-9d5c-41dccc14d365
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011630Z
+20190403T021858Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

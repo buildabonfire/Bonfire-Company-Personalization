@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {3A9B2075-DCB6-4A74-9C70-6369A32450B8}
+id: {88367B10-76C7-4C9A-B022-F2488A75DBA5}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Freight Transportation Arrangement-4731
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Freight Transportation Arrangement-4731
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011712Z
+created: 20190403T021946Z
 
 ----version----
 language: en
 version: 1
-revision: 76d1b9ee-9448-4d0c-8693-4af39438733b
+revision: 4a8390e0-5f31-4f73-992d-e5186316fb7f
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 34
 
 Freight Transportation Arrangement
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{02C4E9E3-7B75-4BA5-866A-D10907BAB605}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011712Z
+20190403T021946Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-76d1b9ee-9448-4d0c-8693-4af39438733b
+4a8390e0-5f31-4f73-992d-e5186316fb7f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011712Z
+20190403T021946Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {392B8974-F91F-4E68-BF14-F25BACC2BA56}
+id: {88D47590-BA0C-4C53-A694-D784A5189CF6}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Real Estate Investment Trusts-6798
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Real Estate Investment Trusts-6798
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011742Z
+created: 20190403T022029Z
 
 ----version----
 language: en
 version: 1
-revision: 87259a04-1a78-4e2e-9042-2dc32f69af45
+revision: 07578561-f9e8-4b64-9c06-b6ef91d98f9f
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 29
 
 Real Estate Investment Trusts
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{44780277-BEC3-4E74-A772-BD02DC64B719}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011742Z
+20190403T022029Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-87259a04-1a78-4e2e-9042-2dc32f69af45
+07578561-f9e8-4b64-9c06-b6ef91d98f9f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011742Z
+20190403T022029Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

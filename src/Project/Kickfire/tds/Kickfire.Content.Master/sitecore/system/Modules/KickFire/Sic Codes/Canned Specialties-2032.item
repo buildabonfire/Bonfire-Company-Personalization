@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {0824F626-5636-4259-9216-5282DE3873FD}
+id: {23F36762-D6B3-4D9C-84B3-D957A11589E8}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Canned Specialties-2032
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Canned Specialties-2032
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011557Z
+created: 20190403T021825Z
 
 ----version----
 language: en
 version: 1
-revision: 8f0ebdb8-991d-48c7-b194-6acc9eabec00
+revision: dee8eab0-9ef1-426e-ad39-800c016d8dc0
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 18
 
 Canned Specialties
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{E1AC0171-2913-4C79-8D85-9FC4CE153A5A}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011558Z
+20190403T021825Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8f0ebdb8-991d-48c7-b194-6acc9eabec00
+dee8eab0-9ef1-426e-ad39-800c016d8dc0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011558Z
+20190403T021825Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

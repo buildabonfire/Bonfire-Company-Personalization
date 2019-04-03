@@ -8,14 +8,8 @@ name: Industry
 master: {00000000-0000-0000-0000-000000000000}
 template: {8E0C1738-3591-4C60-8151-54ABCC9807D1}
 templatekey: Profile
+created: 20190319T161202Z
 
-----field----
-field: {5D9FE5D7-4C45-4A98-A1F5-4796A6DA428B}
-name: Name
-key: name
-content-length: 8
-
-Industry
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -35,6 +29,13 @@ language: en
 version: 1
 revision: 87739c61-2713-40e7-be10-5fed9796983c
 
+----field----
+field: {5D9FE5D7-4C45-4A98-A1F5-4796A6DA428B}
+name: Name
+key: name
+content-length: 8
+
+Industry
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created

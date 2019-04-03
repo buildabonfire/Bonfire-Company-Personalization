@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {623B7938-787D-4C8D-A01C-81928E8900E0}
+id: {3AE8E3A4-9016-4B64-BD7C-A8B5F2F79B6A}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Fur-bearing Animals And Rabbits-271
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Fur-bearing Animals And Rabbits-271
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011542Z
+created: 20190403T021811Z
 
 ----version----
 language: en
 version: 1
-revision: 4bc72833-75e6-476e-8235-60c1d013ebec
+revision: 8dca6c9f-a87e-4884-bd90-dc6766ac1c9f
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 31
 
 Fur-bearing Animals And Rabbits
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{259F6096-D2C8-4171-BF15-247243929E49}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011542Z
+20190403T021811Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4bc72833-75e6-476e-8235-60c1d013ebec
+8dca6c9f-a87e-4884-bd90-dc6766ac1c9f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011542Z
+20190403T021811Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

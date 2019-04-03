@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {5E5A100E-C0F3-4E18-8998-3CFDDF293F45}
+id: {DE93B615-CA4F-47EB-88FC-027AA5EF81FC}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Commodity Contracts Brokers Dealers-6221
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Commodity Contracts Brokers Dealers-6221
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011737Z
+created: 20190403T022022Z
 
 ----version----
 language: en
 version: 1
-revision: 68dea9a8-0217-41a8-8b76-0b2f934aa49d
+revision: f0b7c4c9-cce4-4bbc-8702-c87e7bc326c7
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 36
 
 Commodity Contracts Brokers, Dealers
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{9629E4A6-8536-43FD-81E6-EF9C73CCE9D1}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011737Z
+20190403T022022Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-68dea9a8-0217-41a8-8b76-0b2f934aa49d
+f0b7c4c9-cce4-4bbc-8702-c87e7bc326c7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011738Z
+20190403T022022Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

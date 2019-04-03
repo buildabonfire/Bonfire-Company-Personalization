@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {6BB3FB38-9780-4DB8-BD92-FC46A22E8188}
+id: {223FB60A-86EA-4813-8370-2D195294C7B8}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Womens Childrens and Infants Clothing and Accessories-5137
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Womens Childrens and Infants Clothing and Accessories-5137
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011814Z
+created: 20190403T022107Z
 
 ----version----
 language: en
 version: 1
-revision: 11ea7bf5-3305-47cd-b816-2ff0b977068b
+revision: b3c6f99c-4e45-4a88-a874-e6a2b8b4fef9
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 58
 
 Women's, Children's, and Infants' Clothing and Accessories
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{50A4611D-5CDA-40E0-BFC7-6467B8AB62B8}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011814Z
+20190403T022107Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-11ea7bf5-3305-47cd-b816-2ff0b977068b
+b3c6f99c-4e45-4a88-a874-e6a2b8b4fef9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011814Z
+20190403T022107Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {2A49D385-C6D4-41E4-B284-9EF89BD5C134}
+id: {EB17A119-D2DE-4C1E-BBAF-72307ABFBA1F}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Primary Metal Products-3399
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Primary Metal Products-3399
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011637Z
+created: 20190403T021906Z
 
 ----version----
 language: en
 version: 1
-revision: f3a0b4bb-22ca-4e0d-abde-1cd4a36d3d8b
+revision: f2cc2604-0fcf-444f-bca1-0001567ffc08
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 22
 
 Primary Metal Products
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{2F1FE136-D4D1-4C73-AE20-444796F3CFC6}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011637Z
+20190403T021906Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f3a0b4bb-22ca-4e0d-abde-1cd4a36d3d8b
+f2cc2604-0fcf-444f-bca1-0001567ffc08
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011637Z
+20190403T021906Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

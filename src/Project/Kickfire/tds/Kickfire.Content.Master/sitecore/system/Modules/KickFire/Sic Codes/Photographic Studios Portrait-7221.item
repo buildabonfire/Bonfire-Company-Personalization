@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {9240F8C9-DD29-40CB-B0DA-5ADA60A9CA86}
+id: {AE460334-B935-4FFF-A6CC-C0AE305A1F09}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Photographic Studios Portrait-7221
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Photographic Studios Portrait-7221
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011745Z
+created: 20190403T022032Z
 
 ----version----
 language: en
 version: 1
-revision: ce63548e-84a7-462f-af9a-76781ca52610
+revision: 28bc6adb-ad27-4d64-b165-c74b8379987a
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 30
 
 Photographic Studios, Portrait
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{9FAEDD5B-D7FA-479C-B9C1-C815BBAA7B14}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011745Z
+20190403T022032Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ce63548e-84a7-462f-af9a-76781ca52610
+28bc6adb-ad27-4d64-b165-c74b8379987a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011745Z
+20190403T022032Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

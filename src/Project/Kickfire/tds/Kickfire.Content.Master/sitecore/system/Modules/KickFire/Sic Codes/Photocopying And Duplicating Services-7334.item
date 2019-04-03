@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {A1B38098-D014-4873-8635-FACCC919EDA2}
+id: {4ABC599C-B87C-4838-9633-9420FC2F97D7}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Photocopying And Duplicating Services-7334
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Photocopying And Duplicating Services-7334
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011747Z
+created: 20190403T022035Z
 
 ----version----
 language: en
 version: 1
-revision: f420d4a6-ba6f-48da-8729-68097e1c4cfc
+revision: 58c04aef-6515-4d3a-8a51-eef52b0d7fea
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 37
 
 Photocopying And Duplicating Services
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{9B5C9095-5A12-4CF1-8D4B-643A5D5FA08C}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011747Z
+20190403T022035Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f420d4a6-ba6f-48da-8729-68097e1c4cfc
+58c04aef-6515-4d3a-8a51-eef52b0d7fea
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011747Z
+20190403T022035Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

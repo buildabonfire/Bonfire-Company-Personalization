@@ -1,13 +1,19 @@
 ----item----
 version: 1
-id: {393951AC-AA5A-445E-97EF-3439246EA11A}
+id: {C8CF4CCF-721C-4EEB-BA34-577AA246F048}
 database: master
-path: /sitecore/system/Marketing Control Panel/Profiles/Industry/Pattern Cards/Motion pictures
+path: /sitecore/system/Marketing Control Panel/Profiles/Industry/Pattern Cards/Motion Pictures
 parent: {1FA9B98B-E061-427F-B0CC-54B8816ADF56}
-name: Motion pictures
+name: Motion Pictures
 master: {00000000-0000-0000-0000-000000000000}
 template: {4A6A7E36-2481-438F-A9BA-0453ECC638FA}
 templatekey: Pattern Card
+created: 20190403T013742Z
+
+----version----
+language: en
+version: 1
+revision: c76480e7-14ba-4c6e-b93a-33070be30bea
 
 ----field----
 field: {FE732790-2DDB-4657-A882-C2FCE1FBF0C9}
@@ -15,98 +21,53 @@ name: Name
 key: name
 content-length: 15
 
-Motion pictures
+Motion Pictures
 ----field----
-field: {6DA71AD3-5849-4482-9317-D21390E5A348}
-name: Pattern
-key: pattern
-content-length: 2509
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 15
 
-<tracking>
-  <profile id="{8C78D1EC-E978-4EF7-A27F-F70038548230}" name="Industry">
-    <key name="Agriculture crops" value="0" />
-    <key name="Agriculture services" value="0" />
-    <key name="Air transportation" value="0" />
-    <key name="Amusment parks" value="0" />
-    <key name="Analyzing equipment" value="0" />
-    <key name="Apparel products" value="0" />
-    <key name="Apparel stores" value="0" />
-    <key name="Auto dealers" value="0" />
-    <key name="Auto repair and services" value="0" />
-    <key name="Banks" value="0" />
-    <key name="Building materials" value="0" />
-    <key name="Business services" value="0" />
-    <key name="Chemical products" value="0" />
-    <key name="Coal" value="0" />
-    <key name="Commercial machinery" value="0" />
-    <key name="Communications" value="0" />
-    <key name="Computer hardware" value="0" />
-    <key name="Credit unions" value="0" />
-    <key name="Economic administration" value="0" />
-    <key name="Educational services" value="0" />
-    <key name="Electric gas and sewage" value="0" />
-    <key name="Electronic equipment" value="0" />
-    <key name="Engineering management and accounting" value="0" />
-    <key name="Environment and housing administration" value="0" />
-    <key name="Food products" value="0" />
-    <key name="Food stores" value="0" />
-    <key name="Forestry" value="0" />
-    <key name="Furniture" value="0" />
-    <key name="Furniture stores" value="0" />
-    <key name="Gas stations" value="0" />
-    <key name="Government" value="0" />
-    <key name="Health services" value="0" />
-    <key name="Hotels" value="0" />
-    <key name="Human resource administration" value="0" />
-    <key name="Hunting" value="0" />
-    <key name="Insurance agents" value="0" />
-    <key name="Insurance carriers" value="0" />
-    <key name="Investment companies" value="0" />
-    <key name="Leather products" value="0" />
-    <key name="Legal services" value="0" />
-    <key name="Livestock" value="0" />
-    <key name="Membership organizations" value="0" />
-    <key name="Merchandise stores" value="0" />
-    <key name="Metal" value="0" />
-    <key name="Mining" value="0" />
-    <key name="Misc establishments" value="0" />
-    <key name="Misc manufacturing" value="0" />
-    <key name="Misc repair services" value="0" />
-    <key name="Misc retail" value="0" />
-    <key name="Misc services" value="0" />
-    <key name="Motion pictures" value="5" />
-  </profile>
-</tracking>
-----version----
-language: en
-version: 1
-revision: 5d94919f-c62b-4ff1-8c2a-e2aba8f2703f
+Motion Pictures
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
 
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160318T144539Z
+20190403T013742Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-5d94919f-c62b-4ff1-8c2a-e2aba8f2703f
+c76480e7-14ba-4c6e-b93a-33070be30bea
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160318T144544Z
+20190403T013742Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

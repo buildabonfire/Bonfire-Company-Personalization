@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {5FEE7F67-A843-49F1-9B6A-5DBF811DEF88}
+id: {BE39266D-55AF-4F75-9C18-F84B5501E07B}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Electrical Repair Shops-7629
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Electrical Repair Shops-7629
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011753Z
+created: 20190403T022044Z
 
 ----version----
 language: en
 version: 1
-revision: 45f762ca-dadf-4338-938f-70ec58530310
+revision: d6140a00-2df0-43a1-8cbb-b63a3759eac7
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 23
 
 Electrical Repair Shops
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{7AAA32F3-B8EF-43AA-941C-6B9926BE342C}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011753Z
+20190403T022044Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-45f762ca-dadf-4338-938f-70ec58530310
+d6140a00-2df0-43a1-8cbb-b63a3759eac7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011753Z
+20190403T022044Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

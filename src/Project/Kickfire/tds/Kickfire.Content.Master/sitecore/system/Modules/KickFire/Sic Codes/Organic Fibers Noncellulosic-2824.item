@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {554D547B-59D3-4744-A861-3DC7E05057E8}
+id: {65584F26-F91A-4E61-83E7-F478208A1A73}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Organic Fibers Noncellulosic-2824
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Organic Fibers Noncellulosic-2824
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011621Z
+created: 20190403T021849Z
 
 ----version----
 language: en
 version: 1
-revision: 39552088-d4c3-4fe4-93d6-3782ea6d041f
+revision: 3c6cee75-1cc7-4322-97e2-f686fce1944b
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 29
 
 Organic Fibers, Noncellulosic
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{516344F6-C508-4149-B647-0F5ABD9C5039}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011621Z
+20190403T021849Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-39552088-d4c3-4fe4-93d6-3782ea6d041f
+3c6cee75-1cc7-4322-97e2-f686fce1944b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011621Z
+20190403T021849Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

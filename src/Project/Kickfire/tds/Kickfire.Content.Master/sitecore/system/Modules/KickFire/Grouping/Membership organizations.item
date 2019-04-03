@@ -1,18 +1,19 @@
 ----item----
 version: 1
-id: {BEB924BC-2526-43FB-BEAB-785FB96D3458}
+id: {E0D87B6D-A896-4197-BE0B-B14BFDFDD302}
 database: master
-path: /sitecore/system/Modules/KickFire/Grouping/Membership organizations
+path: /sitecore/system/Modules/KickFire/Grouping/Membership Organizations
 parent: {8F6AC979-C5EB-4300-820B-E7E264526588}
-name: Membership organizations
+name: Membership Organizations
 master: {00000000-0000-0000-0000-000000000000}
 template: {A4AB9DEA-0DF9-4B34-869D-40F1CB02C9FA}
 templatekey: Grouping
+created: 20190403T015710Z
 
 ----version----
 language: en
 version: 1
-revision: 632e45be-b359-43a3-8c62-7b1f4f546978
+revision: 33ff7448-21a3-4b5a-80ea-32845e398a46
 
 ----field----
 field: {F9E6C052-9189-43DA-B814-E9019C793E99}
@@ -20,39 +21,60 @@ name: Group
 key: group
 content-length: 24
 
-Membership organizations
+Membership Organizations
 ----field----
 field: {851F239D-F387-4724-B756-62179C7F0356}
 name: Pattern
 key: pattern
 content-length: 38
 
-{58820982-69F1-44FA-AAF1-594DA23446F7}
+{0BD5563C-4666-48B7-A450-57A787B292AC}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 24
+
+Membership Organizations
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160318T151024Z
+20190403T015710Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-632e45be-b359-43a3-8c62-7b1f4f546978
+33ff7448-21a3-4b5a-80ea-32845e398a46
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160318T151028Z
+20190403T015710Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

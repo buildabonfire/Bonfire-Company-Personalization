@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {117DEA7B-D0E7-4514-93B5-EEBD0BAB581D}
+id: {A18764F7-E3CA-40A2-AF15-3CC1AC3430DE}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Measuring And Controlling Devices Nec-3829
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Measuring And Controlling Devices Nec-3829
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011701Z
+created: 20190403T021931Z
 
 ----version----
 language: en
 version: 1
-revision: 80abd44f-216f-4e2f-9028-90d2843cbcbf
+revision: dcf4d8ec-4f04-4a95-ada3-b66c07a27a35
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 38
 
 Measuring And Controlling Devices, Nec
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{3313EBA0-DCAE-4F63-914A-4549815DB118}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011701Z
+20190403T021931Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-80abd44f-216f-4e2f-9028-90d2843cbcbf
+dcf4d8ec-4f04-4a95-ada3-b66c07a27a35
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011701Z
+20190403T021931Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

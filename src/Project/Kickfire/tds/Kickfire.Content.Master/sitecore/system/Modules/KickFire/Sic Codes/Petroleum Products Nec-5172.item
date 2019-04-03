@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {68FFB87C-0313-487E-B6EC-1C540CF04738}
+id: {5CE82DBE-B0D4-49A2-A2A4-562520A7A9F3}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Petroleum Products Nec-5172
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Petroleum Products Nec-5172
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011724Z
+created: 20190403T022002Z
 
 ----version----
 language: en
 version: 1
-revision: 9bc7b177-7b3c-465d-913b-480abe2b6630
+revision: e1810a02-df24-446e-aad8-31aad7e020b0
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 23
 
 Petroleum Products, Nec
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{50A4611D-5CDA-40E0-BFC7-6467B8AB62B8}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011724Z
+20190403T022002Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9bc7b177-7b3c-465d-913b-480abe2b6630
+e1810a02-df24-446e-aad8-31aad7e020b0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011724Z
+20190403T022002Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

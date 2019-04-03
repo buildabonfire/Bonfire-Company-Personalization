@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {875D34B0-C7B7-46E7-B899-5FCB774A1261}
+id: {B4253253-F105-462C-AA36-45D1F47FC2E7}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Security And Commodity Service-6289
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Security And Commodity Service-6289
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011738Z
+created: 20190403T022023Z
 
 ----version----
 language: en
 version: 1
-revision: cadbd768-20bb-49c3-ac3c-b9746a63155d
+revision: d5f712e6-c73c-4792-8e0c-967bebe09086
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 30
 
 Security And Commodity Service
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{9629E4A6-8536-43FD-81E6-EF9C73CCE9D1}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011738Z
+20190403T022023Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cadbd768-20bb-49c3-ac3c-b9746a63155d
+d5f712e6-c73c-4792-8e0c-967bebe09086
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011738Z
+20190403T022023Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -32,7 +32,7 @@
     <PackageReadme>
     </PackageReadme>
     <SitecoreAssemblyPath />
-    <GeneratePackage>True</GeneratePackage>
+    <GeneratePackage>False</GeneratePackage>
     <SeperateFilesAndItems>False</SeperateFilesAndItems>
     <PackageExcludeCode>False</PackageExcludeCode>
     <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
@@ -72,11 +72,6 @@ THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND
     </BundledProject>
   </ItemGroup>
   <ItemGroup>
-    <SourceWebProjects Include="{6a8a18d8-6e93-49a6-81f7-82d75401ff94}|src\Feature\SicCodeService\code\Bonfire.Feature.SicCodeService.csproj">
-      <SourceWebPhysicalPath>..\..\..\Feature\SicCodeService\code</SourceWebPhysicalPath>
-      <SourceWebVirtualPath>/Bonfire.Feature.SicCodeService.csproj</SourceWebVirtualPath>
-      <SourceWebProjectId>6a8a18d8-6e93-49a6-81f7-82d75401ff94</SourceWebProjectId>
-    </SourceWebProjects>
     <SourceWebProjects Include="{752c5c9e-a15b-4a29-98b1-35a93c57c35e}|src\Foundation\XConnectService\code\Bonfire.Foundation.XConnectService.csproj">
       <SourceWebPhysicalPath>..\..\..\Foundation\XConnectService\code</SourceWebPhysicalPath>
       <SourceWebVirtualPath>/Bonfire.Foundation.XConnectService.csproj</SourceWebVirtualPath>
@@ -106,10 +101,6 @@ THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND
     <ProjectReference Include="..\..\..\Feature\KickfireService\code\Bonfire.Feature.KickfireService.csproj">
       <Project>{b844f84c-4a3b-4731-a3d8-780bce4dd8c8}</Project>
       <Name>Bonfire.Feature.KickfireService</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Feature\SicCodeService\code\Bonfire.Feature.SicCodeService.csproj">
-      <Project>{6a8a18d8-6e93-49a6-81f7-82d75401ff94}</Project>
-      <Name>Bonfire.Feature.SicCodeService</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Foundation\CacheService\code\Bonfire.Foundation.Kickfire.CacheService.csproj">
       <Project>{c6cdfae6-beea-41a4-984f-c3dc57aac55e}</Project>

@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {69054AE3-4574-4341-9E3C-D09958FECA10}
+id: {875D682C-ACEF-4FC4-B74A-C8AADBF47020}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Books Periodicals And Newspapers-5192
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Books Periodicals And Newspapers-5192
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011725Z
+created: 20190403T022003Z
 
 ----version----
 language: en
 version: 1
-revision: 34aeca7a-7081-4936-9874-3ff82ee141e3
+revision: 32e6fcde-8bc2-4a67-abc5-5cf4a63d4905
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 34
 
 Books, Periodicals, And Newspapers
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{50A4611D-5CDA-40E0-BFC7-6467B8AB62B8}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011725Z
+20190403T022003Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-34aeca7a-7081-4936-9874-3ff82ee141e3
+32e6fcde-8bc2-4a67-abc5-5cf4a63d4905
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011725Z
+20190403T022003Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

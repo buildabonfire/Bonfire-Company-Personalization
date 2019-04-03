@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {87CF49ED-D4E2-41DF-86AA-FACD1D0C7917}
+id: {59771999-ECC5-424F-BB95-DEF4B2043A60}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Commercial Physical Research-8731
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Commercial Physical Research-8731
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011805Z
+created: 20190403T022057Z
 
 ----version----
 language: en
 version: 1
-revision: 5457d36f-bbfc-4953-ba50-f819e45edf58
+revision: a7d5b3c3-2660-42a8-b2f3-e1e1861aaf3b
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 28
 
 Commercial Physical Research
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{8AFA7BA9-367C-462C-AD14-021D99E7B867}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011805Z
+20190403T022058Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5457d36f-bbfc-4953-ba50-f819e45edf58
+a7d5b3c3-2660-42a8-b2f3-e1e1861aaf3b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011805Z
+20190403T022058Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

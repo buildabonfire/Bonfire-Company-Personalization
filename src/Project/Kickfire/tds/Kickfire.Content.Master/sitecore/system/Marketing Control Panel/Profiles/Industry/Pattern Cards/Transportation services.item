@@ -1,13 +1,19 @@
 ----item----
 version: 1
-id: {E5E8068F-675B-4E45-99C4-F87539B819F5}
+id: {1FAA7060-E804-4F3B-874E-F13D89ADA15F}
 database: master
-path: /sitecore/system/Marketing Control Panel/Profiles/Industry/Pattern Cards/Transportation services
+path: /sitecore/system/Marketing Control Panel/Profiles/Industry/Pattern Cards/Transportation Services
 parent: {1FA9B98B-E061-427F-B0CC-54B8816ADF56}
-name: Transportation services
+name: Transportation Services
 master: {00000000-0000-0000-0000-000000000000}
 template: {4A6A7E36-2481-438F-A9BA-0453ECC638FA}
 templatekey: Pattern Card
+created: 20190403T013737Z
+
+----version----
+language: en
+version: 1
+revision: d497c049-c99d-44b9-8ccf-45b4af67111d
 
 ----field----
 field: {FE732790-2DDB-4657-A882-C2FCE1FBF0C9}
@@ -15,123 +21,53 @@ name: Name
 key: name
 content-length: 23
 
-Transportation services
+Transportation Services
 ----field----
-field: {6DA71AD3-5849-4482-9317-D21390E5A348}
-name: Pattern
-key: pattern
-content-length: 3706
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 23
 
-<tracking>
-  <profile id="{8C78D1EC-E978-4EF7-A27F-F70038548230}" name="Industry">
-    <key name="Agriculture crops" value="0" />
-    <key name="Agriculture services" value="0" />
-    <key name="Air transportation" value="0" />
-    <key name="Amusment parks" value="0" />
-    <key name="Analyzing equipment" value="0" />
-    <key name="Apparel products" value="0" />
-    <key name="Apparel stores" value="0" />
-    <key name="Auto dealers" value="0" />
-    <key name="Auto repair and services" value="0" />
-    <key name="Banks" value="0" />
-    <key name="Building materials" value="0" />
-    <key name="Business services" value="0" />
-    <key name="Chemical products" value="0" />
-    <key name="Coal" value="0" />
-    <key name="Commercial machinery" value="0" />
-    <key name="Communications" value="0" />
-    <key name="Computer hardware" value="0" />
-    <key name="Credit unions" value="0" />
-    <key name="Economic administration" value="0" />
-    <key name="Educational services" value="0" />
-    <key name="Electric gas and sewage" value="0" />
-    <key name="Electronic equipment" value="0" />
-    <key name="Engineering management and accounting" value="0" />
-    <key name="Environment and housing administration" value="0" />
-    <key name="Food products" value="0" />
-    <key name="Food stores" value="0" />
-    <key name="Forestry" value="0" />
-    <key name="Furniture" value="0" />
-    <key name="Furniture stores" value="0" />
-    <key name="Gas stations" value="0" />
-    <key name="Government" value="0" />
-    <key name="Health services" value="0" />
-    <key name="Hotels" value="0" />
-    <key name="Human resource administration" value="0" />
-    <key name="Hunting" value="0" />
-    <key name="Insurance agents" value="0" />
-    <key name="Insurance carriers" value="0" />
-    <key name="Investment companies" value="0" />
-    <key name="Leather products" value="0" />
-    <key name="Legal services" value="0" />
-    <key name="Livestock" value="0" />
-    <key name="Membership organizations" value="0" />
-    <key name="Merchandise stores" value="0" />
-    <key name="Metal" value="0" />
-    <key name="Mining" value="0" />
-    <key name="Misc establishments" value="0" />
-    <key name="Misc manufacturing" value="0" />
-    <key name="Misc repair services" value="0" />
-    <key name="Misc retail" value="0" />
-    <key name="Misc services" value="0" />
-    <key name="Motion pictures" value="0" />
-    <key name="Motor freight transportation" value="0" />
-    <key name="Museums and galleries" value="0" />
-    <key name="National sercurity" value="0" />
-    <key name="Not Available" value="0" />
-    <key name="Oil and gas" value="0" />
-    <key name="Paper products" value="0" />
-    <key name="Passenger transportation" value="0" />
-    <key name="Personal services" value="0" />
-    <key name="Petroleum" value="0" />
-    <key name="Pipelines" value="0" />
-    <key name="Printing and publishing" value="0" />
-    <key name="Private households" value="0" />
-    <key name="Public finance" value="0" />
-    <key name="Public safety" value="0" />
-    <key name="Railroad" value="0" />
-    <key name="Real estate" value="0" />
-    <key name="Restaurants and bars" value="0" />
-    <key name="Rubber and plastic products" value="0" />
-    <key name="Security brokers" value="0" />
-    <key name="Social services" value="0" />
-    <key name="Stone products" value="0" />
-    <key name="Textile products" value="0" />
-    <key name="Tobacco products" value="0" />
-    <key name="Transportation equipment" value="0" />
-    <key name="Transportation services" value="5" />
-  </profile>
-</tracking>
-----version----
-language: en
-version: 1
-revision: deaa9cc1-41e5-4c69-ae6a-a83c0a87e056
+Transportation Services
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
 
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160318T145645Z
+20190403T013737Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-deaa9cc1-41e5-4c69-ae6a-a83c0a87e056
+d497c049-c99d-44b9-8ccf-45b4af67111d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160318T145650Z
+20190403T013737Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

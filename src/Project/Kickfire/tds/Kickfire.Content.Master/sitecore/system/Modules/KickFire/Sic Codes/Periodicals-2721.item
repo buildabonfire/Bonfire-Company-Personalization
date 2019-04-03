@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {61DFD10B-803F-4C68-8B67-1446A519BD30}
+id: {D09B53E8-459F-49E8-B68D-E312CE6AA5C1}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Periodicals-2721
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Periodicals-2721
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011618Z
+created: 20190403T021845Z
 
 ----version----
 language: en
 version: 1
-revision: d45cc222-d588-41f9-ad4e-53e2278bda61
+revision: 23a802b9-d631-4690-a3bc-ec70306f2d05
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 11
 
 Periodicals
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{8D265483-4B98-4DA1-B3BE-CD25FE585530}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011618Z
+20190403T021845Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d45cc222-d588-41f9-ad4e-53e2278bda61
+23a802b9-d631-4690-a3bc-ec70306f2d05
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011618Z
+20190403T021845Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {1816DE35-6B1F-4826-892B-11DACE017AFD}
+id: {2325E2D7-38BF-4FDA-A86E-04B27D38999F}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Space Research And Technology-9661
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Space Research And Technology-9661
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011810Z
+created: 20190403T022103Z
 
 ----version----
 language: en
 version: 1
-revision: 6edbb695-1e40-4c5d-979b-2c8dc117ec80
+revision: 88728ebb-1f44-4cb2-9823-2472f9a1f945
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 29
 
 Space Research And Technology
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{5B5D5069-C980-4CD5-AD4C-0832C19E324A}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011810Z
+20190403T022103Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6edbb695-1e40-4c5d-979b-2c8dc117ec80
+88728ebb-1f44-4cb2-9823-2472f9a1f945
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011810Z
+20190403T022103Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

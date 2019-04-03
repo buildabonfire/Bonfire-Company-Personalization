@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {D8E8E738-7F66-4797-AC47-C51A95F9FFBE}
+id: {40D43187-59A3-440D-83A7-3401EFBA055F}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Photographic Equipment And Supplies-5043
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Photographic Equipment And Supplies-5043
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011717Z
+created: 20190403T021953Z
 
 ----version----
 language: en
 version: 1
-revision: 4bddf5a5-48fb-4130-8774-3d1b74e178d2
+revision: e8ffcd80-82b8-4406-87f8-08e67b20e56b
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 35
 
 Photographic Equipment And Supplies
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{15BF2567-384F-4468-BF26-FFA475C8BAA9}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011717Z
+20190403T021953Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4bddf5a5-48fb-4130-8774-3d1b74e178d2
+e8ffcd80-82b8-4406-87f8-08e67b20e56b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011717Z
+20190403T021953Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

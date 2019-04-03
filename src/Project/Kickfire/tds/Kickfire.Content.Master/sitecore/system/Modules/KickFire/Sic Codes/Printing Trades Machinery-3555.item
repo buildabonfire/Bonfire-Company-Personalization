@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {729DFC12-05D3-49CC-853A-1CF20AF1FC21}
+id: {C05135B1-A8BB-4B39-9BA4-41B18DD65A3A}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Printing Trades Machinery-3555
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Printing Trades Machinery-3555
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011646Z
+created: 20190403T021915Z
 
 ----version----
 language: en
 version: 1
-revision: b86d87d8-be1c-42f5-889f-6ffd75deb695
+revision: 013bbe9d-58e6-433a-a8da-068d47c801e6
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 25
 
 Printing Trades Machinery
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{2B6A02E1-3F67-4E0D-8AB4-6E5E0293E38A}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011646Z
+20190403T021915Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b86d87d8-be1c-42f5-889f-6ffd75deb695
+013bbe9d-58e6-433a-a8da-068d47c801e6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011646Z
+20190403T021916Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

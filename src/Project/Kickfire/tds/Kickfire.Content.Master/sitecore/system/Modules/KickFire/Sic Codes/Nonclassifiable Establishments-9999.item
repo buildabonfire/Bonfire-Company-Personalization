@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {70D34509-4BDB-43FA-9789-4F69B48626E1}
+id: {8C2255EC-0400-43F5-A663-DC844BB02801}
 database: master
 path: /sitecore/system/Modules/KickFire/Sic Codes/Nonclassifiable Establishments-9999
 parent: {6F25CFF3-970F-477B-A9EB-B56465B34892}
@@ -8,12 +8,12 @@ name: Nonclassifiable Establishments-9999
 master: {00000000-0000-0000-0000-000000000000}
 template: {F084D07D-D66B-4BC2-90C6-17FD5D49EA91}
 templatekey: SicCode
-created: 20190320T011815Z
+created: 20190403T022109Z
 
 ----version----
 language: en
 version: 1
-revision: 770a0a7f-3edb-4056-8111-f92080eba87f
+revision: 1e43e7b5-5c11-4757-a58e-f8cdc1d8fa9d
 
 ----field----
 field: {415E8711-4FE5-45BC-A218-057634681385}
@@ -29,6 +29,13 @@ key: description
 content-length: 30
 
 Nonclassifiable Establishments
+----field----
+field: {C8A6C8A5-8124-4728-A4C4-811AA2B3CBFE}
+name: Grouping
+key: grouping
+content-length: 38
+
+{D49309DC-9238-464A-8721-EB05C002AD37}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -49,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190320T011815Z
+20190403T022109Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-770a0a7f-3edb-4056-8111-f92080eba87f
+1e43e7b5-5c11-4757-a58e-f8cdc1d8fa9d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190320T011816Z
+20190403T022109Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
