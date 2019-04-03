@@ -152,17 +152,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 
             int.TryParse(model.Data[0].SicCode, out var sicId);
 
-            //// lets look for an override
-            //var sicCodeModel = _sicCodeOverrideRepository.GetSicCodeFromOverride(model.Data[0].SicCode);
-            //if (sicCodeModel == null)
-            //{
-            //    //sicCodeModel = _sicCodeRepository.GetSicCodeById(sicId);
-            //}
-
-            // get the profile item so we can assign the proper points
             var profileItem = _sicCodeGroupRepository.GetProfileItemBySicCode(model.Data[0].SicCode);
-
-            //var groupItem = SicCodeGroupRepository.GetSicGroup(model.Data[0].SicCode);
 
             ProcessProfile(profileItem);
 

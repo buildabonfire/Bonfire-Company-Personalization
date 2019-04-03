@@ -58,7 +58,6 @@ namespace Bonfire.Feature.KickfireCore.Repository
             if (string.IsNullOrEmpty(sicCodePath)) return null;
 
             return DoSearch(Templates.SicCodeOverride.FieldNames.Code, sicCode, sicCodePath, Templates.SicCodeOverride.Id);
-            //return GetGroupParent()?.Children.FirstOrDefault(x => x[Templates.SicCode.Fields.Group] == sicCode);
         }
 
         private Item GetProfileFromOverride(Item sicCodeOverride)
