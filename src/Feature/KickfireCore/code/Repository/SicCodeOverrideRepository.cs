@@ -36,7 +36,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
 
         public Item GetGroupOverrideParent()
         {
-            var groupSetting = Sitecore.Configuration.Settings.GetAppSetting("Bonfire.Kickfire.Overrides");
+            var groupSetting = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.Overrides");
 
             if (_db == null || groupSetting == null || ID.IsID(groupSetting))
                 return null;

@@ -1,4 +1,6 @@
 ﻿using System.Linq;
+using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 
@@ -9,12 +11,12 @@ namespace Bonfire.Feature.KickfireCore.Repository
         private readonly Database _db;
         public SicCodeGroupGroupRepository()
         {
-            _db = Sitecore.Configuration.Factory.GetDatabase(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.MasterDatabaseName"));
+            _db = Sitecore.Configuration.Factory.GetDatabase(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.WebDatabaseName"));
         }
 
         public Item GetSicGroup(string sicCode)
         {
-            var item = GetSicCodeItem(sicCode);
+            var item = GetSicCodeItemOrDefault(sicCode);
             if (item != null)
                 return item;
 
@@ -23,7 +25,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
 
         public Item GetProfileItemBySicCode(string sicCode)
         {
-            return GetProfileFromSicCode(GetSicCodeItem(sicCode));
+            return GetProfileFromOverride(GetSicCodeItemOrDefault(sicCode));
         }
 
 
@@ -32,7 +34,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
 
         private Item GetDefaultSicCode()
         {
-            var defaultItem = Sitecore.Configuration.Settings.GetAppSetting("Bonfire.Kickfire.DefaultSicCode");
+            var defaultItem = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.DefaultSicCode");
 
             if (_db == null || defaultItem == null || ID.IsID(defaultItem))
                 return null;
@@ -40,9 +42,9 @@ namespace Bonfire.Feature.KickfireCore.Repository
             return _db.GetItem(ID.Parse(defaultItem));
         }
 
-        private Item GetSicCodeItem(string sicCode)
+        private Item GetSicCodeItemOrDefault(string sicCode)
         {
-            var sicCodeItem = GetSicCodeFromBase(sicCode);
+            var sicCodeItem = GetSicCodeItem(sicCode); 
 
             if (sicCodeItem != null)
                 return sicCodeItem;
@@ -50,32 +52,58 @@ namespace Bonfire.Feature.KickfireCore.Repository
             return GetDefaultSicCode();
         }
 
-        private Item GetSicCodeFromBase(string sicCode)
+        private Item GetSicCodeItem(string sicCode)
         {
-            return GetGroupParent()?.Children.FirstOrDefault(x => x[Templates.SiceCode.Fields.Group] == sicCode);
+            var sicCodePath = GetSicCodeParent().Paths.FullPath;
+            if (string.IsNullOrEmpty(sicCodePath)) return null;
+
+            return DoSearch(Templates.SicCodeOverride.FieldNames.Code, sicCode, sicCodePath, Templates.SicCodeOverride.Id);
+            //return GetGroupParent()?.Children.FirstOrDefault(x => x[Templates.SicCode.Fields.Group] == sicCode);
         }
 
         private Item GetProfileFromOverride(Item sicCodeOverride)
         {
             // get the group code this is overriding and get the profile for that
             var profileItem = (Sitecore.Data.Fields.ReferenceField)sicCodeOverride.Fields[Templates.SicCodeOverride.Fields.Grouping];
-            return GetProfileFromSicCode(profileItem.TargetItem);
+            return GetProfileFromGroup(profileItem.TargetItem);
         }
 
-        private Item GetProfileFromSicCode(Item sicCode)
+        private Item GetProfileFromGroup(Item sicCode)
         {
-            var profileItem = (Sitecore.Data.Fields.ReferenceField) sicCode.Fields[Templates.SiceCode.Fields.Profile];
+            var profileItem = (Sitecore.Data.Fields.ReferenceField) sicCode.Fields[Templates.SicCode.Fields.Profile];
             return profileItem.TargetItem;
         }
 
         public Item GetGroupParent()
         {
-            var groupSetting = Sitecore.Configuration.Settings.GetAppSetting("Bonfire.Kickfire.Grouping");
+            var groupSetting = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.Grouping");
 
-            if (_db == null || groupSetting == null || ID.IsID(groupSetting))
+            if (_db == null || groupSetting == null || !ID.IsID(groupSetting))
                 return null;
 
             return _db.GetItem(ID.Parse(groupSetting));
+        }
+
+        protected virtual string GetSearchIndexNameForDatabase() => $"sitecore_{Sitecore.Context.Database}_index";
+
+        private Item DoSearch(string fieldName, string value, string startPath, ID templateId)
+        {
+            var searchIndexNameForDatabase = this.GetSearchIndexNameForDatabase();
+            using (var searchContext = ContentSearchManager.GetIndex(searchIndexNameForDatabase).CreateSearchContext())
+            {
+                var searchResult = searchContext
+                    .GetQueryable<SearchResultItem>()
+                    .FirstOrDefault(x => x[fieldName] == value
+                                         && x.Path.StartsWith(startPath)
+                                         && x.TemplateId == templateId);
+
+                return searchResult?.GetItem();
+            }
+        }
+
+        private static Item GetSicCodeParent()
+        {
+            return Sitecore.Context.Database.GetItem(Constants.IDs.SicParentId);
         }
     }
 }

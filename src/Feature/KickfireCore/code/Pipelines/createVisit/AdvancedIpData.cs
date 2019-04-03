@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Bonfire.Feature.KickfireCore.Helpers;
 using Bonfire.Feature.KickfireCore.Models.Facets;
 using Bonfire.Feature.KickfireCore.Repository;
 using Bonfire.Feature.KickfireCore.Services;
 using Bonfire.Foundation.Kickfire.Library.Model;
-using Bonfire.Foundation.Kickfire.Library.Repositories;
 using Bonfire.Foundation.Kickfire.Library.Services;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Pipelines.CreateVisits;
@@ -17,17 +17,14 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
     {
         private readonly ICompanyService _companyService;
         private readonly ISicCodeOverrideRepository _sicCodeOverrideRepository;
-        private readonly ISicCodeRepository _sicCodeRepository;
         private readonly ISicCodeGroupRepository _sicCodeGroupRepository;
 
         public AdvancedIpData(ISicCodeGroupRepository sicCodeGroupRepository, 
             ICompanyService companyService, 
-            ISicCodeOverrideRepository sicCodeOverrideRepository,
-            ISicCodeRepository sicCodeRepository)
+            ISicCodeOverrideRepository sicCodeOverrideRepository)
         {
             _companyService = companyService;
             _sicCodeOverrideRepository = sicCodeOverrideRepository;
-            _sicCodeRepository = sicCodeRepository;
             _sicCodeGroupRepository = sicCodeGroupRepository;
         }
 
@@ -56,17 +53,18 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                     return;
                 }
 
-                // call the services
-                var model = _companyService.GetRootObject(clientIp);
+                // lets use async to call our web service
+                var model = Task.Run(() => _companyService.GetKickfireModel(clientIp));
+                var companyModel = model.Result;
 
                 // Make sure our request is good.
-                if (IsRequestValid(model))
+                if (IsRequestValid(companyModel))
                 {
-                    ProcessValidRequest(model, clientIp);
+                    ProcessValidRequest(companyModel, clientIp);
                 }
                 else
                 {
-                    ProcessInvalidRequest(model, clientIp);
+                    ProcessInvalidRequest(companyModel, clientIp);
                 }
             }
             catch (Exception ex)
@@ -75,7 +73,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             }
         }
 
-        private void ProcessValidRequest(KickFireModel.RootObject model, string clientIp)
+        private void ProcessValidRequest(KickFireModel model, string clientIp)
         {
             // add company data to xDB
             UpdateCompanyDataOnClient(model);
@@ -91,7 +89,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             // lets kick off the Engagement Plan
         }
 
-        private void ProcessInvalidRequest(KickFireModel.RootObject model, string clientIp)
+        private void ProcessInvalidRequest(KickFireModel model, string clientIp)
         {
             if (model == null)
                 Log.Info("KickFire: Model null. IP is " + clientIp, this);
@@ -109,7 +107,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             }
         }
 
-        private bool IsRequestValid(KickFireModel.RootObject model)
+        private bool IsRequestValid(KickFireModel model)
         {
             return model != null
                    && model.Status == "success"
@@ -143,7 +141,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             Log.Info("KickFire: ====== ALL IS DONE ======", "KickFire");
         }
 
-        public void ProcessSicCode(string clientIp, KickFireModel.RootObject model )
+        public void ProcessSicCode(string clientIp, KickFireModel model )
         {
             // Lets put the user into the right pattern
             if (string.IsNullOrWhiteSpace(model.Data[0].SicCode))
@@ -154,12 +152,12 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 
             int.TryParse(model.Data[0].SicCode, out var sicId);
 
-            // lets look for an override
-            var sicCodeModel = _sicCodeOverrideRepository.GetSicCodeFromOverride(model.Data[0].SicCode);
-            if (sicCodeModel == null)
-            {
-                sicCodeModel = _sicCodeRepository.GetSicCodeById(sicId);
-            }
+            //// lets look for an override
+            //var sicCodeModel = _sicCodeOverrideRepository.GetSicCodeFromOverride(model.Data[0].SicCode);
+            //if (sicCodeModel == null)
+            //{
+            //    //sicCodeModel = _sicCodeRepository.GetSicCodeById(sicId);
+            //}
 
             // get the profile item so we can assign the proper points
             var profileItem = _sicCodeGroupRepository.GetProfileItemBySicCode(model.Data[0].SicCode);
@@ -170,13 +168,13 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 
         }
 
-        private static void UpdateCompanyDataOnClient(KickFireModel.RootObject model)
+        private static void UpdateCompanyDataOnClient(KickFireModel model)
         {
             var service = new CompanyConnectService();
             service.UpdateCompanyDataOnClient(HydrateCompanyModel(model));
         }
 
-        private static CompanyFacet HydrateCompanyModel(KickFireModel.RootObject model)
+        private static CompanyFacet HydrateCompanyModel(KickFireModel model)
         {
             var data = new CompanyFacet();
             data.Name = model.Data[0].Name;
@@ -217,7 +215,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                    || Tracker.Current.Session.Interaction.GeoData.Country == "US";
         }
 
-        private bool ShouldProcessIsp(KickFireModel.RootObject model)
+        private bool ShouldProcessIsp(KickFireModel model)
         {
             return !AnalyticsConfigurationHelper.SkipIsp() ||
                    AnalyticsConfigurationHelper.SkipIsp() && model.Data[0].IsIsp == 0;

@@ -41,11 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\ObjectExtension.cs" />
     <Compile Include="Interfaces\ICustomerLookup.cs" />
     <Compile Include="Model\KickFireModel.cs" />
     <Compile Include="Model\SiceCodeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ISicCodeRepository.cs" />
+    <Compile Include="Repositories\ApiSerializationRepository.cs" />
     <Compile Include="Services\ICompanyService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,7 +54,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.2</Version>
+    </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

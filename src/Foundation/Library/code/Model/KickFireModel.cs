@@ -4,6 +4,12 @@ namespace Bonfire.Foundation.Kickfire.Library.Model
 {
     public class KickFireModel
     {
+        public string Status { get; set; }
+        public int Results { get; set; }
+        public List<Datum> Data { get; set; }
+        public bool IsError { get; set; }
+        public string Message { get; set; }
+
         public class Datum
         {
             public string Cid { get; set; }
@@ -31,15 +37,6 @@ namespace Bonfire.Foundation.Kickfire.Library.Model
             public string NaicsCode { get; set; }
             public int IsIsp { get; set; }
             public int Confidence { get; set; }
-        }
-
-        public class RootObject
-        {
-            public string Status { get; set; }
-            public int Results { get; set; }
-            public List<Datum> Data { get; set; }
-            public bool IsError { get; set; }
-            public string Message { get; set; }
         }
     }
 }

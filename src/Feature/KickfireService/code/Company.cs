@@ -1,8 +1,10 @@
-﻿using System.IO;
-using System.Net;
-using System.Text;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 using Bonfire.Foundation.Kickfire.CacheService.Cache;
+using Bonfire.Foundation.Kickfire.Library.Extensions;
 using Bonfire.Foundation.Kickfire.Library.Model;
+using Bonfire.Foundation.Kickfire.Library.Repositories;
 using Bonfire.Foundation.Kickfire.Library.Services;
 using Newtonsoft.Json;
 using Sitecore.Diagnostics;
@@ -11,7 +13,7 @@ namespace Bonfire.Feature.KickfireService
 {
     public class Company : ICompanyService
     {
-        public KickFireModel.RootObject GetRootObject(string clientIp)
+        public async Task<KickFireModel> GetKickfireModel(string clientIp)
         {
             var apiUrl = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ApiUrl");
             Assert.IsNotNullOrEmpty(apiUrl, "Kickfire API url cannot be empty. Please update the settings file.");
@@ -19,41 +21,51 @@ namespace Bonfire.Feature.KickfireService
             var apiKey = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ApiKey");
             Assert.IsNotNullOrEmpty(apiKey, "Kickfire API key cannot be empty. Please update the settings file.");
 
-            var company = CacheBuilder.KickFireCache.Get(clientIp);
+            var company = GetCompanyFromCache(clientIp);
 
-            if (string.IsNullOrWhiteSpace(company))
+            if (company != null)
             {
-                company = CallApiService(clientIp, apiKey, apiUrl);
-                CacheBuilder.KickFireCache.Set(clientIp, company);
-            }
-            else
                 Log.Debug("KickFire: Got company from cache. " + clientIp, "KickFire");
+                return company;
+            }
 
-            var data =  JsonConvert.DeserializeObject<KickFireModel.RootObject>(company);
-            data.IsError = false;
+            company = await CallApiService(clientIp, apiKey, apiUrl);
+            //CacheBuilder.KickFireCache.Set(clientIp, company.Jsonize());
 
-            return data;
+            return company;
         }
 
-        private static string CallApiService(string clientIp, string apiKey, string apiUrl)
+        private async Task <KickFireModel> CallApiService(string clientIp, string apiKey, string apiUrl)
         {
-            string company;
             var apiCall = GetApiUrl(clientIp, apiKey, apiUrl);
             Log.Debug($"KickFire: Calling url {apiCall}", "KickFire");
-            var webRequest = WebRequest.Create(apiCall);
 
-            using (var response = webRequest.GetResponse())
+            KickFireModel company = null;
+            try
             {
-                using (var streamReader = new StreamReader(response.GetResponseStream(), new UTF8Encoding()))
-                {
-                    // convert to our model
-                    company = streamReader.ReadToEnd();
-                    streamReader.Close();
-                }
-                response.Close();
+                var ct = new CancellationToken();
+                company = await Task.Run(() => ApiSerializationRepository.DeserializeGetRequestAsync<KickFireModel>(apiCall, ct, GetTimeSpan()), ct);
+
+            }
+            catch (TaskCanceledException tce)
+            {
+                Log.Error($"The API call timed out before it could be completed. The time out is {GetTimeSpan().ToString()}", tce, this);
+                return null;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message, e, this);
+                return null;
             }
 
-            Log.Debug("KickFire: API call for " + clientIp + "|" + company, "KickFire");
+            
+            if (company == null)
+            {
+                Log.Debug("KickFire: API call for " + clientIp +" return nulled value in response.", "KickFire");
+                return null;
+            }
+
+            Log.Debug("KickFire: API call for " + clientIp + "|" + company.Jsonize(), "KickFire");
             return company;
         }
 
@@ -62,6 +74,30 @@ namespace Bonfire.Feature.KickfireService
             var api = $"{apiUrl}?ip={clientIp}&key={apiKey}";
 
             return api;
+        }
+
+        private static KickFireModel GetCompanyFromCache(string clientIp)
+        {
+            var cache = CacheBuilder.KickFireCache.Get(clientIp);
+            if (string.IsNullOrEmpty(cache))
+                return null;
+
+            try
+            {
+                var model = JsonConvert.DeserializeObject<KickFireModel>(cache);
+                model.IsError = false;
+                return model;
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Could not serialize the cache response. Value = {cache}", e, "KickFire");
+                return null;
+            }
+        }
+
+        private TimeSpan GetTimeSpan()
+        {
+            return new TimeSpan(0, 0, 2);
         }
     }
 }
