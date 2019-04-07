@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Bonfire.Feature.KickfireCore.Helpers;
 using Bonfire.Feature.KickfireCore.Models.Facets;
@@ -53,9 +54,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                     return;
                 }
 
-                // lets use async to call our web service
-                var model = Task.Run(() => _companyService.GetKickfireModel(clientIp));
-                var companyModel = model.Result;
+                var companyModel = GetKickfireModel(clientIp);
 
                 // Make sure our request is good.
                 if (IsRequestValid(companyModel))
@@ -107,7 +106,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             }
         }
 
-        private bool IsRequestValid(KickFireModel model)
+        private static bool IsRequestValid(KickFireModel model)
         {
             return model != null
                    && model.Status == "success"
@@ -138,7 +137,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             profile.Score(scores);
             profile.UpdatePattern();
 
-            Log.Info("KickFire: ====== ALL IS DONE ======", "KickFire");
+            Log.Info("KickFire: ====== ALL IS DONE ======", "KickFire"); 
         }
 
         public void ProcessSicCode(string clientIp, KickFireModel model )
@@ -166,38 +165,55 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 
         private static CompanyFacet HydrateCompanyModel(KickFireModel model)
         {
-            var data = new CompanyFacet();
-            data.Name = model.Data[0].Name;
-            data.Cid = model.Data[0].Cid;
-            data.Category = model.Data[0].Category2;
-            data.Category2 = model.Data[0].Category;
-            data.City = model.Data[0].City;
-            data.Confidence = model.Data[0].Confidence;
-            data.Country = model.Data[0].Country;
-            data.CountryShort = model.Data[0].CountryShort;
-            data.Employees = model.Data[0].Employees;
-            data.Facebook = model.Data[0].Facebook;
-            data.IsIsp = model.Data[0].IsIsp;
-            data.Latitude = model.Data[0].Latitude;
-            data.LinkedIn = model.Data[0].LinkedIn;
-            data.Longitude = model.Data[0].Longitude;
-            data.Phone = model.Data[0].Phone;
-            data.Postal = model.Data[0].Postal;
-            data.Region = model.Data[0].Region;
-            data.RegionShort = model.Data[0].RegionShort;
-            data.Revenue = model.Data[0].Revenue;
-            data.SicCode = model.Data[0].SicCode;
-            data.NaicsCode = model.Data[0].NaicsCode;
-            data.StockSymbol = model.Data[0].StockSymbol;
-            data.Street = model.Data[0].Street;
-            data.Twitter = model.Data[0].Twitter;
-            data.Website = model.Data[0].Website;
+            var data = new CompanyFacet
+            {
+                Name = model.Data[0].Name,
+                Cid = model.Data[0].Cid,
+                Category = model.Data[0].Category2,
+                Category2 = model.Data[0].Category,
+                City = model.Data[0].City,
+                Confidence = model.Data[0].Confidence,
+                Country = model.Data[0].Country,
+                CountryShort = model.Data[0].CountryShort,
+                Employees = model.Data[0].Employees,
+                Facebook = model.Data[0].Facebook,
+                IsIsp = model.Data[0].IsIsp,
+                Latitude = model.Data[0].Latitude,
+                LinkedIn = model.Data[0].LinkedIn,
+                Longitude = model.Data[0].Longitude,
+                Phone = model.Data[0].Phone,
+                Postal = model.Data[0].Postal,
+                Region = model.Data[0].Region,
+                RegionShort = model.Data[0].RegionShort,
+                Revenue = model.Data[0].Revenue,
+                SicCode = model.Data[0].SicCode,
+                NaicsCode = model.Data[0].NaicsCode,
+                StockSymbol = model.Data[0].StockSymbol,
+                Street = model.Data[0].Street,
+                Twitter = model.Data[0].Twitter,
+                Website = model.Data[0].Website
+            };
             data.IsIsp = model.Data[0].IsIsp;
             data.Confidence = model.Data[0].Confidence;
             return data;
         }
 
-        private bool ShouldProcessNonUsa()
+        private KickFireModel GetKickfireModel(string ip)
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+
+            // lets use async to call our web service
+            Log.Debug("Kickfire: Start API call to KF", "KickFire");
+            var model = Task.Run(() => _companyService.GetKickfireModel(ip));
+            var companyModel = model.Result;
+            sw.Stop();
+            Log.Info($"Kickfire: End API call to KF. Took {sw.ElapsedMilliseconds} ms", "KickFire");
+
+            return companyModel;
+        }
+
+        private static bool ShouldProcessNonUsa()
         {
             if (!AnalyticsConfigurationHelper.OnlyUsa()) return true;
 
@@ -205,7 +221,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                    || Tracker.Current.Session.Interaction.GeoData.Country == "US";
         }
 
-        private bool ShouldProcessIsp(KickFireModel model)
+        private static bool ShouldProcessIsp(KickFireModel model)
         {
             return !AnalyticsConfigurationHelper.SkipIsp() ||
                    AnalyticsConfigurationHelper.SkipIsp() && model.Data[0].IsIsp == 0;
