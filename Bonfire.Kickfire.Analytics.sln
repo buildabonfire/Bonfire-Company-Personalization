@@ -40,16 +40,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kickfire", "Kickfire", "{93
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KickfireCore.Model.Builder", "src\Feature\KickfireCore\builder\Kickfire.Model.Builder\KickfireCore.Model.Builder.csproj", "{6656C010-251E-4993-A38D-EC9C51A9764C}"
 EndProject
-Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Bonfire.Kickfire.Deployment", "src\Platform\tds\Bonfire.Kickfire.Deployment\Bonfire.Kickfire.Deployment.scproj", "{A3F0F07B-9459-4095-9643-4E84B2BFFBDE}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6656C010-251E-4993-A38D-EC9C51A9764C} = {6656C010-251E-4993-A38D-EC9C51A9764C}
-		{CF2EA81A-EC3A-4833-8DE6-798BF884A4C2} = {CF2EA81A-EC3A-4833-8DE6-798BF884A4C2}
-		{B844F84C-4A3B-4731-A3D8-780BCE4DD8C8} = {B844F84C-4A3B-4731-A3D8-780BCE4DD8C8}
-		{1B87945B-CF36-428C-9EDD-8D331F8B2806} = {1B87945B-CF36-428C-9EDD-8D331F8B2806}
-		{752C5C9E-A15B-4A29-98B1-35A93C57C35E} = {752C5C9E-A15B-4A29-98B1-35A93C57C35E}
-		{C6CDFAE6-BEEA-41A4-984F-C3DC57AAC55E} = {C6CDFAE6-BEEA-41A4-984F-C3DC57AAC55E}
-	EndProjectSection
-EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Kickfire.Content.Master", "src\Project\Kickfire\tds\Kickfire.Content.Master\Kickfire.Content.Master.scproj", "{E28BB9B3-CC9D-4607-936C-8C190F5BBFBF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{7C0357E7-E328-4BB3-AEAD-F04648AFBC24}"
@@ -57,6 +47,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KickfireDemo", "src\Project\Demo\code\KickfireDemo.csproj", "{3C65B9FD-8C33-4AD4-973F-5CF2C077A0DC}"
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "KickfireDemo.Master", "src\Project\Demo\tds\KickfireDemo.Master\KickfireDemo.Master.scproj", "{1804CE58-9D6C-4392-8CB0-B969912B82BD}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Bonfire.Kickfire.Deployment", "src\Platform\tds\Bonfire.Kickfire.Deployment\Bonfire.Kickfire.Deployment.scproj", "{BE2A78DD-DD97-40D4-B37E-B92083C198A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,12 +80,6 @@ Global
 		{6656C010-251E-4993-A38D-EC9C51A9764C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6656C010-251E-4993-A38D-EC9C51A9764C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6656C010-251E-4993-A38D-EC9C51A9764C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3F0F07B-9459-4095-9643-4E84B2BFFBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A3F0F07B-9459-4095-9643-4E84B2BFFBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A3F0F07B-9459-4095-9643-4E84B2BFFBDE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{A3F0F07B-9459-4095-9643-4E84B2BFFBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A3F0F07B-9459-4095-9643-4E84B2BFFBDE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A3F0F07B-9459-4095-9643-4E84B2BFFBDE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{E28BB9B3-CC9D-4607-936C-8C190F5BBFBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E28BB9B3-CC9D-4607-936C-8C190F5BBFBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E28BB9B3-CC9D-4607-936C-8C190F5BBFBF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -110,6 +96,12 @@ Global
 		{1804CE58-9D6C-4392-8CB0-B969912B82BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1804CE58-9D6C-4392-8CB0-B969912B82BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1804CE58-9D6C-4392-8CB0-B969912B82BD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BE2A78DD-DD97-40D4-B37E-B92083C198A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2A78DD-DD97-40D4-B37E-B92083C198A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2A78DD-DD97-40D4-B37E-B92083C198A2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BE2A78DD-DD97-40D4-B37E-B92083C198A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2A78DD-DD97-40D4-B37E-B92083C198A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2A78DD-DD97-40D4-B37E-B92083C198A2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,14 +119,14 @@ Global
 		{752C5C9E-A15B-4A29-98B1-35A93C57C35E} = {1A444C8C-71BF-4B93-8E47-78C69A43FC86}
 		{9357C991-D289-4E5E-A976-9C7E80B93B53} = {3ADF73BC-3C29-4EA5-A022-FD9CE48E85DB}
 		{6656C010-251E-4993-A38D-EC9C51A9764C} = {D1EC470A-2B70-4D35-AEFF-464CDCE377E1}
-		{A3F0F07B-9459-4095-9643-4E84B2BFFBDE} = {8E82E4A9-F83C-435D-A062-79164F2DCC8D}
 		{E28BB9B3-CC9D-4607-936C-8C190F5BBFBF} = {9357C991-D289-4E5E-A976-9C7E80B93B53}
 		{7C0357E7-E328-4BB3-AEAD-F04648AFBC24} = {3ADF73BC-3C29-4EA5-A022-FD9CE48E85DB}
 		{3C65B9FD-8C33-4AD4-973F-5CF2C077A0DC} = {7C0357E7-E328-4BB3-AEAD-F04648AFBC24}
 		{1804CE58-9D6C-4392-8CB0-B969912B82BD} = {7C0357E7-E328-4BB3-AEAD-F04648AFBC24}
+		{BE2A78DD-DD97-40D4-B37E-B92083C198A2} = {8E82E4A9-F83C-435D-A062-79164F2DCC8D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 		SolutionGuid = {1E602087-685C-4CC2-B084-95024795A051}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
