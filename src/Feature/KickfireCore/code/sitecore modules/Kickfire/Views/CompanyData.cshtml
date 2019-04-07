@@ -1,0 +1,173 @@
+﻿@model Bonfire.Feature.KickfireCore.Models.Facets.CompanyFacet
+
+
+<style>
+    div.section__company {
+        float: left;
+        width: 100%;
+    }
+</style>
+
+@if (Model == null)
+{
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="sc-advancedExpander-header data-sc-registered" data-bind="click: toggle">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="sc-advancedExpander-header-icon-container data-sc-registered" data-bind="css: {'not-empty': imageUrl()!='' }">
+                                <img class="sc-advancedExpander-header-icon data-sc-registered" onerror="this.style.display = 'none'" onload="this.style.display = 'inline';" alt="" data-bind="attr : {src: imageUrl}" src="" style="display: none;">
+                            </td>
+                            <td class="sc-advancedExpander-header-title">
+                                <span class="sc-advancedExpander-header-title-text data-sc-registered" data-bind="text: header">Company Information</span>
+                            </td>
+                            <td class="sc-advancedExpander-header-actionbar sc-actionbar-collapsed data-sc-registered" data-bind="css: {'sc-actionbar-collapsed': !showActionBar() }">
+                                <div class="sc-advancedExpander-header-actionbar-container data-sc-registered" data-bind="visible: showActionBar" style="display: none;"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row" style="padding: 15px;">
+                <div>
+                    <span class="memberDetailsLabel"><strong>Company</strong></span>
+                    <span class="memberDetailsValue">THE CONTACT'S COMPANY DATA IS EMPTY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+
+    <style>
+        .memberDetailsLabel {
+            padding-left: 10px;
+            width: 150px;
+            display: block;
+            float: left;
+        }
+
+        .memberDetailsValue {
+            padding-left: 100px;
+            display: block;
+        }
+    </style>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="row" style="padding: 15px;">
+                <div></div>
+                <span class="memberDetailsLabel"><strong>Company</strong></span>
+                <span class="memberDetailsValue">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </div>
+
+            <div class="section__company">
+                <span class="memberDetailsLabel">Cid:</span>
+                <span class="memberDetailsValue">@Model.Cid</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Name:</span>
+                <span class="memberDetailsValue">@Model.Name</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Website:</span>
+                <span class="memberDetailsValue">@Model.Website</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Street:</span>
+                <span class="memberDetailsValue">@Model.Street</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">City:</span>
+                <span class="memberDetailsValue">@Model.City</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Region:</span>
+                <span class="memberDetailsValue">@Model.Region</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">RegionShort:</span>
+                <span class="memberDetailsValue">@Model.RegionShort</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Postal:</span>
+                <span class="memberDetailsValue">@Model.Postal</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Country:</span>
+                <span class="memberDetailsValue">@Model.Country</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">CountryShort:</span>
+                <span class="memberDetailsValue">@Model.CountryShort</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Phone:</span>
+                <span class="memberDetailsValue">@Model.Phone</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Employees:</span>
+                <span class="memberDetailsValue">@Model.Employees</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Revenue:</span>
+                <span class="memberDetailsValue">@Model.Revenue</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Category:</span>
+                <span class="memberDetailsValue">@Model.Category</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Category2:</span>
+                <span class="memberDetailsValue">@Model.Category2</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">NaicsCode:</span>
+                <span class="memberDetailsValue">@Model.NaicsCode</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">SicCode:</span>
+                <span class="memberDetailsValue">@Model.SicCode</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Latitude:</span>
+                <span class="memberDetailsValue">@Model.Latitude</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Longitude:</span>
+                <span class="memberDetailsValue">@Model.Longitude</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">StockSymbol:</span>
+                <span class="memberDetailsValue">@Model.StockSymbol</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Facebook:</span>
+                <span class="memberDetailsValue">@Model.Facebook</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Twitter:</span>
+                <span class="memberDetailsValue">@Model.Twitter</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">LinkedIn:</span>
+                <span class="memberDetailsValue">@Model.LinkedIn</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">IsIsp:</span>
+                <span class="memberDetailsValue">@Model.IsIsp</span>
+            </div>
+            <div class="section__company">
+                <span class="memberDetailsLabel">Confidence:</span>
+                <span class="memberDetailsValue">@Model.Confidence</span>
+            </div>
+        </div>
+    </div>
+
+}

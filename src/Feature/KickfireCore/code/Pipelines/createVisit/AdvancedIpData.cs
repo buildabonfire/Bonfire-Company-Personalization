@@ -17,15 +17,12 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
     public class AdvancedIpData : CreateVisitProcessor
     {
         private readonly ICompanyService _companyService;
-        private readonly ISicCodeOverrideRepository _sicCodeOverrideRepository;
         private readonly ISicCodeGroupRepository _sicCodeGroupRepository;
 
         public AdvancedIpData(ISicCodeGroupRepository sicCodeGroupRepository, 
-            ICompanyService companyService, 
-            ISicCodeOverrideRepository sicCodeOverrideRepository)
+            ICompanyService companyService)
         {
             _companyService = companyService;
-            _sicCodeOverrideRepository = sicCodeOverrideRepository;
             _sicCodeGroupRepository = sicCodeGroupRepository;
         }
 

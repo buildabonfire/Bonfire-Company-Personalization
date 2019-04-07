@@ -10,7 +10,6 @@ namespace Bonfire.Feature.KickfireCore.ServicesConfigurator
         {
             // register each repository and service
             serviceCollection.AddScoped<ISicCodeGroupRepository, SicCodeGroupGroupRepository>();
-            serviceCollection.AddScoped<ISicCodeOverrideRepository, SicCodeOverrideRepository>();
         }
     }
 }
