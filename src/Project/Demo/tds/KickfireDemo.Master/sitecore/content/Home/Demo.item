@@ -10,18 +10,32 @@ template: {1F2FC5C0-D682-4837-8951-A5E9ECD0647A}
 templatekey: DemoPage
 created: 20190319T183447Z
 
+----field----
+field: {B0A67B2A-8B07-4E0B-8809-69F751709806}
+name: __Tracking
+key: __tracking
+content-length: 261
+
+<tracking>
+  <profile id="24dff2cf-b30a-4b75-8967-2fe3ded82271" name="Focus">
+    <key name="Background" value="10" />
+    <key name="Practical" value="0" />
+    <key name="Process" value="0" />
+    <key name="Scope" value="0" />
+  </profile>
+</tracking>
 ----version----
 language: en
 version: 1
-revision: 9188ea22-2598-45d4-987d-fabed1f1841e
+revision: 0190a384-f0e2-45e1-92c9-fe2974c10c3e
 
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 253
+content-length: 2932
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DCD01BA4-4781-4D04-8658-425F7B16542A}" s:ds="{00A4924D-EF56-4976-B80D-FA364247B729}" s:id="{FCE4B116-DD33-41E1-85C7-81106CB04E9A}" s:par="" s:ph="main" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{1A462A2E-E3C2-45E4-A46B-0646E65CA275}" p:before="*" s:id="{FCE4B116-DD33-41E1-85C7-81106CB04E9A}" s:ph="main"><rls><ruleset><rule uid="{A5B14663-6CFE-4B99-90C9-DEED85BEA2CC}" s:name="Pattern match"><conditions><condition uid="88A5EBA9A5D94983987AE8ECBD1D7C14" s:id="{E00DB4F0-B206-4544-AD90-25D201CFB62C}" s:ProfileName="Industry" s:PatternName="Business Services" /></conditions><actions><action uid="2708785BA5B14C7DA5A7A71F37853BE0" s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}" s:DataSource="{BDCF22EC-B6DB-44D4-9153-BF65D1184E51}" /></actions></rule><rule uid="{00000000-0000-0000-0000-000000000000}" s:name="Default"><conditions><condition uid="D878EF8E77EB4D2B8702557BA921790D" s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" /></conditions><actions><action uid="7F8BC6DBFBA34411A16DDD0348023F63" s:id="{25F351A1-712D-45F8-857D-8AD95BB2ACE9}" /></actions></rule></ruleset></rls></r><r uid="{DCD01BA4-4781-4D04-8658-425F7B16542A}" p:after="r[@uid='{1A462A2E-E3C2-45E4-A46B-0646E65CA275}']" s:ds="{00A4924D-EF56-4976-B80D-FA364247B729}" s:id="{FCE4B116-DD33-41E1-85C7-81106CB04E9A}" s:par="" s:ph="main"><rls><ruleset><rule uid="{527A53C4-02DB-44DA-8B62-8EBACD3B13B9}" s:name="Facet property"><conditions><condition uid="5CE0940B8872421C8EE4CCB66911A17F" s:id="{40B81635-1B8A-4379-9119-2743BC5F8683}" s:Property="{174DD140-0355-4FB3-BFD2-A8E9E6D8EBC7}" s:operatorid="{2E67477C-440C-4BCA-A358-3D29AED89F47}" s:value="kick" /></conditions><actions><action uid="69C0FE28CB0449CE914418CA0CE050D3" s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}" s:DataSource="{517DD370-5668-44C5-8C41-A032C17981FF}" /></actions></rule><rule uid="{E6EEBD8C-FCEE-42E7-97B1-3CEAED79C258}" s:name="Specify name..."><conditions><condition uid="E9A2F64FDB4D4A3B982C1B34EFFC9A07" s:id="{B50EC945-A3CF-4E29-A9D3-C70B71AD04FC}" s:operatorid="{2E67477C-440C-4BCA-A358-3D29AED89F47}" s:value="Kick" /></conditions><actions><action uid="2669F20A389A4CB6BB773640080E4F18" s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}" s:DataSource="{347873BD-E269-4DA5-9354-FB6DF154A3C4}" /></actions></rule><rule uid="{CD92977D-4EA1-4AA7-BEBB-CA8539CDCE3B}" s:name="10-50"><conditions><condition uid="A48898232FE843EA877E74E1076AA530" s:id="{33EED952-2F6C-4F1F-B97C-5C2F04794E0B}" s:EmployeeCount="{4A24B4FD-6B21-450E-B4B4-E4E73D32A56D}" /></conditions><actions><action uid="986784994FA84E03BA2FCADD6E6726F4" s:id="{0F3C6BEC-E56B-4875-93D7-2846A75881D2}" s:DataSource="{5FEEC142-0E81-4DFF-891E-7DF8E6658A05}" /></actions></rule><rule uid="{00000000-0000-0000-0000-000000000000}" s:name="Default"><conditions><condition uid="AB414AAB3D6C4F43A1447AE6E99421D9" s:id="{4888ABBB-F17D-4485-B14B-842413F88732}" /></conditions><actions /></rule></ruleset></rls></r><r uid="{A052F052-F32B-4736-A48D-9D1C2FA921C7}" p:after="*[1=2]" s:id="{12FE3DD1-4E33-4D89-80E7-3BAC00CB3043}" s:ph="main" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -35,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9188ea22-2598-45d4-987d-fabed1f1841e
+0190a384-f0e2-45e1-92c9-fe2974c10c3e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190319T184258Z
+20190407T161856Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

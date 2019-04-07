@@ -1,26 +1,33 @@
 ----item----
 version: 1
-id: {56916C8D-DC3D-4445-9527-2C469825B353}
+id: {12FE3DD1-4E33-4D89-80E7-3BAC00CB3043}
 database: master
-path: /sitecore/content/Home/Demo/New Data Folder
-parent: {38F1F36D-3E17-4D92-8D26-6D0AD5399B90}
-name: New Data Folder
+path: /sitecore/layout/Renderings/Project/KickfireDemo/KickfireInfo
+parent: {2FCBDCA9-320F-4A47-A786-7858AE633B0C}
+name: KickfireInfo
 master: {00000000-0000-0000-0000-000000000000}
-template: {D108B156-7206-4CE3-9EF9-3FD684807D3B}
-templatekey: Data Folder
-created: 20190319T184657Z
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
+created: 20190319T195146Z
 
 ----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 61
 
-{257BBC6B-CBF4-49FE-817D-DAD1257F4A7E}
+KickfireDemo.Controllers.KickfireDemoController, KickfireDemo
+----field----
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 12
+
+KickfireInfo
 ----version----
 language: en
 version: 1
-revision: 6a127696-9af4-425f-8977-792f56aa6e3e
+revision: 1d451b23-2a3c-406c-9efc-5a33e93861c7
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -35,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20190319T184657Z
+20190319T195146Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6a127696-9af4-425f-8977-792f56aa6e3e
+1d451b23-2a3c-406c-9efc-5a33e93861c7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190407T161406Z
+20190319T195217Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
