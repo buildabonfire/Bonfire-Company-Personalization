@@ -14,15 +14,6 @@ namespace Bonfire.Feature.KickfireCore.Repository
             _db = Sitecore.Configuration.Factory.GetDatabase(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.WebDatabaseName"));
         }
 
-        public Item GetSicGroup(string sicCode)
-        {
-            var item = GetSicCodeItemOrDefault(sicCode);
-            if (item != null)
-                return item;
-
-            return GetDefaultSicCode();
-        }
-
         public Item GetProfileItemBySicCode(string sicCode)
         {
             return GetProfileFromOverride(GetSicCodeItemOrDefault(sicCode));
@@ -71,16 +62,6 @@ namespace Bonfire.Feature.KickfireCore.Repository
         {
             var profileItem = (Sitecore.Data.Fields.ReferenceField) sicCode.Fields[Templates.SicCode.Fields.Profile];
             return profileItem.TargetItem;
-        }
-
-        public Item GetGroupParent()
-        {
-            var groupSetting = Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.Grouping");
-
-            if (_db == null || groupSetting == null || !ID.IsID(groupSetting))
-                return null;
-
-            return _db.GetItem(ID.Parse(groupSetting));
         }
 
         protected virtual string GetSearchIndexNameForDatabase() => $"sitecore_{Sitecore.Context.Database}_index";
