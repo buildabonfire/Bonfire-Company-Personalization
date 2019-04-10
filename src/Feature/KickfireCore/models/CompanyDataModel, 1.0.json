@@ -59,6 +59,12 @@
         "Category": {
           "Type": "String"
         },
+        "Category2": {
+          "Type": "String"
+        },
+        "NaicsCode": {
+          "Type": "String"
+        },
         "SicCode": {
           "Type": "String"
         },
@@ -80,9 +86,6 @@
         "LinkedIn": {
           "Type": "String"
         },
-        "LinkedInId": {
-          "Type": "String"
-        },
         "IsIsp": {
           "Type": "Int32"
         },
@@ -95,7 +98,7 @@
   "Facets": [
     {
       "Target": "Contact",
-      "Name": "CompanyFacet",
+      "Name": "Company",
       "Type": "Bonfire.Feature.KickfireCore.Models.Facets.CompanyFacet"
     }
   ]
