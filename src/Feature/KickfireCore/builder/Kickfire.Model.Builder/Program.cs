@@ -10,6 +10,9 @@ namespace KickfireCore.Model.Builder
             var json = XdbModelWriter.Serialize(Bonfire.Feature.KickfireCore.Models.DataModel.CompanyDataModel.Model);
             File.WriteAllText(Bonfire.Feature.KickfireCore.Models.DataModel.CompanyDataModel.Model + ".json", json);
 
+            var identifiedGoal = XdbModelWriter.Serialize(Bonfire.Feature.KickfireCore.Models.DataModel.IdentifiedGoalDataModel.Model);
+            File.WriteAllText(Bonfire.Feature.KickfireCore.Models.DataModel.IdentifiedGoalDataModel.Model + ".json", identifiedGoal);
+
         }
     }
 }

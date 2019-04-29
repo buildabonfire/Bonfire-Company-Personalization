@@ -34,9 +34,9 @@ namespace Bonfire.Feature.KickfireCore
         {
             public struct Fields
             {
-                public static ID KireFireKey = new ID("{5A3E6C40-392E-437A-A72A-7C2D9D9CADE4}");
                 public static ID SkipIsp = new ID("{66A4FE61-1260-452F-9465-54199854F9F3}");
                 public static ID SkipNonUsa = new ID("{99CA527F-E76D-4ACF-A121-152D360EBB07}");
+                public static ID IdentificationGoal = new ID("{18C09059-A649-43C6-B4CB-A1FD395B6B54}");
             }
         }
 

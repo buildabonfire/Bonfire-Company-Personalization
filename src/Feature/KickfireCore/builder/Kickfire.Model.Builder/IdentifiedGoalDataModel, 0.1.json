@@ -1,0 +1,23 @@
+{
+  "Name": "IdentifiedGoalDataModel",
+  "Version": "0.1",
+  "References": [
+    {
+      "Name": "XConnect",
+      "Version": "1.0"
+    },
+    {
+      "Name": "Sitecore.XConnect.Collection.Model",
+      "Version": "9.0"
+    }
+  ],
+  "Types": {
+    "Bonfire.Feature.KickfireCore.Models.Goals.IdentifiedGoal": {
+      "Type": "Event",
+      "BaseType": "Sitecore.XConnect.Goal",
+      "ClrType": "Bonfire.Feature.KickfireCore.Models.Goals.IdentifiedGoal, Bonfire.Feature.KickfireCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {}
+    }
+  },
+  "Facets": []
+}

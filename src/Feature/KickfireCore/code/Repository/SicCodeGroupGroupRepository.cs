@@ -3,6 +3,7 @@ using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.SearchTypes;
 using Sitecore.Data;
 using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
 
 namespace Bonfire.Feature.KickfireCore.Repository
 {
@@ -16,7 +17,12 @@ namespace Bonfire.Feature.KickfireCore.Repository
 
         public Item GetProfileItemBySicCode(string sicCode)
         {
-            return GetProfileFromOverride(GetSicCodeItemOrDefault(sicCode));
+            var profileItem = GetProfileFromOverride(GetSicCodeItemOrDefault(sicCode));
+
+            if (profileItem == null)
+                Log.Info("profileItem is null", this); 
+
+            return profileItem;
         }
 
 
@@ -46,22 +52,38 @@ namespace Bonfire.Feature.KickfireCore.Repository
         private Item GetSicCodeItem(string sicCode)
         {
             var sicCodePath = GetSicCodeParent().Paths.FullPath;
-            if (string.IsNullOrEmpty(sicCodePath)) return null;
+            if (string.IsNullOrEmpty(sicCodePath))
+            {
+                Log.Info("sicCodePath is null", this);
+                return null;
+            }
 
             return DoSearch(Templates.SicCodeOverride.FieldNames.Code, sicCode, sicCodePath, Templates.SicCodeOverride.Id);
         }
 
         private Item GetProfileFromOverride(Item sicCodeOverride)
         {
+            if (sicCodeOverride == null)
+            {
+                Log.Info("sicCodeOverride is null", this);
+                return null;
+            }
+
             // get the group code this is overriding and get the profile for that
             var profileItem = (Sitecore.Data.Fields.ReferenceField)sicCodeOverride.Fields[Templates.SicCodeOverride.Fields.Grouping];
-            return GetProfileFromGroup(profileItem.TargetItem);
+            return profileItem?.TargetItem != null ? GetProfileFromGroup(profileItem.TargetItem) : null;
         }
 
         private Item GetProfileFromGroup(Item sicCode)
         {
+            if (sicCode == null)
+            {
+                Log.Info("sicCode is null", this);
+                return null;
+            }
+
             var profileItem = (Sitecore.Data.Fields.ReferenceField) sicCode.Fields[Templates.SicCode.Fields.Profile];
-            return profileItem.TargetItem;
+            return profileItem?.TargetItem;
         }
 
         protected virtual string GetSearchIndexNameForDatabase() => $"sitecore_{Sitecore.Context.Database}_index";
@@ -77,7 +99,13 @@ namespace Bonfire.Feature.KickfireCore.Repository
                                          && x.Path.StartsWith(startPath)
                                          && x.TemplateId == templateId);
 
-                return searchResult?.GetItem();
+                var result = searchResult?.GetItem();
+                if (result == null)
+                {
+                    Log.Info($"Sic Code search is null. fieldName={fieldName}, value={value}, startPath={startPath}, templateId={templateId.Guid}", this);
+                }
+
+                return result;
             }
         }
 

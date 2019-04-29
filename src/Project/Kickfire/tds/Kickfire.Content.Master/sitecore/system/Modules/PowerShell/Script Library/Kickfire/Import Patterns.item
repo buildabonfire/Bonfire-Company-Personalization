@@ -14,7 +14,7 @@ created: 20190403T013456Z
 field: {B1A94FF0-6897-47C0-9C51-AA6ACB80B1F0}
 name: Script
 key: script
-content-length: 1286
+content-length: 1937
 
 [Sitecore.Data.ID]$patternTemplate = "{4A6A7E36-2481-438F-A9BA-0453ECC638FA}"
     
@@ -26,16 +26,45 @@ function CreateItem([string]$group)
 
     $goodName = [Sitecore.Data.Items.ItemUtil]::ProposeValidItemName($group);
     $path = "/sitecore/system/Marketing Control Panel/Profiles/Industry/Pattern Cards/$goodName"
+    
+    Write-Host  "Looking for $path"
+    
     $displayName = $goodName
     
-    $item = New-Item -Path "$path" -ItemType $patternTemplate
+    $found = FindExisting $goodName
+    if($found -eq $false)
+    {
+        Write-Host  "Not Found $groupName"
+        $item = New-Item -Path $path -ItemType $patternTemplate
+        
+        $id = $item.ID
+        
+        $item.Editing.BeginEdit()
+        $item["Name"] = $displayName
+        $item."__Display Name" = $displayName
+        $item.Editing.EndEdit()
+    }
+    else
+    {
+        Write-Host  "Found $groupName"
+    }
+}
+
+function FindExisting([string]$itemName)
+{
+    $patterns = Get-Item -Path master:$path
+
+    #$pattern = $patterns.Axes.GetDescendants() |
+    #    ? { $_.Name -eq $itemName } |
+    #    select -first 1
+
+    if($patterns -eq $null) {
+        Write-Host  "Could not find $groupName"
+        return $false
+    }
     
-    $id = $item.ID
-    
-    $item.Editing.BeginEdit()
-    $item["Name"] = $displayName
-    $item."__Display Name" = $displayName
-    $item.Editing.EndEdit()
+    Write-Host  "Found $groupName"
+    return $true
 }
 
 
@@ -64,7 +93,7 @@ foreach ($row in $importData) {
 ----version----
 language: en
 version: 1
-revision: 2cc225e8-3fe9-4048-b9e1-98b7c3b60cc4
+revision: 79269a6d-5506-4315-8bf2-1832d65761ef
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -93,14 +122,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2cc225e8-3fe9-4048-b9e1-98b7c3b60cc4
+79269a6d-5506-4315-8bf2-1832d65761ef
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20190403T013641Z
+20190411T005202Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

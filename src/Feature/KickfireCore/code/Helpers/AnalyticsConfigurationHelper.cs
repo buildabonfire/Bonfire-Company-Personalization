@@ -30,8 +30,7 @@ namespace Bonfire.Feature.KickfireCore.Helpers
             {
                 if (configItem.Fields[Templates.Configuration.Fields.SkipIsp] != null)
                 {
-                    CheckboxField skipIsp =
-                        configItem.Fields[Templates.Configuration.Fields.SkipIsp];
+                    CheckboxField skipIsp = configItem.Fields[Templates.Configuration.Fields.SkipIsp];
 
                     return skipIsp.Checked;
                 }
@@ -49,8 +48,7 @@ namespace Bonfire.Feature.KickfireCore.Helpers
             {
                 if (configItem.Fields[Templates.Configuration.Fields.SkipNonUsa] != null)
                 {
-                    CheckboxField skipUsa =
-                        configItem.Fields[Templates.Configuration.Fields.SkipNonUsa];
+                    CheckboxField skipUsa = configItem.Fields[Templates.Configuration.Fields.SkipNonUsa];
 
                     return skipUsa.Checked;
                 }
@@ -58,6 +56,23 @@ namespace Bonfire.Feature.KickfireCore.Helpers
 
             return false;
 
+        }
+
+        internal static Item IdentificationGoal()
+        {
+            var configItem = GetConfigurationItem();
+
+            if (configItem != null)
+            {
+                if (configItem.Fields[Templates.Configuration.Fields.IdentificationGoal] != null)
+                {
+                    InternalLinkField link = configItem.Fields[Templates.Configuration.Fields.IdentificationGoal];
+
+                    return link?.TargetItem;
+                }
+            }
+
+            return null;
         }
     }
 }

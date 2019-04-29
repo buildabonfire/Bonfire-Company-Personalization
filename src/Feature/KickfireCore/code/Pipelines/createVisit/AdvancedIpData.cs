@@ -8,8 +8,10 @@ using Bonfire.Feature.KickfireCore.Repository;
 using Bonfire.Feature.KickfireCore.Services;
 using Bonfire.Foundation.Kickfire.Library.Model;
 using Bonfire.Foundation.Kickfire.Library.Services;
+using Bonfire.Foundation.XConnectService.Services;
 using Sitecore.Analytics;
 using Sitecore.Analytics.Pipelines.CreateVisits;
+using Sitecore.Data;
 using Sitecore.Diagnostics;
 
 namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
@@ -17,12 +19,13 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
     public class AdvancedIpData : CreateVisitProcessor
     {
         private readonly ICompanyService _companyService;
+        private readonly IEventTrackerService _eventTrackerService;
         private readonly ISicCodeGroupRepository _sicCodeGroupRepository;
 
-        public AdvancedIpData(ISicCodeGroupRepository sicCodeGroupRepository, 
-            ICompanyService companyService)
+        public AdvancedIpData(ISicCodeGroupRepository sicCodeGroupRepository, ICompanyService companyService, IEventTrackerService eventTrackerService)
         {
             _companyService = companyService;
+            _eventTrackerService = eventTrackerService;
             _sicCodeGroupRepository = sicCodeGroupRepository;
         }
 
@@ -30,7 +33,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
         {
             //var companyService = DependencyResolver.Current.GetService<ICompanyService>();
 
-            Assert.ArgumentNotNull(args, "args");
+            Assert.ArgumentNotNull(args, "args"); 
             Assert.IsNotNull(args.Session, "args.Session is null");
             Assert.IsNotNull(args.Session.Contact, "args.Session.Contact is null");
             Assert.IsNotNull(_companyService, "Company service can not be null");
@@ -51,12 +54,15 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                     return;
                 }
 
-                var companyModel = GetKickfireModel(clientIp);
+                var companyModel = GetKickfireModel(clientIp);  
 
                 // Make sure our request is good.
                 if (IsRequestValid(companyModel))
                 {
                     ProcessValidRequest(companyModel, clientIp);
+
+                    // fire the goals
+                    //ProcessGoals(companyModel);
                 }
                 else
                 {
@@ -137,7 +143,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             Log.Info("KickFire: ====== ALL IS DONE ======", "KickFire"); 
         }
 
-        public void ProcessSicCode(string clientIp, KickFireModel model )
+        private void ProcessSicCode(string clientIp, KickFireModel model )
         {
             // Lets put the user into the right pattern
             if (string.IsNullOrWhiteSpace(model.Data[0].SicCode))
@@ -150,8 +156,24 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
 
             var profileItem = _sicCodeGroupRepository.GetProfileItemBySicCode(model.Data[0].SicCode);
 
-            ProcessProfile(profileItem);
+            if (profileItem != null)
+                ProcessProfile(profileItem);
 
+        }
+
+        private void ProcessGoals(KickFireModel model)
+        {
+            var identificationGoal = AnalyticsConfigurationHelper.IdentificationGoal(); 
+
+            if (identificationGoal != null && model.Data[0].Confidence > 70)
+            {
+                //_eventTrackerService.TrackGoal(identificationGoal.ID.ToGuid());
+
+                //var companyConnectService = new CompanyConnectService();
+
+                //companyConnectService.AddXconnectGoal(identificationGoal.ID.ToGuid(), Tracker.Current.Interaction.UserAgent, new ID("{B418E4F2-1013-4B42-A053-B6D4DCA988BF}").ToGuid());
+
+            }
         }
 
         private static void UpdateCompanyDataOnClient(KickFireModel model)
@@ -165,7 +187,6 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             var data = new CompanyFacet
             {
                 Name = model.Data[0].Name,
-                Cid = model.Data[0].Cid,
                 Category = model.Data[0].Category2,
                 Category2 = model.Data[0].Category,
                 City = model.Data[0].City,
@@ -185,10 +206,12 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                 Revenue = model.Data[0].Revenue,
                 SicCode = model.Data[0].SicCode,
                 NaicsCode = model.Data[0].NaicsCode,
+                NaicsGroup = model.Data[0].NaicsGroup,
                 StockSymbol = model.Data[0].StockSymbol,
                 Street = model.Data[0].Street,
                 Twitter = model.Data[0].Twitter,
-                Website = model.Data[0].Website
+                Website = model.Data[0].Website,
+                IsWifi = model.Data[0].IsWifi
             };
             data.IsIsp = model.Data[0].IsIsp;
             data.Confidence = model.Data[0].Confidence;
@@ -201,9 +224,11 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             sw.Start();
 
             // lets use async to call our web service
-            Log.Debug("Kickfire: Start API call to KF", "KickFire");
+            Log.Info("Kickfire: Start API call to KF", "KickFire");
+
             var model = Task.Run(() => _companyService.GetKickfireModel(ip));
             var companyModel = model.Result;
+
             sw.Stop();
             Log.Info($"Kickfire: End API call to KF. Took {sw.ElapsedMilliseconds} ms", "KickFire");
 

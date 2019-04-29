@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 namespace Bonfire.Feature.KickfireCore.Services
 {
     using Sitecore.XConnect;
@@ -62,6 +64,34 @@ namespace Bonfire.Feature.KickfireCore.Services
                 _contactIdentificationRepository.Manager.RemoveFromSession(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
                 Sitecore.Analytics.Tracker.Current.Session.Contact = _contactIdentificationRepository.Manager.LoadContact(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
                 
+            }
+        }
+
+        public void AddXconnectGoal(Guid goalId, string userAgent, Guid channelId)
+        {
+            var contactReference = _contactIdentificationRepository.GetContactReference();
+
+            using (var client = _contactIdentificationRepository.CreateContext())
+            {
+                // get the contact
+                var contact = client.Get(contactReference, new ContactExpandOptions());
+
+                var interaction = new Interaction(contact, InteractionInitiator.Brand, channelId, userAgent);
+
+                var goal = new Goal(goalId, DateTime.UtcNow) {EngagementValue = 20};
+
+                interaction.Events.Add(goal);
+
+                //client.AddContact(contact);
+                client.AddInteraction(interaction);
+
+                // submit the changes to xConnect
+                client.Submit();
+
+                // reset the contact
+                _contactIdentificationRepository.Manager.RemoveFromSession(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
+                Sitecore.Analytics.Tracker.Current.Session.Contact = _contactIdentificationRepository.Manager.LoadContact(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
+
             }
         }
 
