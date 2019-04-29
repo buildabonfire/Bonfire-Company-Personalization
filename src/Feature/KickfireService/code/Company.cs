@@ -30,7 +30,7 @@ namespace Bonfire.Feature.KickfireService
             }
 
             company = await CallApiService(clientIp, apiKey, apiUrl);
-            //CacheBuilder.KickFireCache.Set(clientIp, company.Jsonize());
+            CacheBuilder.KickFireCache.Set(clientIp, company.Jsonize());
 
             return company;
         }

@@ -30,6 +30,7 @@ namespace Bonfire.Feature.KickfireCore.Models.Facets
         public string Category { get; set; }
         public string Category2 { get; set; }
         public string NaicsCode { get; set; }
+        public string NaicsGroup { get; set; }
         public string SicCode { get; set; }
         public string Latitude { get; set; }
         public string Longitude { get; set; }
@@ -38,6 +39,7 @@ namespace Bonfire.Feature.KickfireCore.Models.Facets
         public string Twitter { get; set; }
         public string LinkedIn { get; set; }
         public int IsIsp { get; set; }
+        public int IsWifi { get; set; }
         public int Confidence { get; set; }
     }
 }

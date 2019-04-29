@@ -8,11 +8,9 @@ namespace Bonfire.Foundation.Kickfire.Library.Model
         public int Results { get; set; }
         public List<Datum> Data { get; set; }
         public bool IsError { get; set; }
-        public string Message { get; set; }
 
         public class Datum
         {
-            public string Cid { get; set; }
             public string Name { get; set; }
             public string Website { get; set; }
             public string Street { get; set; }
@@ -35,7 +33,9 @@ namespace Bonfire.Foundation.Kickfire.Library.Model
             public string LinkedIn { get; set; }
             public string Category2 { get; set; }
             public string NaicsCode { get; set; }
+            public string NaicsGroup { get; set; }
             public int IsIsp { get; set; }
+            public int IsWifi { get; set; }
             public int Confidence { get; set; }
         }
     }
