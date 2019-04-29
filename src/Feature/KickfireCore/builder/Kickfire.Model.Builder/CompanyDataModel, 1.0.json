@@ -65,6 +65,9 @@
         "NaicsCode": {
           "Type": "String"
         },
+        "NaicsGroup": {
+          "Type": "String"
+        },
         "SicCode": {
           "Type": "String"
         },
@@ -87,6 +90,9 @@
           "Type": "String"
         },
         "IsIsp": {
+          "Type": "Int32"
+        },
+        "IsWifi": {
           "Type": "Int32"
         },
         "Confidence": {
