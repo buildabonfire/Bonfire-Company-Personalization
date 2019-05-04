@@ -1,6 +1,7 @@
 ﻿
 
 using System;
+using Bonfire.Foundation.Kickfire.Library.Extensions;
 
 namespace Bonfire.Feature.KickfireCore.Services
 {
@@ -38,23 +39,20 @@ namespace Bonfire.Feature.KickfireCore.Services
                 var contact = client.Get(contactReference, new ContactExpandOptions(facets.ToArray()));
 
                 // pull the facet from the contact (if it exists)
-                var facet = contact.GetFacet<CompanyFacet>(CompanyFacet.DefaultFacetKey);
+                var facet = contact.GetFacet<CompanyFacet>(CompanyFacet.DefaultFacetKey) ;
 
                 // if it exists, change it, else make a new one
                 if (facet != null)
                 {
-                    facet = model;
+                    UpdateFacet(facet, model);
 
                     // set the facet on the client connection
                     client.SetFacet(contact, CompanyFacet.DefaultFacetKey, facet);
                 }
                 else
                 {
-                    // make a new one
-                    facet = model;
-
                     // set the facet on the client connection
-                    client.SetFacet(contact, CompanyFacet.DefaultFacetKey, facet);
+                    client.SetFacet(contact, CompanyFacet.DefaultFacetKey, model);
                 }
 
                 // submit the changes to xConnect
@@ -93,6 +91,37 @@ namespace Bonfire.Feature.KickfireCore.Services
                 Sitecore.Analytics.Tracker.Current.Session.Contact = _contactIdentificationRepository.Manager.LoadContact(Sitecore.Analytics.Tracker.Current.Contact.ContactId);
 
             }
+        }
+
+        private static void UpdateFacet(CompanyFacet facet, CompanyFacet model)
+        {
+            facet.Cid = model.Cid;
+            facet.Name = model.Name;
+            facet.Website = model.Website;
+            facet.Street = model.Street;
+            facet.City = model.City;
+            facet.RegionShort = model.RegionShort;
+            facet.Region = model.Region;
+            facet.Postal = model.Postal;
+            facet.CountryShort = model.CountryShort;
+            facet.Country = model.Country;
+            facet.Phone = model.Phone;
+            facet.Employees = model.Employees;
+            facet.Revenue = model.Revenue;
+            facet.Category = model.Category;
+            facet.Category2 = model.Category2;
+            facet.NaicsCode = model.NaicsCode;
+            facet.NaicsGroup = model.NaicsGroup;
+            facet.SicCode = model.SicCode;
+            facet.Latitude = model.Latitude;
+            facet.Longitude = model.Longitude;
+            facet.StockSymbol = model.StockSymbol;
+            facet.Facebook = model.Facebook;
+            facet.Twitter = model.Twitter;
+            facet.LinkedIn = model.LinkedIn;
+            facet.IsIsp = model.IsIsp;
+            facet.IsWifi = model.IsWifi;
+            facet.Confidence = model.Confidence;
         }
 
     }
