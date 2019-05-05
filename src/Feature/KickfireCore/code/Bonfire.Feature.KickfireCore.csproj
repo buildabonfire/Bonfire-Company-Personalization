@@ -69,6 +69,8 @@
     <Content Include="App_Config\Modules\Kickfire\ExpressTab.config" />
     <Content Include="sitecore modules\Kickfire\Views\CompanyData.cshtml" />
     <Content Include="sitecore modules\Kickfire\Web.config" />
+    <Content Include="Models\FacetModel\CompanyDataModel, 1.0.json" />
+    <Content Include="Models\FacetModel\IdentifiedGoalDataModel, 0.1.json" />
     <None Include="Web.config">
       <SubType>Designer</SubType>
     </None>

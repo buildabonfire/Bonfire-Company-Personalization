@@ -1,0 +1,111 @@
+{
+  "Name": "CompanyDataModel",
+  "Version": "1.0",
+  "References": [
+    {
+      "Name": "XConnect",
+      "Version": "1.0"
+    },
+    {
+      "Name": "Sitecore.XConnect.Collection.Model",
+      "Version": "9.0"
+    }
+  ],
+  "Types": {
+    "Bonfire.Feature.KickfireCore.Models.Facets.CompanyFacet": {
+      "Type": "Facet",
+      "BaseType": "Sitecore.XConnect.Facet",
+      "ClrType": "Bonfire.Feature.KickfireCore.Models.Facets.CompanyFacet, Bonfire.Feature.KickfireCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+      "Properties": {
+        "Cid": {
+          "Type": "String"
+        },
+        "Name": {
+          "Type": "String"
+        },
+        "Website": {
+          "Type": "String"
+        },
+        "Street": {
+          "Type": "String"
+        },
+        "City": {
+          "Type": "String"
+        },
+        "RegionShort": {
+          "Type": "String"
+        },
+        "Region": {
+          "Type": "String"
+        },
+        "Postal": {
+          "Type": "String"
+        },
+        "CountryShort": {
+          "Type": "String"
+        },
+        "Country": {
+          "Type": "String"
+        },
+        "Phone": {
+          "Type": "String"
+        },
+        "Employees": {
+          "Type": "String"
+        },
+        "Revenue": {
+          "Type": "String"
+        },
+        "Category": {
+          "Type": "String"
+        },
+        "Category2": {
+          "Type": "String"
+        },
+        "NaicsCode": {
+          "Type": "String"
+        },
+        "NaicsGroup": {
+          "Type": "String"
+        },
+        "SicCode": {
+          "Type": "String"
+        },
+        "Latitude": {
+          "Type": "String"
+        },
+        "Longitude": {
+          "Type": "String"
+        },
+        "StockSymbol": {
+          "Type": "String"
+        },
+        "Facebook": {
+          "Type": "String"
+        },
+        "Twitter": {
+          "Type": "String"
+        },
+        "LinkedIn": {
+          "Type": "String"
+        },
+        "IsIsp": {
+          "Type": "Int32"
+        },
+        "IsWifi": {
+          "Type": "Int32"
+        },
+        "Confidence": {
+          "Type": "Int32"
+        }
+      }
+    }
+  },
+  "Facets": [
+    {
+      "Target": "Contact",
+      "Name": "Company",
+      "Type": "Bonfire.Feature.KickfireCore.Models.Facets.CompanyFacet"
+    }
+  ]
+}
