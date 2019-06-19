@@ -17,7 +17,7 @@ namespace Bonfire.Feature.KickfireCore
 
             public struct FieldNames
             {
-                public static string Code = "code";
+                public static string Code = "siccode";
             }
         }
 

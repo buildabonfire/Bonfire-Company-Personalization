@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bonfire.Foundation.Kickfire.CacheService</RootNamespace>
     <AssemblyName>Bonfire.Foundation.Kickfire.CacheService</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -43,6 +43,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -52,10 +53,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="2.0.1" />
@@ -64,16 +67,16 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Sitecore.Kernel">
-      <Version>12.0.0</Version>
+      <Version>9.0.180604</Version>
     </PackageReference>
     <PackageReference Include="Sitecore.Logging">
-      <Version>12.0.0</Version>
+      <Version>9.0.180604</Version>
     </PackageReference>
     <PackageReference Include="Sitecore.Update">
-      <Version>4.0.0</Version>
+      <Version>9.0.180604</Version>
     </PackageReference>
     <PackageReference Include="Sitecore.Zip">
-      <Version>12.0.0</Version>
+      <Version>9.0.180604</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
