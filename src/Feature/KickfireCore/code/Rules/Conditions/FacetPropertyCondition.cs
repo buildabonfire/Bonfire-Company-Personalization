@@ -28,6 +28,7 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
             if (xConnectFacet.Facets == null) return false;
 
             var company = xConnectFacet.Facets[CompanyFacet.DefaultFacetKey] as CompanyFacet;
+            if (company == null) return false;
 
             return ProcessFacetProperty(company, ruleContext);
         }
@@ -47,8 +48,8 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
 
         public static string GetPropValue(object src, string propName)
         {
-            var val = src.GetType().GetProperty(propName).GetValue(src, null);
-            return val.ToString();
+            var val = src?.GetType()?.GetProperty(propName)?.GetValue(src, null);
+            return val?.ToString() ?? "";
         }
 
         private string GetFieldName(string id)
