@@ -21,6 +21,7 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
             if (xConnectFacet.Facets == null) return false;
 
             var company = xConnectFacet.Facets[CompanyFacet.DefaultFacetKey] as CompanyFacet;
+            if (company == null) return false;
 
             return this.Compare(this.GetVisitStringValue(company), this.GetValue(ruleContext));
         }
