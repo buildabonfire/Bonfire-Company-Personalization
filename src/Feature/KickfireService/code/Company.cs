@@ -30,7 +30,7 @@ namespace Bonfire.Feature.KickfireService
             }
 
             company = await CallApiService(clientIp, apiKey, apiUrl);
-            CacheBuilder.KickFireCache.Set(clientIp, company.Jsonize());
+            CacheBuilder.KickFireCache.Set(clientIp, company);
 
             return company;
         }
@@ -78,21 +78,9 @@ namespace Bonfire.Feature.KickfireService
 
         private static KickFireModel GetCompanyFromCache(string clientIp)
         {
-            var cache = CacheBuilder.KickFireCache.Get(clientIp);
-            if (string.IsNullOrEmpty(cache))
-                return null;
+            var model = (KickFireModel) CacheBuilder.KickFireCache.Get(clientIp);
 
-            try
-            {
-                var model = JsonConvert.DeserializeObject<KickFireModel>(cache);
-                model.IsError = false;
-                return model;
-            }
-            catch (Exception e)
-            {
-                Log.Error($"Could not serialize the cache response. Value = {cache}", e, "KickFire");
-                return null;
-            }
+            return model;
         }
 
         private TimeSpan GetTimeSpan()
