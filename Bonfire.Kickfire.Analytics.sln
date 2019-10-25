@@ -113,7 +113,7 @@ Global
 		{F1457D9E-9A38-42E1-A94C-AE49EA3FB21E} = {3CF9024E-EABA-4EA8-ADE2-1C58A683FB55}
 		{C6CDFAE6-BEEA-41A4-984F-C3DC57AAC55E} = {24850DB7-6CCE-4409-B33B-5AD2F4AD4379}
 		{1B87945B-CF36-428C-9EDD-8D331F8B2806} = {F1457D9E-9A38-42E1-A94C-AE49EA3FB21E}
-		{D1EC470A-2B70-4D35-AEFF-464CDCE377E1} = {A625C89D-C77F-4E5C-AE2A-80C96E517CC7}
+		{D1EC470A-2B70-4D35-AEFF-464CDCE377E1} = {6BF51DA5-6C9B-4848-B0C2-8A2E7816E8E9}
 		{CF2EA81A-EC3A-4833-8DE6-798BF884A4C2} = {D1EC470A-2B70-4D35-AEFF-464CDCE377E1}
 		{1A444C8C-71BF-4B93-8E47-78C69A43FC86} = {3CF9024E-EABA-4EA8-ADE2-1C58A683FB55}
 		{752C5C9E-A15B-4A29-98B1-35A93C57C35E} = {1A444C8C-71BF-4B93-8E47-78C69A43FC86}
@@ -126,7 +126,7 @@ Global
 		{BE2A78DD-DD97-40D4-B37E-B92083C198A2} = {8E82E4A9-F83C-435D-A062-79164F2DCC8D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1E602087-685C-4CC2-B084-95024795A051}
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+		SolutionGuid = {1E602087-685C-4CC2-B084-95024795A051}
 	EndGlobalSection
 EndGlobal
