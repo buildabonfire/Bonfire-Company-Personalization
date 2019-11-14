@@ -20,7 +20,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
             var profileItem = GetProfileFromOverride(GetSicCodeItemOrDefault(sicCode));
 
             if (profileItem == null)
-                Log.Info("profileItem is null", this); 
+                Log.Debug("profileItem is null", this); 
 
             return profileItem;
         }
@@ -54,7 +54,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
             var sicCodePath = GetSicCodeParent().Paths.FullPath;
             if (string.IsNullOrEmpty(sicCodePath))
             {
-                Log.Info("sicCodePath is null", this);
+                Log.Debug("sicCodePath is null", this);
                 return null;
             }
 
@@ -65,7 +65,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
         {
             if (sicCodeOverride == null)
             {
-                Log.Info("sicCodeOverride is null", this);
+                Log.Debug("sicCodeOverride is null", this);
                 return null;
             }
 
@@ -78,7 +78,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
         {
             if (sicCode == null)
             {
-                Log.Info("sicCode is null", this);
+                Log.Debug("sicCode is null", this);
                 return null;
             }
 
@@ -102,7 +102,7 @@ namespace Bonfire.Feature.KickfireCore.Repository
                 var result = searchResult?.GetItem();
                 if (result == null)
                 {
-                    Log.Info($"Sic Code search is null. fieldName={fieldName}, value={value}, startPath={startPath}, templateId={templateId.Guid}", this);
+                    Log.Debug($"Sic Code search is null. fieldName={fieldName}, value={value}, startPath={startPath}, templateId={templateId.Guid}", this);
                 }
 
                 return result;

@@ -15,7 +15,7 @@ namespace Bonfire.Feature.KickfireCore.Helpers
                 var configItem = Sitecore.Context.Database.GetItem(configItemPath);
 
                 if (configItem == null)
-                    Log.Info("The configuration item is empty. Did you forget to publish? Configuration item is located at " + configItemPath + ".", new System.Exception("config item null"));
+                    Log.Debug("The configuration item is empty. Did you forget to publish? Configuration item is located at " + configItemPath + ".", new System.Exception("config item null"));
                 return configItem;
             }
 
