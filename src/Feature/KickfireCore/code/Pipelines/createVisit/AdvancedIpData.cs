@@ -41,8 +41,8 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             // convert the IP from the tracker
             var clientIp = GetClientIp(args);
 
-            Log.Info("KickFire: ====== Starting Kickfire for " + clientIp + "======", "KickFire");
-            Log.Info("KickFire: GEOIP Country IS : " + Tracker.Current.Session.Interaction.GeoData.Country, "KickFire");
+            Log.Debug("KickFire: ====== Starting Kickfire for " + clientIp + "======", "KickFire");
+            Log.Debug("KickFire: GEOIP Country IS : " + Tracker.Current.Session.Interaction.GeoData.Country, "KickFire");
             
             // make the call
             try
@@ -50,7 +50,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
                 // check to see if we only want USA to keep the API hits down
                 if (!ShouldProcessNonUsa())
                 {
-                    Log.Info("KickFire: Not USA, kicking out", "KickFire");
+                    Log.Debug("KickFire: Not USA, kicking out", "KickFire");
                     return;
                 }
 
@@ -80,7 +80,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             // add company data to xDB
             UpdateCompanyDataOnClient(model);
 
-            Log.Info("KickFire: Logged for " + clientIp, "KickFire");
+            Log.Debug("KickFire: Logged for " + clientIp, "KickFire");
 
             bool.TryParse(Sitecore.Configuration.Settings.GetSetting("Bonfire.Kickfire.ProcessSicCode"),
                 out var processSicCode);
@@ -94,18 +94,18 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
         private void ProcessInvalidRequest(KickFireModel model, string clientIp)
         {
             if (model == null)
-                Log.Info("KickFire: Model null. IP is " + clientIp, this);
+                Log.Debug("KickFire: Model null. IP is " + clientIp, this);
 
             else
             {
                 if (model.Status != "success")
-                    Log.Info("KickFire: Model capture not successful. Is is " + clientIp, "KickFire");
+                    Log.Debug("KickFire: Model capture not successful. Is is " + clientIp, "KickFire");
 
                 if (model?.Data?.Count == 0)
-                    Log.Info("KickFire: No data records. IP is " + clientIp, "KickFire");
+                    Log.Debug("KickFire: No data records. IP is " + clientIp, "KickFire");
 
                 if (model?.Data != null && model?.Data[0].IsIsp != 0)
-                    Log.Info("KickFire: Is ISP, skipped. IP is " + clientIp, "KickFire");
+                    Log.Debug("KickFire: Is ISP, skipped. IP is " + clientIp, "KickFire");
             }
         }
 
@@ -135,12 +135,12 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             var profile = Tracker.Current.Interaction.Profiles[Constants.Profile.IndustryName];
             var scores = new Dictionary<string, double> { { profileItem.Name, 10 } };
 
-            Log.Info("KickFire: Looking up profile " + profile.ProfileName, "KickFire");
+            Log.Debug("KickFire: Looking up profile " + profile.ProfileName, "KickFire");
 
             profile.Score(scores);
             profile.UpdatePattern();
 
-            Log.Info("KickFire: ====== ALL IS DONE ======", "KickFire"); 
+            Log.Debug("KickFire: ====== ALL IS DONE ======", "KickFire"); 
         }
 
         private void ProcessSicCode(string clientIp, KickFireModel model )
@@ -148,7 +148,7 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             // Lets put the user into the right pattern
             if (string.IsNullOrWhiteSpace(model.Data[0].SicCode))
             {
-                Log.Info("KickFire: No SicCode from Kickfire API call. IP is " + clientIp, "KickFire");
+                Log.Debug("KickFire: No SicCode from Kickfire API call. IP is " + clientIp, "KickFire");
                 return;
             }
 
@@ -224,13 +224,13 @@ namespace Bonfire.Feature.KickfireCore.Pipelines.createVisit
             sw.Start();
 
             // lets use async to call our web service
-            Log.Info("Kickfire: Start API call to KF", "KickFire");
+            Log.Debug("Kickfire: Start API call to KF", "KickFire");
 
             var model = Task.Run(() => _companyService.GetKickfireModel(ip));
             var companyModel = model.Result;
 
             sw.Stop();
-            Log.Info($"Kickfire: End API call to KF. Took {sw.ElapsedMilliseconds} ms", "KickFire");
+            Log.Debug($"Kickfire: End API call to KF. Took {sw.ElapsedMilliseconds} ms", "KickFire");
 
             return companyModel;
         }
