@@ -4,7 +4,6 @@ This service will perform a lookup on the visitor's IP and try to identify the c
 
 Currently the service supports:
  * [KickFire](http://kickfire.io/) - Includes SicCode info
- * [Extreme Ip](http://extreme-ip-lookup.com/)
 
 My next integration will be with MaxMind for company info.
 
