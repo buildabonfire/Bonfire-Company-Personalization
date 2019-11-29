@@ -10,8 +10,6 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
 {
     public abstract class CompanyFacetCondition<T> : StringOperatorCondition<T> where T : RuleContext
     {
-        public string Value { get; set; }
-
         protected override bool Execute(T ruleContext)
         {
             Assert.ArgumentNotNull((object)ruleContext, nameof(ruleContext));
@@ -23,14 +21,11 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
             var company = xConnectFacet.Facets[CompanyFacet.DefaultFacetKey] as CompanyFacet;
             if (company == null) return false;
 
-            return this.Compare(this.GetVisitStringValue(company), this.GetValue(ruleContext));
+            var stringVal = this.GetVisitStringValue(company);
+
+            return this.Compare(stringVal.Item1, stringVal.Item2);
         }
 
-        protected virtual string GetValue(T ruleContext)
-        {
-            return this.Value ?? string.Empty;
-        }
-
-        protected abstract string GetVisitStringValue(CompanyFacet company);
+        protected abstract (string, string) GetVisitStringValue(CompanyFacet company);
     }
 }
