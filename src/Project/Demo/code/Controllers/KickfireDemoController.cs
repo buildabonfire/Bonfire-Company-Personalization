@@ -9,16 +9,23 @@ namespace KickfireDemo.Controllers
     {
         public ActionResult KickfireInfo()
         {
-            var xConnectFacet = Tracker.Current.Contact.GetFacet<IXConnectFacets>("XConnectFacets");
-            var company = new CompanyFacet();
-
-            if (xConnectFacet?.Facets != null)
+            try
             {
-                company = xConnectFacet.Facets[CompanyFacet.DefaultFacetKey] as CompanyFacet;
+                var xConnectFacet = Tracker.Current.Contact.GetFacet<IXConnectFacets>("XConnectFacets");
+                var company = new CompanyFacet();
+
+                if (xConnectFacet?.Facets != null)
+                {
+                    company = xConnectFacet.Facets[CompanyFacet.DefaultFacetKey] as CompanyFacet;
+                }
+
+                return this.View(company);
+
             }
-
-            return this.View(company);
+            catch (System.Exception)
+            {
+                return this.View(new CompanyFacet());
+            }            
         }
-
     }
 }
