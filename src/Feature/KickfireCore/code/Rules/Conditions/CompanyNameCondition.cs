@@ -10,7 +10,6 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
 
         protected override (string, string) GetVisitStringValue(CompanyFacet facet)
         {
-            Log.Info($"CompanyNameCondition {facet.Name}", this);
             return (facet.Name, Value);
         }
     }

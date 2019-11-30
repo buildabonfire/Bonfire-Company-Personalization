@@ -22,8 +22,11 @@ namespace Bonfire.Feature.KickfireCore.Rules.Conditions
             if (company == null) return false;
 
             var stringVal = this.GetVisitStringValue(company);
+            var result = this.Compare(stringVal.Item1, stringVal.Item2);
 
-            return this.Compare(stringVal.Item1, stringVal.Item2);
+            Log.Debug($"CompanyFacetCondition {stringVal.Item1} vs {stringVal.Item2}, result {result}", this);
+
+            return result;
         }
 
         protected abstract (string, string) GetVisitStringValue(CompanyFacet company);
