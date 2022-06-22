@@ -43,7 +43,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" version="13.0.1" />
     <PackageReference Include="Sitecore.Analytics">
       <Version>9.1.0</Version>
     </PackageReference>
